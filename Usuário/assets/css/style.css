@@ -14,7 +14,7 @@ body{
 	
 	position: absolute;
 	right:8;
-    top: 19.1%;
+    top: 15%;
     /* bottom: 50px; */
 
 	}
@@ -35,16 +35,17 @@ body{
 ul{	
 	background-color: #008FFF;
 	border:solid;
-	border-color:#0052ffff;
+	border-color:rgb(27, 95, 240);
 	margin-top: 1%;
 	list-style:none;	
 	display:flex;
 	padding: 5px;
+	font-size: 17px;
 }
 
 li{
 	float:left;
-	margin-left:160px;
+	margin-left:15%;
 }
 
 a{	
@@ -54,6 +55,7 @@ a{
 
 a:hover{
 	color: white;
+	font-weight: bold;
 }
 
 .text-bold{
@@ -63,7 +65,7 @@ a:hover{
 
 .anuncio{
 	margin-top: 3%;
-	margin-left:8%;
+	margin-left:16%;
 }
 
 .dentista{
@@ -90,6 +92,7 @@ a:hover{
 #propaganda{
 	float:right;
 	border:solid;
+	border-width: 1px;
 	margin-left: 10%;
 	margin-top:3%;
 	height:200px;
@@ -97,6 +100,7 @@ a:hover{
 
 .container{
 	display:flex;
+	width: 100%;
 }
 
 .titulo{
