@@ -14,7 +14,7 @@ body{
 	
 	position: absolute;
 	right:8;
-    top: 15%;
+    top: 100px;
     /* bottom: 50px; */
 
 	}
@@ -45,7 +45,7 @@ ul{
 
 li{
 	float:left;
-	margin-left:15%;
+	margin-left:130px;
 }
 
 a{	
@@ -65,7 +65,7 @@ a:hover{
 
 .anuncio{
 	margin-top: 3%;
-	margin-left:16%;
+	margin-left:100px;
 }
 
 .dentista{
