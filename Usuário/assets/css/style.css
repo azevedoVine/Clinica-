@@ -54,14 +54,14 @@ body{
 
 
 .menu li   ul{
-	position:absolute;
+	position: absolute;
 	background-color: #008FFF;
 	border:solid;
 	border-color:rgb(27, 95, 240);
 	display:none; }
 
 .menu li:hover ul{
-	display:block;}
+	display:flex;}
 
 .menu li ul li{ display:block; width:100%;}
 
