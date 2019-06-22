@@ -32,7 +32,7 @@ body{
 	border-width:0.1px;
 }
 
-ul{	
+.menu{	
 	background-color: #008FFF;
 	border:solid;
 	border-color:rgb(27, 95, 240);
@@ -43,10 +43,27 @@ ul{
 	font-size: 17px;
 }
 
-li{
+.menu li{
 	float:left;
 	margin-left:130px;
 }
+
+.menu li a{
+	color:black;
+	text-decoration:none;}
+
+
+.menu li   ul{
+	position:absolute;
+	background-color: #008FFF;
+	border:solid;
+	border-color:rgb(27, 95, 240);
+	display:none; }
+
+.menu li:hover ul{
+	display:block;}
+
+.menu li ul li{ display:block; width:100%;}
 
 a{	
 	color:black;
