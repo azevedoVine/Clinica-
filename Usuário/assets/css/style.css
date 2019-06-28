@@ -90,7 +90,10 @@ a:hover{
 
 .anuncio{
 	margin-top: 3%;
-	margin-left:20%;
+	margin-right:12%;
+	margin-left:12%;
+
+
 }
 
 .dentista{
@@ -160,4 +163,10 @@ footer{
 	
 }
 
+.vejamais{
+	border-color:#008FFF;
+	height: 30px;
+	border-radius: 10px;
+	background-color:#f9f9f9ff;
+}
  
