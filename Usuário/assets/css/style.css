@@ -15,7 +15,6 @@ body{
 	position: absolute;
 	right:8;
     top: 100px;
-    /* bottom: 50px; */
 
 	}
 
@@ -45,7 +44,7 @@ body{
 
 .menu li{
 	float:left;
-	margin-left:130px;
+	margin-left:14%;
 }
 
 .menu li a{
@@ -58,12 +57,21 @@ body{
 	background-color: #008FFF;
 	border:solid;
 	border-color:rgb(27, 95, 240);
-	display:none; }
+	display:none; 
+	width: 200px;
+	margin-top: 5px;
+}
 
 .menu li:hover ul{
-	display:flex;}
+	display:block;
+}
 
-.menu li ul li{ display:block; width:100%;}
+.menu li ul li{
+	margin-top: 3px;
+	margin-bottom: 2px;
+	list-style:none; 
+	width:100%;
+	margin-left: -20;}
 
 a{	
 	color:black;
@@ -82,7 +90,7 @@ a:hover{
 
 .anuncio{
 	margin-top: 3%;
-	margin-left:100px;
+	margin-left:20%;
 }
 
 .dentista{
@@ -92,6 +100,7 @@ a:hover{
 .foto-dentista{
 	border:solid;
 	border-color:#008FFF;
+	margin-top: 2px;
 }
 
 .nome-dentista{
@@ -103,14 +112,14 @@ a:hover{
 	background-color:#f9f9f9ff;
 	display:flex;
 	margin-top: 3%;
-	width: 80%;
+	width: 60%;
 }
 
 #propaganda{
 	float:right;
 	border:solid;
 	border-width: 1px;
-	margin-left: 10%;
+	margin-left: 20%;
 	margin-top:3%;
 	height:200px;
 }
@@ -150,3 +159,5 @@ footer{
 	height:18;
 	
 }
+
+ 
