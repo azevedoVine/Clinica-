@@ -7,7 +7,7 @@ body{
 
 	 width:150px;
 	 height:120px;
-	 background-color:#008FFF;
+	 background-color:green;
 	 text-align:center;
 }
 #procurar-box{
@@ -67,8 +67,7 @@ body{
 }
 
 .menu li ul li{
-	margin-top: 3px;
-	margin-bottom: 2px;
+	margin-bottom: 6px;
 	list-style:none; 
 	width:100%;
 	margin-left: -20;}
@@ -92,13 +91,11 @@ a:hover{
 	margin-top: 3%;
 	margin-right:12%;
 	margin-left:12%;
-
-
 }
 
 .dentista{
 	float: left;
-	margin-left: 9%;}
+	margin-left: 8%;}
 	
 .foto-dentista{
 	border:solid;
@@ -112,10 +109,13 @@ a:hover{
 }
 
 #dentistas{
-	background-color:#f9f9f9ff;
 	display:flex;
-	margin-top: 3%;
-	width: 60%;
+}
+
+.fundo{
+	background-color:#f9f9f9ff;
+	width: 45%;
+	margin-left: 7%;
 }
 
 #propaganda{
@@ -123,7 +123,7 @@ a:hover{
 	border:solid;
 	border-width: 1px;
 	margin-left: 20%;
-	margin-top:3%;
+	margin-top:5%;
 	height:200px;
 }
 
@@ -165,8 +165,12 @@ footer{
 
 .vejamais{
 	border-color:#008FFF;
-	height: 30px;
 	border-radius: 10px;
 	background-color:#f9f9f9ff;
+	margin-left: 80%;	
 }
- 
+
+.vejamais:hover{
+	background-color: #008FFF;
+	color: white;
+}
