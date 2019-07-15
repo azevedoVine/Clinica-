@@ -1,13 +1,14 @@
 body{
 	font-family: Franklin Gothic Book;
-	font-size: 20 px; 
+	font-size: 20 px;
+	background-color: rgb(231, 247, 247);
 }
 
 #logo{
 
 	 width:150px;
 	 height:120px;
-	 background-color:green;
+	 background-color:#04B404;
 	 text-align:center;
 }
 #procurar-box{
@@ -115,7 +116,7 @@ a:hover{
 .fundo{
 	background-color:#f9f9f9ff;
 	width: 45%;
-	margin-left: 7%;
+	margin-left: 12%;
 }
 
 #propaganda{
@@ -136,6 +137,11 @@ a:hover{
 	font-family: Franklin Gothic Book, Calibri;
 	text-align: center;
 	font-size: 25px;
+}
+
+.sub-titulo{
+	font-family: Franklin Gothic Book, Calibri;
+	font-size: 15px;
 }
 
 .negrito{
@@ -173,4 +179,11 @@ footer{
 .vejamais:hover{
 	background-color: #008FFF;
 	color: white;
+}
+
+.atualizacoes-atalho{
+	background-color: #f9f9f9ff;
+	margin-left:12%;
+	word-wrap: break-word:
+	width:300px;
 }
