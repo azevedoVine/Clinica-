@@ -1,19 +1,13 @@
 body{
 	font-family: Franklin Gothic Book;
-	font-size: 20 px;
-}
-
-#topo{
-	margin-top: 70px;
-	position: relative;
+	font-size: 16px;
 }
 
 #logo{
 
-	 width:150px;
-	 height:120px;
-	 background-color:#04B404;
-	 text-align:center;
+	 width:30px;
+	 height:30px;
+
 	 
 }
 #procurar-box{
@@ -23,34 +17,23 @@ body{
 	top:0;
 	}
 
-#pesquisar{
-	width:100%;
-	border-color:#008FFF;
-	border-width:0.1px;
-}
-
 #login{ 
-
-	right: 8;
-	top:1%;
-	margin-left: 240px;
+	top:0;
+	margin-left: 10%;
 }
 
 .menu{	
-	background-color: #008FFF;
-	border:solid;
-	border-color:rgb(27, 95, 240);
-	list-style:none;	
-	display:flex;
-	padding: 5px;
-	font-size: 17px;
-	position: absolute;
-	width: 88%;
-	top:0;
-	padding-left: 10%;
-	
-}
-
+    background-color: #008FFF;
+    border: solid;
+    border-color: rgb(27, 95, 240);
+    list-style: none;
+    display: flex;
+    padding: 0 15%;
+    font-size: 17px;
+    position: relative;
+    width: 88%;
+    top: 0;
+    padding-top: 17px;}
 ul{
 	position: absolute;
 }
@@ -196,12 +179,24 @@ footer{
 
 .atualizacoes-atalho{
 	background-color: #f9f9f9ff;
-	margin-left:2%;
+	margin-left:250px;
 	word-wrap: break-word;
 	width:350px;
 	padding: 15px;
 }
 
 .atualizacao-botao{
-	margin-bottom: 0 !important;
+	border-color:#008FFF;
+	border-radius: 10px;
+	background-color:#f9f9f9ff;
+	margin-bottom: 0;
+}
+
+.atualizacao-botao:hover{
+	background-color: #008FFF;
+	color: white;
+}
+
+.dados-link:hover{
+	color: #008FFF;
 }
