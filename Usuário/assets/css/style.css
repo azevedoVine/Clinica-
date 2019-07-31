@@ -18,7 +18,7 @@ body{
 	}
 
 #login{ 
-	top:0;
+    margin-bottom: 2px;
 	margin-left: 10%;
 }
 
@@ -33,7 +33,7 @@ body{
     position: relative;
     width: 88%;
     top: 0;
-    padding-top: 17px;}
+    padding-top: 5px;}
 ul{
 	position: absolute;
 }
@@ -41,6 +41,7 @@ ul{
 .menu li{
 	float:left;
 	margin-left:8%;
+	margin-top: 5px;
 }
 
 .menu li a{
@@ -199,4 +200,14 @@ footer{
 
 .dados-link:hover{
 	color: #008FFF;
+}
+
+.atualizacoes-box{
+	display: flex;
+}
+
+.atualizacao{
+	width: 23%;
+	font-size: 20px !important;
+	padding-left: 5%;
 }
