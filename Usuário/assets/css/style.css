@@ -250,8 +250,8 @@ footer{
 	border-width: 1.5px;
 	background-color: yellow;
 	font-weight: 600;
-	width: 65%;
-	margin-left: 17%;	
+	width: 75%;
+	margin-left: 13%;	
 	text-align: center;
 	margin-bottom: 2%;
 	display: flex;
@@ -304,7 +304,7 @@ footer{
 .icone-mais{
 	height: 20px;
 	margin-top: 1%;
-	margin-left: 2%;
+	margin-left: 4%;
 	margin-bottom: 1%;
 }
 
@@ -395,7 +395,8 @@ footer{
   }
 
   .botao-saiba{
-	  margin: 0;
+	  margin-top: 1%;
+	  margin-bottom: 0;
   }
 
   .modal-maior {
