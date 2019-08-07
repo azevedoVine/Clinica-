@@ -7,19 +7,13 @@ body{
 
 	 width:30px;
 	 height:30px;
-
+	 margin-left: 90%;
 	 
 }
-#procurar-box{
-	
-	position: absolute;
-	right:8;
-	top:0;
-	}
 
 #login{ 
     margin-bottom: 2px;
-	margin-left: 7%;
+	margin-left: 11%;
 }
 
 .menu{	
@@ -40,7 +34,7 @@ ul{
 
 .menu li{
 	float:left;
-	margin-left:8%;
+	margin-left:10%;
 	margin-top: 5px;
 }
 
@@ -75,7 +69,7 @@ a{
 }
 
 a:hover{
-	color: white;
+
 	font-weight: bold;
 }
 
@@ -126,6 +120,7 @@ a:hover{
 .container{
 	display: flex;
 	margin-left: 12%;
+	
 }
 
 .titulo{
@@ -137,7 +132,7 @@ a:hover{
 
 .sub-titulo{
 	font-family: Franklin Gothic Book, Calibri;
-	font-size: 15px;
+	font-size: 16px;
 	margin-top: 1%;
 }
 
@@ -166,7 +161,7 @@ footer{
 	border-color:#008FFF;
 	border-radius: 10px;
 	background-color:#f9f9f9ff;
-	margin-left: 75%;
+	margin-left: 67%;
 	margin-bottom: 5px;	
 }
 
@@ -216,6 +211,7 @@ footer{
 
 .foto-propaganda{
 	width: 170px;
+	height: 123;
 	border:solid;
 	border-color: #008FFF;
 }
@@ -255,11 +251,11 @@ footer{
 	background-color: yellow;
 	font-weight: 600;
 	width: 65%;
-	margin-left: 13%;	
+	margin-left: 17%;	
 	text-align: center;
 	margin-bottom: 2%;
 	display: flex;
-	padding-left: 5%;
+	padding: 0.5%;
 }
 
 .saiba-mais:hover{
@@ -290,12 +286,26 @@ footer{
 
 .formulario{
 	margin-right: 1%;
+	width: 40%;
+	float: left;
+}
+
+.formulario-2{
+	margin-right: 1%;
+	width: 40%;
+	float: right;
+}
+
+.formulario-consulta{
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 .icone-mais{
 	height: 20px;
-	margin-top: 13%;
-	margin-left: 5%;
+	margin-top: 1%;
+	margin-left: 2%;
+	margin-bottom: 1%;
 }
 
 *, *::after, *::before {
@@ -372,4 +382,43 @@ footer{
 
   .informacao-dentista{
 	  margin-left: 5%;
+  }
+
+  .atualizacao-individual{
+	  margin-top: 5%;
+	  background-color: #f9f9f9ff;
+	  padding: 5%;
+  }
+
+  .propaganda-individual{
+	  margin-top:5%;
+  }
+
+  .botao-saiba{
+	  margin: 0;
+  }
+
+  .modal-maior {
+	top: 40% !important;
+	height: 60%!important;
+  }
+
+  .modal-foto{
+	  float: right;
+	  position: relative;
+	  margin-bottom: 2px;
+	  margin-left: 4px;
+  }
+
+  .botao-disponibilidade{
+	border-color:#008FFF;
+	border-radius: 10px;
+	background-color:#f9f9f9ff;
+	margin-left: 67%;
+	margin-bottom: 0px;	  
+  }
+
+  .botao-disponibilidade:active{
+	background-color: #008FFF;
+	color: white;
   }

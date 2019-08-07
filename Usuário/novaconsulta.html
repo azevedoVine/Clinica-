@@ -21,11 +21,6 @@
 								<li><a href="#">Minhas Consultas</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Mensagens</a>
-							<ul>
-								<li><a href="#">Nova Mensagem</a></li>
-							</ul>
-						</li>
 						<li><a href="sobre.html">Sobre Nós</a></li>
 						<div id="login">
 								<img src="assets/img/user.png" height="35" >
@@ -35,27 +30,48 @@
         
         <section>
             <div class="container">
-                <p class="titulo-pagina">Nova Consulta</p>
+                
                 <div class="formulario-consulta">
+                        <p class="titulo-pagina negrito">Nova Consulta</p>
                     <div class="formulario">
+                        
                         <form>
 
-                            <label>Nome: <input type="text" name="name"></label>
+                            <label>Nome: <input type="text" name="name"></label> <br>
 
                             <label>Dentista: <input type="select" name="dentista"></label>
                 
                         </form>
                     </div>
 
-                    <div>
+                    <div class="formulario-2">
                         <form>
-                        <label>Horário: <input type="number" min="00" max="12" name="horario"></label>
+                        <label>Horário: <input type="number" min="00" max="12" name="horario"></label> <br>
         
-                            <label>Especialidade: <input type="select" name="dentista"></label>      
-                                    
+                        Especialidade: 
+                                <input type="radio" name="especilidade" value="Especialidade1" class="input-consulta"> Esp 1
+                                <input type="radio" name="especilidade" value="Especialidade2"> Esp 2
+                                <input type="radio" name="especilidade" value="Especialidade3"> Esp 3
+                             
+                        <input type="submit" value="Verificar Disponibilidade" class="botao-disponibilidade">
                         </form>
                     </div>
                 </div>
+            
+                <div class="propaganda-tratamento">
+                        <p class="titulo negrito">Tratamentos</p>
+                        <div class="propaganda-individual">
+                            <p class="sub-titulo negrito">Clareamento</p>
+                            <p>Todos as descrições das pessoas são sobre a humanidade do atendimento, a pessoa pega no pulso, examina, olha com carinho.</p>
+                            <img src="assets/img/clareamento.jpg" class="foto-propaganda">
+                        </div>
+                        <div class="propaganda-individual">
+                            <p class="sub-titulo negrito">Aparelho Odontológico</p>
+                            <p>Todos as descrições das pessoas são sobre a humanidade do atendimento, a pessoa pega no pulso, examina, olha com carinho.</p>
+                            <img src="assets/img/aparelho-ortodontico.jpg" class="foto-propaganda">
+                            <a href="tratamentos.html"><button class='vejamais tratamento-botao'>Veja mais</button></a>
+                        </div>
+                    </div>
             </div>
         </section>
 
