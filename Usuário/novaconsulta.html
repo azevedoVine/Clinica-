@@ -30,14 +30,15 @@
         
         <section>
             <div class="container">
+                                    
                 
-                <div class="formulario-consulta">
-                        <p class="titulo-pagina negrito">Nova Consulta</p>
+                        <p class="titulo-pagina negrito">Nova Consulta</p> 
+                    <div class="formulario-consulta"> 
                     <div class="formulario">
                         
                         <form>
 
-                            <label>Nome: <input type="text" name="name"></label> <br>
+                            <label>Nome: <input type="text" name="name" placeholder="Jenovevo User"></label>
 
                             <label>Dentista: <input type="select" name="dentista"></label>
                 
@@ -46,13 +47,17 @@
 
                     <div class="formulario-2">
                         <form>
-                        <label>Horário: <input type="number" min="00" max="12" name="horario"></label> <br>
+                        <label>Horário: <input type="time" id="appt" name="horario" 
+                            min="09:00" max="18:00"></label>
         
-                        Especialidade: 
-                                <input type="radio" name="especilidade" value="Especialidade1" class="input-consulta"> Esp 1
-                                <input type="radio" name="especilidade" value="Especialidade2"> Esp 2
-                                <input type="radio" name="especilidade" value="Especialidade3"> Esp 3
-                             
+                        <label> Especialidades:
+                            <select name="especialidades" form="carform">
+                                    <option value="esp1">Esp1</option>
+                                    <option value="esp2">Esp2</option>
+                                    <option value="esp3">Esp3</option>
+                                    <option value="esp4">Esp4</option>
+                            </select>
+                        </label>
                         <input type="submit" value="Verificar Disponibilidade" class="botao-disponibilidade">
                         </form>
                     </div>

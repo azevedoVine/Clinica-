@@ -50,7 +50,8 @@ ul{
 	border-color:rgb(27, 95, 240);
 	display:none; 
 	width: 200px;
-	margin-top: 5px;
+	margin-top: 0.8%;
+	margin-left: -3%;
 }
 
 .menu li:hover ul{
@@ -273,7 +274,7 @@ footer{
 }
 
 .horario{
-	margin-left: 35% !important;
+	margin-left: 1% !important;
 }
 
 .titulo-pagina{
@@ -285,7 +286,7 @@ footer{
 }
 
 .formulario{
-	margin-right: 1%;
+	/* margin-right: 1%; */
 	width: 40%;
 	float: left;
 }
@@ -297,8 +298,8 @@ footer{
 }
 
 .formulario-consulta{
-	margin-left: 10%;
-	margin-right: 10%;
+	margin-left: 3%;
+	display: flex;
 }
 
 .icone-mais{
@@ -397,6 +398,7 @@ footer{
   .botao-saiba{
 	  margin-top: 1%;
 	  margin-bottom: 0;
+	  margin-left: 8%;
   }
 
   .modal-maior {
@@ -422,4 +424,14 @@ footer{
   .botao-disponibilidade:active{
 	background-color: #008FFF;
 	color: white;
+  }
+
+  #mapa-sobre{
+	  margin-left: 4%
+  }
+
+  select{
+	  width: 150px;
+	  height: 20px;
+	  position: absolute;
   }
