@@ -300,6 +300,7 @@ footer{
 .formulario-consulta{
 	margin-left: 3%;
 	display: flex;
+	width: 55%;
 }
 
 .icone-mais{
@@ -417,8 +418,9 @@ footer{
 	border-color:#008FFF;
 	border-radius: 10px;
 	background-color:#f9f9f9ff;
-	margin-left: 67%;
-	margin-bottom: 0px;	  
+	margin-left: 216%;
+	margin-bottom: 0px;	 
+	margin-top: 3%;
   }
 
   .botao-disponibilidade:active{
