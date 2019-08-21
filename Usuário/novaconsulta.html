@@ -34,25 +34,33 @@
                                     
                 
                          
-                    <div class="formulario-consulta"> 
+                    <div class="formulario-consulta">
+                        <p class="titulo-pagina negrito consulta-titulo">Nova Consulta</p>  
                     <div class="formulario">
-                        <p class="titulo-pagina negrito">Nova Consulta</p> 
+                        
                         <form>
 
-                            <label>Nome: <input type="text" name="name" placeholder="Jenovevo User"></label>
+                            <label>Nome: </label><input type="text" name="name" placeholder="Jenovevo User">
 
-                            <label>Dentista: <input type="select" name="dentista"></label>
+                            <label> Dentistas: </label>
+                            <select name="dentistas" >
+                                    <option value="dent1">Qualquer um</option>
+                                    <option value="dent2">Joeferson</option>
+                                    <option value="dent3">Jalma</option>
+                                    <option value="dent4">Gumercinda</option>
+                            </select>
                 
-                        <label>Horário: <input type="time" id="appt" name="horario" min="09:00" max="18:00"></label>
+                        <label>Horário: </label><input type="time" id="appt" name="horario" min="09:00" max="18:00">
         
-                        <label> Especialidades:
-                            <select name="especialidades" form="carform">
+                        <label> Especialidades: </label>
+                            <select name="especialidades">
                                     <option value="esp1">Esp1</option>
                                     <option value="esp2">Esp2</option>
                                     <option value="esp3">Esp3</option>
                                     <option value="esp4">Esp4</option>
                             </select>
-                        </label>
+                        
+                        <label>Mensagem (opcional):</label> <textarea></textarea>
                         <input type="submit" value="Verificar Disponibilidade" class="botao-disponibilidade">
                         </form>
                     </div>
