@@ -94,6 +94,7 @@ a:active{
 	border-color:#008FFF;
 	margin-top: 2px;
 	height: 30%;
+	
 }
 
 .nome-dentista{
@@ -459,8 +460,20 @@ footer{
 
   .info-user{
 	  display: flex;
+	  width: 50%;
   }
 
   .dados-user{
 	  margin-left: 1%;
+  }
+
+  .mais-info-link{
+	  color: #008FFF;
+  }
+
+  .calendario{
+	  background-color: gray;
+	  width: 100px;
+	  height: 100px;
+
   }
