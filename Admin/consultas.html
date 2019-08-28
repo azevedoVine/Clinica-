@@ -45,35 +45,35 @@
 			<div class="tabela">
 					<table>
 							<tr class="titulo-tabela">
-							<th colspan="5">Atualizações</th>
+							<th colspan="5">Consultas</th>
 						  </tr>
 						  <tr class="tr1">
 							<th>Id</th>
-							<th>Titulo</th>
-							<th>Descrição</th>
-							<th>Foto</th>
+							<th>Paciente</th>
+							<th>Especialidade</th>
+							<th>Dentista</th>
 							<th>Ações</th>
 						  </tr>
 						  <tr>
 							<td>1</td>
-							<td>Noticia Tal</td>
-							<td>É legal</td>
-							<td><img src="assets/img/uj.png"></td>
-							<td><img src="assets/img/lapis.png" class="icone-tabela"><a data-modal-target="#excluir"><img src="assets/img/lixeira.png" class="icone-tabela"></a></td>
+							<td>Paciente Tal</td>
+							<td>AF</td>
+							<td>Jalmas</td>
+							<td><a data-modal-target="#excluir"><img src="assets/img/detalhe.png" class="icone-tabela"></a></td>
 						  </tr>
 						  <tr>
 								<td>2</td>
-								<td>Noticia Tal</td>
-								<td>É legal</td>
-								<td><img src="assets/img/uj.png"></td>
-								<td><img src="assets/img/lapis.png" class="icone-tabela"><a data-modal-target="#excluir"><img src="assets/img/lixeira.png" class="icone-tabela"></a></td>
+								<td>Paciente Tal</td>
+								<td>F</td>
+								<td>Gumercinda</td>
+								<td><a data-modal-target="#detalhe-consulta"><img src="assets/img/detalhe.png" class="icone-tabela"></a></td>
 						  </tr>
 						  <tr>
 								<td>3</td>
-								<td>Noticia Tal</td>
-								<td>Não é legal</td>
-								<td>Null</td>
-								<td><img src="assets/img/lapis.png" class="icone-tabela"><a data-modal-target="#excluir"><img src="assets/img/lixeira.png" class="icone-tabela"></a></td>
+								<td>Paciente Tal</td>
+								<td>A</td>
+								<td>Joeferson</td>
+								<td><a data-modal-target="#detalhe-consulta"><img src="assets/img/detalhe.png" class="icone-tabela"></a></td>
 						  </tr>
 						 
 						  
@@ -87,14 +87,16 @@
 
 		<div class="modal" id="excluir">
                 <div class="modal-header">
-                  <div class="titulo negrito">Excluir</div>
+                  <div class="titulo negrito">Consulta</div>
                   <button data-close-button class="close-button">&times;</button>
                 </div>
                 <div class="modal-body">
                     <article>
-							<p>Tem certeza que deseja excluir "Noticia Tal"?</p>
-							<button>Excluir</button>
-							<button data-close-button>Cancelar</button>
+							<p><span class="negrito">Paciete: </span>Jurandir</p>
+							<p><span class="negrito">Horário: </span>09-00</p>
+							<p><span class="negrito">Dia: </span>01/12/1123</p>
+							<p><span class="negrito">Dentista: </span>Jalma</p>
+							
                     </article>
                 </div>
             </div>

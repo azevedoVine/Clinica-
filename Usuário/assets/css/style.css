@@ -111,6 +111,7 @@ a:active{
 .dentistas{
 	display:flex;
 	justify-content: space-around;
+	padding-left: 1%;
 }
 
 .fundo{
@@ -502,4 +503,13 @@ footer{
 	margin-top: 2px;
 	height: 30%;
     width: 35%;
+  }
+
+  .foto-dentista{
+	border:solid;
+	border-color:#008FFF;
+	margin-top: 2px;
+	/* height: 30%; */
+	height: 200px;
+    width: 100%;
   }

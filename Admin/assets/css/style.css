@@ -16,11 +16,11 @@
 	position: absolute;
 	left: 35%;
 	top: 1%;
-	width: 30%;
+	width: 43%;
 	text-align: center;
 	border:solid;
-	border-color:#d6d50cff;
-	background-color: #f5f30eff;
+	border-color: #008FFF;
+	background-color: #CEE3F6;
 }
 
 .ul-a{
@@ -31,7 +31,7 @@
 
 .atalho{
 	float: left;
-	background-color: #f5f30eff;
+	background-color: #CEE3F6;
 	height: 100%;
 	width: 100px;
 }
@@ -41,7 +41,7 @@
 }
 
 .atalho:hover{
-	background-color:#d6d50cff;
+	background-color: #A9D0F5;
 }
 
 .menu-ul{
@@ -49,57 +49,19 @@
 }
 
 .menu-lateral{
-	background-color:blue;
+	border: solid;
+	border-color:#008FFF;
 	width: 12%;
-	height: 42%;
+	height: 250px;
 	padding-top: 1%;
 	margin-top: 3%;
-}
-
-.icone-menu-lateral{
-	margin-top: 20%;
-	margin-right: 5px;
-}
-
-.icone-menu-lateral:hover{
-	background-color: pink;
+	background-color: #CEE3F6;
+	padding-left: 1%;
 }
 
 a{
 	color: black;
 	text-decoration: none;
-}
-
-.container-msg{
-	position: absolute;
-	left: 35%;
-	top: 30%;
-	float: right;}
-
-#mensagens{
-	display: flex;
-}
-
-
-.mensagem{
-	overflow:hidden;
-	width:250px;
-	float: left;
-	margin-left: 25px;
-	background-color: #f9f9f9ff;
-	padding: 1%;
-}
-
-.destaque{
-	font-weight:bold;
-	font-size: 18px;
-}
-
-.container-atualizacao{
-	position: absolute;
-	left: 35%;
-	top: 87%;
-	float: right;
 }
 
 .titulo{
@@ -109,16 +71,7 @@ a{
 	
 }
 
-#atualizacao{
-	width:90%;
-}
-
-.detalhe{
-	float:right;
-	height:18;
-}
-
-*, *::after, *::before {
+*::after, *::before {
 	box-sizing: border-box;
   }
   
@@ -188,4 +141,66 @@ a{
   #overlay.active {
 	opacity: 1;
 	pointer-events: all;
+  }
+
+  select{
+		border-color: #008FFF;
+  }
+
+  footer{
+	   background-color: #CEE3F6;
+	   font-size: 8px;
+	   text-align: center;
+	   padding-top: 1%; 
+	   height: 5%;
+	   margin-top: 5%;
+  }
+  .botao-novo{
+	background-color: yellow;
+	width: 10%;
+	height: 20px;
+	text-align: center;
+	border: solid;
+	border-color: darkgoldenrod;
+	margin-left: 1%;
+  }
+
+  .container{
+	  display: flex;
+  }
+  .tr1{
+	background-color: grey;
+	border: solid;
+  }
+  
+  .titulo-tabela{
+	background-color:  #1381B4;
+	font-size: 20px;
+  }
+
+  td{
+	border: solid;
+    text-align: center;
+    width: 200px;
+    height: 27px;
+  }
+
+  th{
+	border: solid;
+	
+  }
+
+  .tabela{
+	  margin-top: 3%;
+	  margin-left: 1%;
+  }
+
+  .icone-tabela{
+	  width: 15px; 
+	  height: 15px; 
+	  margin-right: 2px;
+  }
+
+  .negrito{
+	  font-weight: bold;
   }
