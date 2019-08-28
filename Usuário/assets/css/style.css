@@ -86,14 +86,20 @@ a:active{
 }
 
 .dentista{
-	float: left;
-	margin-left: 4%;}
+	/* float: left;
+	margin-left: 4%; */
+	width: 150px;
+    height: 200px;
+
+}
 	
 .foto-perfil{
 	border:solid;
 	border-color:#008FFF;
 	margin-top: 2px;
-	height: 30%;
+	/* height: 30%; */
+	height: 77%;
+    width: 81%;
 	
 }
 
@@ -104,6 +110,7 @@ a:active{
 
 .dentistas{
 	display:flex;
+	justify-content: space-around;
 }
 
 .fundo{
@@ -147,7 +154,10 @@ footer{
 
 .detalhe{
 	float:right;
-	height:18;
+	/* height:18; */
+	float: right;
+    height: 14px;
+    margin-right: 29px;
 	
 }
 
@@ -470,10 +480,26 @@ footer{
   .mais-info-link{
 	  color: #008FFF;
   }
+  .div-calendario{
+	display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    position: absolute;
+    top: 300px;
+  }
 
   .calendario{
 	  background-color: gray;
-	  width: 100px;
-	  height: 100px;
+	  width: 550px;
+	  height: 250px;
+	  color: white;
+	  text-align: center;
+  }
 
+  .foto-usuario{
+	border:solid;
+	border-color:#008FFF;
+	margin-top: 2px;
+	height: 30%;
+    width: 35%;
   }
