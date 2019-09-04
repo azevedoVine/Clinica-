@@ -1,39 +1,7 @@
+	<?php
+			include_once 'topo.php';
+		?>
 <html>
-    <head>
-        <title>Clínica ABC</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-	  
-		<link rel="icon" type="image/png" sizes="32x32" href="assets/img/Logo.png">
-
-    </head>
-    <body>
-		
-			<nav>
-					<ul class="menu">
-						<a href="index.html"><img id="logo" src="assets/img/logo.png" ></a>        
-						<li><a href="index.html">Inicio</a></li>
-						<li><a href="atualizacoes.html">Atualizações</a>
-                        </li>
-                        <li><a href="tratamentos.html">Tratamentos</a></li>
-						<li>Consultas
-							<ul>
-								<li><a href="novaconsulta.html">Nova Consulta</a></li>
-								<li><a href="perfil.html">Minhas Consultas</a></li>
-							</ul>
-						</li>
-						<li><a href="sobre.html">Sobre Nós</a></li>
-						
-							<div id="login">
-                                <a href="perfil.html"><img src="assets/img/user.png" height="35" ></a>
-							</div>
-					</ul>
-		    </nav>
-		
 		<section>
 				<div class="anuncio">
 					<div class="slider">
@@ -45,24 +13,24 @@
 		<section>
 			<div class="container">
 			<div class="fundo">
-				<p class="titulo negrito">Profissionais em Destaque</p>
+				<p class="titulo negrito">Profissionais em Destaque </p>
 				<div class="dentistas">
 					<div class="dentista">
 					<a data-modal-target="#gumercinda">
 						<img src="assets/img/dentista-1.jpg" class="foto-perfil">
-						<p class="nome-dentista">Gumercinda <img src="assets/img/detalhe.png" class="detalhe"></a></p>
+						<p class="nome-dentista">Gumercinda <i class="fas fa-info-circle detalhe"></i> </a></p>
 					</div>
 					
 					<div class="dentista">
 					<a data-modal-target="#jalma">
 						<img src="assets/img/dentista-2.jpg" class="foto-perfil">
-						<p class="nome-dentista">Jalma <img src="assets/img/detalhe.png" class="detalhe"></a></p>
+						<p class="nome-dentista">Jalma <i class="fas fa-info-circle detalhe"></i></a></p>
 					</div>
 					
 					<div class="dentista">
 					<a data-modal-target="#joeferson">
 						<img src="assets/img/dentista-3.jpg" class="foto-perfil">
-					<p class="nome-dentista">Joeferson <img src="assets/img/detalhe.png" class="detalhe"></a></p>
+					<p class="nome-dentista">Joeferson <i class="fas fa-info-circle detalhe"></i></a></p>
 					</div>
 					
 				</div>
@@ -79,23 +47,7 @@
 			</div>
 
 		</section>
-		<footer><p class="titulo-pagina negrito">Contate-nos</p>
-			<div class="container">
-			
-				<div class="dados1">
-				
-				<p class="negrito"> <img src="assets/img/telefone.png" height="20">  1234-5678 </p>
-				
-				<a class="dados-link" href="mailto:clinicaabc@gmail.com"><p class="negrito"> <img src="assets/img/gmail.png" height="20">  ClinicaABC@gmail.com </p></a>
-				</div>
-				
-				<div class="dados2">
-					<a class="dados-link" href="https://www.facebook.com/"><p class="negrito"> <img src="assets/img/FB.png" height="20">  ClinicaABC </p></a>
-					
-					<a class="dados-link" href="https://www.instagram.com/"><p class="negrito"> <img src="assets/img/insta.png" height="20">  @ClinicaABC </p></a>
-				</div>
-			</div>
-		</footer>
+
 
 <!-- Detalhe dos dentistas -->
 		<div class="modal" id="gumercinda">
@@ -157,7 +109,7 @@
 					</div>
 				</div>
 				  <div id="overlay"></div>
-		  
-		<script type="text/javascript" src="assets/js/config.js"></script>
-    </body>
-</html>
+<?php
+	include_once 'footer.php';
+	?>  
+

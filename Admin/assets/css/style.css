@@ -204,3 +204,7 @@ a{
   .negrito{
 	  font-weight: bold;
   }
+
+  .icone-login{
+	  font-size: 40px;
+  }

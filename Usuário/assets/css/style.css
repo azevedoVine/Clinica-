@@ -23,6 +23,7 @@ body{
     list-style: none;
     display: flex;
 	padding: 0 13%;
+	justify-content: space-between;
 	font-size: 14;
     position: relative;
     width: 100%;
@@ -56,6 +57,7 @@ ul{
 
 .menu li:hover ul{
 	display:block;
+	margin-top: 0.5%;
 }
 
 .menu li ul li{
@@ -155,9 +157,9 @@ footer{
 
 .detalhe{
 	float:right;
-	/* height:18; */
+	color: #008FFF;
 	float: right;
-    height: 14px;
+    font-size: 18px;
     margin-right: 29px;
 	
 }
