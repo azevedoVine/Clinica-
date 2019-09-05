@@ -13,19 +13,19 @@
             <a data-modal-target="#tratamento-individual" class="saiba-botao">
                 <img src="assets/img/clareamento.jpg" class="foto-propaganda">
                 <p class="nome-tratamento">Clareamento</p>
-                <div class="saiba-mais"><p class="botao-saiba">SAIBA MAIS</p> <img src="assets/img/icone-mais.png" class="icone-mais"></div></a>
+                <div class="saiba-mais"><p class="botao-saiba">SAIBA MAIS</p><i id="icone-saiba-mais" class="fas fa-plus icone-mais"></i></div></a>
             </div>
             <div class="tratamento">
             <a data-modal-target="#tratamento-individual" class="saiba-botao">
                 <img src="assets/img/aparelho-ortodontico.jpg" class="foto-propaganda">
                 <p class="nome-tratamento">Clareamento</p>
-                <div class="saiba-mais"><p class="botao-saiba">SAIBA MAIS</p> <img src="assets/img/icone-mais.png" class="icone-mais"></div></a>
+                <div class="saiba-mais"><p class="botao-saiba">SAIBA MAIS</p><i id="icone-saiba-mais" class="fas fa-plus icone-mais"></i></div></a>
             </div>
             <div class="tratamento">
             <a data-modal-target="#tratamento-individual" class="saiba-botao">
                 <img src="assets/img/Implantes.jpg" class="foto-propaganda">
                 <p class="nome-tratamento">Implantes</p>
-                <div class="saiba-mais"> <p class="botao-saiba">SAIBA MAIS</p> <img src="assets/img/icone-mais.png" class="icone-mais"></div></a>
+                <div class="saiba-mais"> <p class="botao-saiba">SAIBA MAIS</p><i id="icone-saiba-mais" class="fas fa-plus icone-mais"></i></div></a>
             </div>
             </div>
             <div id="tratamentos"> 
@@ -33,19 +33,19 @@
                 <a data-modal-target="#tratamento-individual" class="saiba-botao">
                     <img src="assets/img/clareamento.jpg" class="foto-propaganda">
                     <p class="nome-tratamento">Clareamento</p>
-                   <div class="saiba-mais"><p class="botao-saiba">SAIBA MAIS</p> <img src="assets/img/icone-mais.png" class="icone-mais"></div></a>
+                   <div class="saiba-mais"><p class="botao-saiba">SAIBA MAIS</p><i id="icone-saiba-mais" class="fas fa-plus icone-mais"></i></div></a>
                 </div>
                 <div class="tratamento">
                 <a data-modal-target="#tratamento-individual" class="saiba-botao">
                     <img src="assets/img/aparelho-ortodontico.jpg" class="foto-propaganda">
                     <p class="nome-tratamento">Clareamento</p>
-                    <div class="saiba-mais"><p class="botao-saiba">SAIBA MAIS</p> <img src="assets/img/icone-mais.png" class="icone-mais"></div></a>
+                    <div class="saiba-mais"><p class="botao-saiba">SAIBA MAIS</p><i id="icone-saiba-mais" class="fas fa-plus icone-mais"></i></div></a>
                 </div>
                 <div class="tratamento">
                 <a data-modal-target="#tratamento-individual" class="saiba-botao">
                     <img src="assets/img/clinica-geral.jpg" class="foto-propaganda">
                     <p class="nome-tratamento">Clinica Geral</p>
-                    <div class="saiba-mais"><p class="botao-saiba">SAIBA MAIS</p> <img src="assets/img/icone-mais.png" class="icone-mais"></div></a>
+                    <div class="saiba-mais"><p class="botao-saiba">SAIBA MAIS</p><i id="icone-saiba-mais" class="fas fa-plus icone-mais"></i></div></a>
                 </div>
                 </div>
         </div>
@@ -66,7 +66,7 @@
             <div>
                 <p class="sub-titulo negrito">Noticia tal</p>
                 <p>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam.</p>
-                <a href="atualizacoes.html"><button class='vejamais tratamento-botao'>Veja mais</button></a>
+                <a href="atualizacoes.php"><button class='vejamais tratamento-botao'>Veja mais</button></a>
             </div>
         </div>
         </div>

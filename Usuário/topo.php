@@ -3,10 +3,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/all.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+		<link rel="stylesheet" href="assets/css/bxslider.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/all.css">
+        <script src="assets/js/3.1.1-jquery.min.js"></script>
+	
+		
 	  
 		<link rel="icon" type="image/png" sizes="32x32" href="assets/img/Logo.png">
 
@@ -28,7 +29,7 @@
                 <li><a href="sobre.php">Sobre Nós</a></li>
                 
                     <div id="login">
-                        <a href="perfil.php"><img src="assets/img/user.png" height="35" ></a>
+                        <a href="perfil.php"><i class="fas fa-user icone-login"></i></a>
                     </div>
             </ul>
     </nav>

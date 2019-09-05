@@ -310,10 +310,14 @@ footer{
 }
 
 .icone-mais{
-	height: 17px;
+	font-size: 17px;
 	margin-top: 0.5%;
 	margin-left: 6%;
 	margin-bottom: 0.5%;
+}
+
+#icone-saiba-mais{
+	color: #04b404ff;
 }
 
 *, *::after, *::before {
@@ -503,8 +507,9 @@ footer{
 	border:solid;
 	border-color:#008FFF;
 	margin-top: 2px;
-	height: 30%;
-    width: 35%;
+	font-size: 180px;
+	color: gray;
+	padding: 5px;
   }
 
   .foto-dentista{
@@ -514,4 +519,18 @@ footer{
 	/* height: 30%; */
 	height: 200px;
     width: 100%;
+  }
+
+  .icone-dados{
+	  font-size: 20px;
+	  color: black;
+  }
+
+  .icone-dados:hover {
+	color: #008FFF;
+  }
+
+  .icone-login{
+	  font-size: 35px;
+	  color: #04b404ff;
   }

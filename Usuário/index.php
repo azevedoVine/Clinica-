@@ -34,7 +34,7 @@
 					</div>
 					
 				</div>
-				<a href="dentistas.html"><button class='vejamais'>Mais Profissionais</button></a>
+				<a href="dentistas.php"><button class='vejamais'>Mais Profissionais</button></a>
 			</div>
 
 			<div class="atualizacoes-atalho">
@@ -43,7 +43,7 @@
 				<p class="sub-titulo negrito">Noticia tal</p>
 				<p>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.</p>
 				</div>
-				<a href="atualizacoes.html"><button class='vejamais atualizacao-botao'>Mais Notícias</button></a>
+				<a href="atualizacoes.php"><button class='vejamais atualizacao-botao'>Mais Notícias</button></a>
 			</div>
 
 		</section>

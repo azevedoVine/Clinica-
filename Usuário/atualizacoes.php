@@ -42,7 +42,7 @@
                     <p class="sub-titulo negrito">Aparelho Odontológico</p>
                     <p>Todos as descrições das pessoas são sobre a humanidade do atendimento, a pessoa pega no pulso, examina, olha com carinho.</p>
                     <img src="assets/img/aparelho-ortodontico.jpg" class="foto-propaganda">
-                    <a href="tratamentos.html"><button class='vejamais tratamento-botao'>Veja mais</button></a>
+                    <a href="tratamentos.php"><button class='vejamais tratamento-botao'>Veja mais</button></a>
                 </div>
             </div>
         </div>

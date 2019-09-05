@@ -6,11 +6,11 @@
             <section>
                 <div class="container">
                     <div class="info-user">
-                        <img src="assets/img/perfil-user.png" height="200" class="foto-usuario">
+                    <i class="fas fa-user foto-usuario"></i>
                         <div class="dados-user">
                             <p><span class="negrito">Nome: </span>Jenovevo Catarrinho</p>
                             <p><span class="negrito">Email: </span>Catarrinho@gmail.com</p>
-                            <a class="negrito mais-info-link" href="#">Mais informações <img src="assets/img/mais-azul.png" class="icone-mais"></a>
+                            <a class="negrito mais-info-link" href="#">Mais informações <i class="fas fa-plus icone-mais"></i></a>
                         </div>
                         <div class="div-calendario">
                             <div class="calendario">
