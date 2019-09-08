@@ -1,35 +1,5 @@
-<html>
-    <head>
-        <title>Clínica ABC - Admin</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/all.css">
-		<link rel="icon" type="image/png" sizes="32x32" href="assets/img/icone-browser.png">
-		
-    </head>
-    <body>
-			<div id="topo">
-				<a href="index.html">
-					<div id="logo">
-						<img src="assets/img/logo.png" width="120" height="120">         
-					</div>
-				</a>
-				<div id="login">
-					<i class="fas fa-user-shield icone-login"></i>
-				</div>
-			</div>
-		<nav>	
-			<div class="acesso-rapido">
-				<ul class="ul-a">
-						<div class="atalho"><li><a href="index.html">Inicio</a></li></div>
-						<div class="atalho atalho-left"><li><a href="atualizacao.html">Atualizações</a></li></div>
-						<div class="atalho atalho-left"><li><a href="consultas.html">Consultas</a></li></div>
-						<div class="atalho atalho-left"><li><a href="tratamentos.html">Tratamentos</a></li></div>
-						<div class="atalho atalho-left"><li><a href="sobre.html">Sobre nós</a></li></div>
-				</ul>
-			</div>
-		</nav>
+<?php include_once "topo.php";
+?>
 			
 		<section>
 		<div class="container">
@@ -46,12 +16,13 @@
 			<div class="tabela">
 					<table>
 							<tr class="titulo-tabela">
-							<th colspan="5">Consultas</th>
+							<th colspan="6">Consultas</th>
 						  </tr>
 						  <tr class="tr1">
 							<th>Id</th>
 							<th>Paciente</th>
 							<th>Especialidade</th>
+							<th>Data</th>
 							<th>Dentista</th>
 							<th>Ações</th>
 						  </tr>
@@ -59,6 +30,7 @@
 							<td>1</td>
 							<td>Paciente Tal</td>
 							<td>AF</td>
+							<td>12/06/2019</td>
 							<td>Jalmas</td>
 							<td> <a data-modal-target="#detalhe-consulta"><i class="fas fa-eye icone-tabela "></i></a></td>
 						  </tr>
@@ -66,6 +38,7 @@
 								<td>2</td>
 								<td>Paciente Tal</td>
 								<td>F</td>
+								<td>12/06/2019</td>
 								<td>Gumercinda</td>
 								<td> <a data-modal-target="#detalhe-consulta"><i class="fas fa-eye icone-tabela "></i></a></td>
 						  </tr>
@@ -73,7 +46,40 @@
 								<td>3</td>
 								<td>Paciente Tal</td>
 								<td>A</td>
+								<td>12/06/2019</td>
+								<td>Gumercinda</td>
+								<td> <a data-modal-target="#detalhe-consulta"><i class="fas fa-eye icone-tabela "></i></a></td>
+						  </tr>
+						  <tr>
+								<td>4</td>
+								<td>Paciente Tal</td>
+								<td>A</td>
+								<td>12/06/2019</td>
+								<td>Jalma</td>
+								<td> <a data-modal-target="#detalhe-consulta"><i class="fas fa-eye icone-tabela "></i></a></td>
+						  </tr>
+						  <tr>
+								<td>5</td>
+								<td>Paciente Tal</td>
+								<td>A</td>
+								<td>12/06/2019</td>
 								<td>Joeferson</td>
+								<td> <a data-modal-target="#detalhe-consulta"><i class="fas fa-eye icone-tabela "></i></a></td>
+						  </tr>
+						  <tr>
+								<td>6</td>
+								<td>Paciente Tal</td>
+								<td>A</td>
+								<td>12/06/2019</td>
+								<td>Gumercinda</td>
+								<td> <a data-modal-target="#detalhe-consulta"><i class="fas fa-eye icone-tabela "></i></a></td>
+						  </tr>
+						  <tr>
+								<td>7</td>
+								<td>Paciente Tal</td>
+								<td>A</td>
+								<td>12/06/2019</td>
+								<td>Jalma</td>
 								<td> <a data-modal-target="#detalhe-consulta"><i class="fas fa-eye icone-tabela "></i></a></td>
 						  </tr>
 						 
@@ -83,8 +89,6 @@
 			</div>
 		</div>
 		</section>
-	
-		<footer><span>Desenvolvido por Vinicius Azevedo</span></footer>
 
 		<div class="modal" id="detalhe-consulta">
                 <div class="modal-header">
@@ -103,7 +107,5 @@
             </div>
               <div id="overlay"></div>
 
-		<script type="text/javascript" src="assets/js/config.js"></script>
-		<script type="text/javascript" src="assets/js/all.js"></script>
-    </body>
-</html>
+<?php include_once "footer.php";
+?>

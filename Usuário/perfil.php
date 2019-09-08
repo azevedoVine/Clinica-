@@ -14,7 +14,19 @@
                         </div>
                         <div class="div-calendario">
                             <div class="calendario">
-                                <h1>Em breve calendário</h1>
+                            <div class="calendar">
+                            <div class="calendar-footer">
+                                <div class="next-prev">
+                                <div class="btn prev-btn">prev</div>
+                                <div class="btn next-btn">next</div>
+                                </div>
+                                <div class="options">
+                                <div class="btn jump-today">Today</div>
+                                <div class="btn cancel-btn">Cancel</div>
+                                <div class="btn ok-btn">Ok</div>
+                                </div>
+                            </div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -35,6 +47,29 @@
                     </div>
                 </div>
             </section>
+
+            <script>
+                let c = $('.calendar');
+                let calendar = new Calendar(c);
+                // console.log(calendar.getSelectedDate().day);
+                // console.log(c.find(0));
+                c.find('.ok-btn').on('click', function() {console.log(calendar.getSelectedDate().fullDate)});
+            </script>
+
+            <script type="text/javascript">
+
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-36251023-1']);
+                _gaq.push(['_setDomainName', 'jqueryscript.net']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+
+            </script>
 <?php
 	include_once 'footer.php';
 	?> 

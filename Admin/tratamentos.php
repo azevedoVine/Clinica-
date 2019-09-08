@@ -1,36 +1,5 @@
-<html>
-    <head>
-        <title>Clínica ABC - Admin</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/all.css">
-		<link rel="icon" type="image/png" sizes="32x32" href="assets/img/icone-browser.png">
-		
-    </head>
-    <body>
-			<div id="topo">
-				<a href="index.html">
-					<div id="logo">
-						<img src="assets/img/logo.png" width="120" height="120">         
-					</div>
-				</a>
-				<div id="login">
-					<i class="fas fa-user-shield icone-login"></i>
-				</div>
-			</div>
-		<nav>	
-			<div class="acesso-rapido">
-				<ul class="ul-a">
-						<div class="atalho"><li><a href="index.html">Inicio</a></li></div>
-						<div class="atalho atalho-left"><li><a href="atualizacao.html">Atualizações</a></li></div>
-						<div class="atalho atalho-left"><li><a href="consultas.html">Consultas</a></li></div>
-						<div class="atalho atalho-left"><li><a href="tratamentos.html">Tratamentos</a></li></div>
-						<div class="atalho atalho-left"><li><a href="sobre.html">Sobre nós</a></li></div>
-				</ul>
-			</div>
-		</nav>
-
+<?php include_once "topo.php";
+?>
 		<section>
 		<div class="container">
 			<div class="menu-lateral">
@@ -38,7 +7,7 @@
 					<select name="filtros">
 						<option value="padrao">Padrão</option>
 						<option value="data-publi">Data de Publicação</option>
-						<option value="autor">Autor</option>
+						<option value="descricao">Descrição</option>
 						<option value="titulo">Titulo</option>                                    
 					</select>		
 			</div>		
@@ -46,12 +15,13 @@
 			<div class="tabela">
 					<table>
 							<tr class="titulo-tabela">
-							<th colspan="5">Atualizações</th>
+							<th colspan="6">Tratamentos</th>
 						  </tr>
 						  <tr class="tr1">
 							<th>Id</th>
 							<th>Titulo</th>
 							<th>Descrição</th>
+							<th>Data de Publicação</th>
 							<th>Foto</th>
 							<th>Ações</th>
 						  </tr>
@@ -59,6 +29,7 @@
 							<td>1</td>
 							<td>Tratamento Tal</td>
 							<td>É legal</td>
+							<td>12/06/2019</td>
 							<td><img src="assets/img/uj.png"></td>
 							<td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
 						  </tr>
@@ -66,6 +37,7 @@
 								<td>2</td>
 								<td>Tratamento Tal</td>
 								<td>Doi mt...</td>
+								<td>12/06/2019</td>
 								<td><img src="assets/img/uj.png"></td>
 								<td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
 						  </tr>
@@ -73,6 +45,7 @@
 								<td>3</td>
 								<td>Tratamento Tal</td>
 								<td>É de boas</td>
+								<td>12/06/2019</td>
 								<td><i class="fas fa-ban icone-tabela "></i></td>
 								<td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
 						  </tr>
@@ -83,8 +56,6 @@
 			</div>
 		</div>
 		</section>
-	
-		<footer><span>Desenvolvido por Vinicius Azevedo</span></footer>
 
 		<div class="modal" id="excluir">
                 <div class="modal-header">
@@ -101,7 +72,5 @@
             </div>
               <div id="overlay"></div>
 
-		<script type="text/javascript" src="assets/js/config.js"></script>
-		<script type="text/javascript" src="assets/js/all.js"></script>
-    </body>
-</html>
+			  <?php include_once "footer.php";
+?>
