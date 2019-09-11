@@ -16,12 +16,13 @@
 				</div>
 			</div>
 		</footer>
-		
+
 		<script type="text/javascript" src="assets/js/all.js"></script>
-		<!-- <script type="text/javascript" src="assets/js/config.js"></script> -->
-		<script src="assets/js/3.1.1-jquery.min.js"></script>
+		<script src="assets/js/3.1.1-jquery.min.js"></script>		
 		<script type="text/javascript" src="assets/js/bxslider.min.js"></script>
-		<script type="text/javascript" src="assets/js/calendar.js"></script>
+		<script type="text/javascript" src="assets/js/config.js"></script>
+		<script type="text/javascript" src="assets/js/caleandar.js"></script>
+    	<script type="text/javascript" src="assests/js/demo.js"></script>
 		
         
     

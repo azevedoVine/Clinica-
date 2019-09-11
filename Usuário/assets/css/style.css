@@ -119,11 +119,13 @@ a:active{
 .fundo{
 	background-color:#f9f9f9ff;
 	width: 50%;
+	height: 400px;
 }
 
 .container{
 	display: flex;
 	margin-left: 13.5%;	
+	height: 30px;
 }
 
 .titulo{
@@ -146,7 +148,10 @@ a:active{
 
 footer{
 	background-color:#f9f9f9ff;
-	margin-top: 5%;
+	bottom: 0;
+	padding-top: 1%;
+	position: absolute;
+	width: 100%;
 }
 
 .dados2{
@@ -168,9 +173,12 @@ footer{
 	border-color:#008FFF;
 	border-radius: 10px;
 	background-color:#f9f9f9ff;
-	margin-left: 67%;
+	margin-left: 71%;
 	margin-bottom: 5px;
-	font-size: 11px;	
+	font-size: 12px;
+	font-weight: 520; 
+	width:20%;
+	height: 25px;	
 }
 
 .vejamais:hover{
@@ -184,6 +192,7 @@ footer{
 	word-wrap: break-word;
 	width:30%;
 	padding: 1%;
+	height: 400px;
 }
 
 .atualizacao-botao{
@@ -334,8 +343,8 @@ footer{
 	border-radius: 10px;
 	z-index: 10;
 	background-color: white;
-	width: 40%;
-	height: 50%;
+	width: 46%;
+	height: 55%;
 	max-width: 80%;
   }
   
@@ -517,8 +526,8 @@ footer{
 	border-color:#008FFF;
 	margin-top: 2px;
 	/* height: 30%; */
-	height: 200px;
-    width: 100%;
+	height: 250px;
+    width: 189px;
   }
 
   .icone-dados{

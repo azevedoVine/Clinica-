@@ -7,13 +7,13 @@
   const overlay = document.getElementById('overlay')
   
   openModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', function(){
       const modal = document.querySelector(button.dataset.modalTarget)
       openModal(modal)
     })
   })
   
-  overlay.addEventListener('click', () => {
+  overlay.addEventListener('click', function(){
     const modals = document.querySelectorAll('.modal.active')
     modals.forEach(modal => {
       closeModal(modal)
