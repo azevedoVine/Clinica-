@@ -13,147 +13,114 @@
 					</select>		
 			</div>		
 			<div class="tabela">
-			<table id="playlistTable">
-  <caption>Atualizações</caption>
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Titulo</th>
-      <th>Descrição</th>
-      <th>Data</th>
-      <th colspan="2">Ações</th>
+          <table id="playlistTable">
+            <caption>Atualizações</caption>
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Titulo</th>
+                <th>Descrição</th>
+                <th>Data</th>
+                <th colspan="2">Ações</th>
 
-    </tr>
-  </thead>
+              </tr>
+            </thead>
 
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Hide You</td>
-      <td>Kosheen</td>
-      <td>01/09/1990</td>
-      <td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"></td>
-      <td><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-    </tr>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Hide You</td>
+                <td>Kosheen</td>
+                <td>01/09/1990</td>
+                <td> <i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+              </tr>
 
-    <tr>
-      <td>2</td>
-      <td>.38.45</td>
-      <td>Thievery Corporation</td>
-      <td>01/09/1990</td>
-      <td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"></td>
-      <td><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-    </tr>
+              <tr>
+                <td>2</td>
+                <td>.38.45</td>
+                <td>Thievery Corporation</td>
+                <td>01/09/1990</td>
+                <td> <i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+              </tr>
 
-    <tr>
-      <td>3</td>
-      <td>Fix You</td>
-      <td>Coldplay</td>
-      <td>01/09/1990</td>
-      <td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"></td>
-      <td><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-    </tr>
+              <tr>
+                <td>3</td>
+                <td>Fix You</td>
+                <td>Coldplay</td>
+                <td>01/09/1990</td>
+                <td> <i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+              </tr>
 
-    <tr>
-      <td>4</td>
-      <td>Maps</td>
-      <td>Yeah Yeah Yeahs</td>
-      <td>01/09/1990</td>
-      <td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"></td>
-      <td><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-    </tr>
+              <tr>
+                <td>4</td>
+                <td>Maps</td>
+                <td>Yeah Yeah Yeahs</td>
+                <td>01/09/1990</td>
+                <td><i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+              </tr>
 
-    <tr>
-      <td>5</td>
-      <td>Ask me how I am</td>
-      <td>Snow Patrol</td>
-      <td>01/09/1990</td>
-      <td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"></td>
-      <td><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-    </tr>
+              <tr>
+                <td>5</td>
+                <td>Ask me how I am</td>
+                <td>Snow Patrol</td>
+                <td>01/09/1990</td>
+                <td> <i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+              </tr>
 
-    <tr>
-      <td>6</td>
-      <td>PMT</td>
-      <td>Deeper Water</td>
-      <td>01/09/1990</td>
-      <td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"></td>
-      <td><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-    </tr>
+              <tr>
+                <td>6</td>
+                <td>PMT</td>
+                <td>Deeper Water</td>
+                <td>01/09/1990</td>
+                <td> <i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+              </tr>
 
-    <tr>
-      <td>7</td>
-      <td>Four Kicks</td>
-      <td>Kings of Leon</td>
-      <td>01/09/2001</td>
-      <td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"></td>
-      <td><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-    </tr>
+              <tr>
+                <td>7</td>
+                <td>Four Kicks</td>
+                <td>Kings of Leon</td>
+                <td>01/09/2001</td>
+                <td> <i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+              </tr>
 
-    <tr>
-      <td>8</td>
-      <td>Gravity</td>
-      <td>Embrace</td>
-      <td>01/09/1998</td>
-      <td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"></td>
-      <td><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-    </tr>
+              <tr>
+                <td>8</td>
+                <td>Gravity</td>
+                <td>Embrace</td>
+                <td>01/09/1998</td>
+                <td> <i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+              </tr>
 
-    <tr>
-      <td>9</td>
-      <td>Lyla</td>
-      <td>Oasis</td>
-      <td>01/09/1990</td>
-      <td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"></td>
-      <td><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-    </tr>
+              <tr>
+                <td>9</td>
+                <td>Lyla</td>
+                <td>Oasis</td>
+                <td>01/09/1990</td>
+                <td> <i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+              </tr>
 
-    <tr>
-      <td>10</td>
-      <td>All For You, Sophia</td>
-      <td>Franz Ferdinand</td>
-      <td>01/09/1990</td>
-      <td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"></td>
-      <td><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-    </tr>
+              <tr>
+                <td>10</td>
+                <td>All For You, Sophia</td>
+                <td>Franz Ferdinand</td>
+                <td>01/09/1990</td>
+                <td><i class="fas fa-pen icone-tabela "></i></a></td>
+                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+              </tr>
 
-  </tbody>
-</table>
+            </tbody>
+          </table>
 			
 			</div>
-
-	<style>
-	table {
-	border-collapse: collapse;
-	width: 50em;
-	border: 1px solid #666;
-  }
-  thead {
-	background: #ccc url(https://www.devfuria.com.br/html-css/tabelas/bar.gif) repeat-x left center;
-	border-top: 1px solid #008FFF;
-	border-bottom: 1px solid #008FFF;
-  }
-  tr:hover {
-	background-color:#008FFF;
-	color: white;
-  }
-  thead tr:hover {
-	background-color: transparent;
-	color: inherit;
-  }
-  tr:nth-child(even) {
-	  background-color: lightblue;
-  }
-  th {
-	font-weight: normal;
-	text-align: left;
-  }
-  th, td {
-	padding: 0.1em 1em;
-  }
-
-	</style>
-
 
 		</div>
 		</section>
@@ -166,7 +133,7 @@
                 <div class="modal-body">
                     <article>
 							<p>Tem certeza que deseja excluir "Noticia Tal"?</p>
-							<button>Excluir</button>
+							<button data-close-button onclick="confirmaExclui()">Excluir</button>
 							<button data-close-button>Cancelar</button>
                     </article>
                 </div>

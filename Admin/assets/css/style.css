@@ -1,9 +1,8 @@
 #logo{
 
-	 width:150px;
-	 height:120px;
+	 width:100px;
+	 height:80px;
 	 background-color:#008FFF;
-	 text-align:center;
 }
 #login{ 
 
@@ -13,7 +12,7 @@
 }
 
 .acesso-rapido{
-	position: absolute;
+	display: flex;
 	left: 35%;
 	top: 1%;
 	width: 43%;
@@ -21,19 +20,22 @@
 	border:solid;
 	border-color: #008FFF;
 	background-color: #CEE3F6;
+	margin-left: 28%;
 }
 
 .ul-a{
 	list-style:none;
 	margin-right: 10%;
+	margin-top: 1%;
 	display: flex;
 }
 
 .atalho{
 	float: left;
 	background-color: #CEE3F6;
-	height: 100%;
+	height: 30%;
 	width: 100px;
+	margin-top: 5%;
 }
 
 .atalho-left{
@@ -41,7 +43,7 @@
 }
 
 .atalho:hover{
-	background-color: #A9D0F5;
+	color: gray;
 }
 
 .menu-ul{
@@ -152,9 +154,14 @@ a{
 	   font-size: 8px;
 	   text-align: center;
 	   padding-top: 1%; 
-	   height: 5%;
+	   height: 30px;
 	   margin-top: 5%;
+	   position: absolute;
+	   bottom: 0;
+	   width: 100%;
+	
   }
+
   .botao-novo{
 	background-color: yellow;
 	width: 10%;
@@ -168,38 +175,6 @@ a{
   .container{
 	  display: flex;
   }
-  /* .tr1{
-	background-color: grey;
-	border: solid;
-  }
-  
-  .titulo-tabela{
-	background-color:  #1381B4;
-	font-size: 20px;
-  }
-
-  td{
-	border: solid;
-    text-align: center;
-    width: 200px;
-    height: 27px;
-  }
-
-  th{
-	border: solid;
-	
-  }
-
-  .tabela{
-	  margin-top: 3%;
-	  margin-left: 1%;
-  }
-
-  .icone-tabela{
-	  width: 15px; 
-	  height: 15px; 
-	  margin-right: 2px;
-  } */
 
   .negrito{
 	  font-weight: bold;
@@ -216,19 +191,19 @@ a{
   }
   thead {
 	background: #ccc url(https://www.devfuria.com.br/html-css/tabelas/bar.gif) repeat-x left center;
-	border-top: 1px solid #a5a5a5;
-	border-bottom: 1px solid #a5a5a5;
+	border-top: 1px solid #008FFF;
+	border-bottom: 1px solid #008FFF;
   }
   tr:hover {
-	background-color:#3d80df;
-	color: #fff;
+	background-color:#008FFF;
+	color: white;
   }
   thead tr:hover {
 	background-color: transparent;
 	color: inherit;
   }
   tr:nth-child(even) {
-	  background-color: #edf5ff;
+	  background-color: lightblue;
   }
   th {
 	font-weight: normal;
@@ -236,4 +211,9 @@ a{
   }
   th, td {
 	padding: 0.1em 1em;
+  }
+
+  .tabela{
+	  margin-left: 10%;
+	  margin-top: 2%;
   }

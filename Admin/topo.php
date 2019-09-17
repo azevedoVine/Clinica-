@@ -10,17 +10,17 @@
     </head>
     <body>
 			<div id="topo">
-				<a href="index.php">
-					<div id="logo">
-						<img src="assets/img/logo.png" width="120" height="120">         
-					</div>
-				</a>
 				<div id="login">
 					<i class="fas fa-user-shield icone-login"></i>
 				</div>
 			</div>
 		<nav>	
 			<div class="acesso-rapido">
+				<a href="index.php">
+					<div id="logo">
+						<img src="assets/img/logo.png" width="80" height="80">         
+					</div>
+				</a>
 				<ul class="ul-a">
 						<div class="atalho"><li><a href="index.php">Inicio</a></li></div>
 						<div class="atalho atalho-left"><li><a href="atualizacao.php">Atualizações</a></li></div>

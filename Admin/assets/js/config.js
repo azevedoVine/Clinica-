@@ -36,4 +36,7 @@ const openModalButtons = document.querySelectorAll('[data-modal-target]')
     overlay.classList.remove('active')
   }
 
+  function confirmaExclui(){
+      alert("Excluído com sucesso!")
+  }
  

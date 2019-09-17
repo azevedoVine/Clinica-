@@ -88,8 +88,6 @@ a:active{
 }
 
 .dentista{
-	/* float: left;
-	margin-left: 4%; */
 	width: 150px;
     height: 200px;
 
@@ -99,7 +97,6 @@ a:active{
 	border:solid;
 	border-color:#008FFF;
 	margin-top: 2px;
-	/* height: 30%; */
 	height: 77%;
     width: 81%;
 	
@@ -422,8 +419,8 @@ footer{
   }
 
   .modal-maior {
-	top: 40% !important;
-	height: 70%!important;
+	top: 50% !important;
+	height: 60% !important;
   }
 
   .modal-foto{
