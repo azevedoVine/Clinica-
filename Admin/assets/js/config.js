@@ -1,21 +1,3 @@
-var co = document.getElementById('grafico');
-var c = co.getContext('2d');
-
-c.globalCompositeOperation = 'destination-over'; //o que faz o retangulo ficar embaixo
-
-c.beginPath();
-c.lineTo(100, 50);
-c.closePath();
-
-c.globalCompositeOperation = 'source-over';
-
-c.beginPath();
-c.rect(0, 50, 500, 90);
-c.fillStyle="red";
-c.fill();
-c.stroke();
-c.closePath();
-
 // JS MODAL
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
   const closeModalButtons = document.querySelectorAll('[data-close-button]')
