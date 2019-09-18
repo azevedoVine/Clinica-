@@ -15,8 +15,8 @@
       	
 			<div class="tabela">
           <table id="playlistTable">
-          <a href="novaatualização.php"><button>Nova Atualização</button></a>
-            <caption>Atualizações</caption>
+          <a data-modal-target="#inserir" ><button class="botao-nova">Nova Atualização</button></a>
+            <caption class="titulo-tabela">Atualizações</caption>
             <thead>
               <tr>
                 <th>Id</th>
@@ -134,9 +134,9 @@
                 </div>
                 <div class="modal-body">
                     <article>
-							<p>Tem certeza que deseja excluir "Noticia Tal"?</p>
+							      <p>Tem certeza que deseja excluir "Atualização 1"?</p>
                     <button data-close-button class="botao-editar" onclick="confirmaExcluir()">Editar</a>
-                    <button data-close-button class="botao-editar">Cancelar</a>
+                    <button data-close-button class="botao-editar-cancelar">Cancelar</a>
                     </article>
                 </div>
             </div>
@@ -154,8 +154,26 @@
                             <label>Descrição:</label><input type="text" placeholder="É um legal">      
                             <label>Data:</label><input type="text" placeholder="XX/XX/XXXX">      
                                 <button data-close-button class="botao-editar" onclick="confirmaEditar()">Editar</a>
-                                <button data-close-button class="botao-editar">Cancelar</a>
+                                <button data-close-button class="botao-editar-cancelar">Cancelar</a>
 							</div>
+						</div>
+					</div>
+				</div>
+          <div id="overlay"></div>
+  
+    <div class="modal" id="inserir">
+					<div class="modal-header">
+					  <div class="titulo negrito">Inserir Atualização</div>
+					  <button data-close-button class="close-button">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div class="inserir-modal">
+						<form>                   
+                            <label>Titulo:</label><input type="text">      
+                            <label>Descrição:</label><textarea type="text" class="textarea-inserir"></textarea>      
+                            <button onclick="confirmaInserir()" class="botao-editar">Inserir</a>
+                            <button data-close-button class="botao-editar-cancelar">Cancelar</a>
+            </form>
 						</div>
 					</div>
 				</div>

@@ -43,4 +43,7 @@ const openModalButtons = document.querySelectorAll('[data-modal-target]')
   function confirmaEditar(){
     alert("Editado com sucesso!")
 }
-  
+   
+  function confirmaInserir(){
+    alert("Inserido com sucesso!")
+  }

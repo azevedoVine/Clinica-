@@ -10,7 +10,7 @@
                         <div class="dados-user">
                             <p><span class="negrito">Nome: </span>Jenovevo Catarrinho</p>
                             <p><span class="negrito">Email: </span>Catarrinho@gmail.com</p>
-                            <a class="negrito mais-info-link">Mais informações <i class="fas fa-plus icone-mais"></i></a>
+                            <a data-modal-target="#editar" class="negrito mais-info-link">Editar informações <i class="fas fa-edit"></i></a>
                         </div>
 
                         <div id="caleandar">
@@ -36,10 +36,25 @@
                 </div>
             </section>
 
-            <script>
-
-
-            </script>
+            <div class="modal" id="editar">
+					<div class="modal-header">
+					  <div class="titulo negrito">Editar informações do Perfil</div>
+					  <button data-close-button class="close-button">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div>
+							<div class="editar-modal">
+                            <label>Nome:</label><input type="text" placeholder="Jenovevo Catarrinho">      
+                            <label>Email:</label><input type="text" placeholder="Catarrinho@gmail.com">      
+                               <div class="botoes-editar">
+                                <button data-close-button class="botao-editar" onclick="confirmaEditar()">Editar</a>
+                                <button data-close-button class="botao-editar-cancelar">Cancelar</a>
+                               </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				  <div id="overlay"></div>
 <?php
 	include_once 'footer.php';
 	?> 

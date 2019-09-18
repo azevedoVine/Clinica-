@@ -15,7 +15,7 @@
 
 			<div class="tabela">
 			<table id="playlistTable">
-            <caption>Consultas</caption>
+            <caption class="titulo-tabela">Consultas</caption>
             <thead>
               <tr>
                 <th>Id</th>

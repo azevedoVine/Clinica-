@@ -28,7 +28,7 @@
                 <li><a href="sobre.php">Sobre Nós</a></li>
                 
                     <div id="login">
-                        <a href="perfil.php"><i class="fas fa-user icone-login"></i></a>
+                        <a href="login.php"><i class="fas fa-user icone-login"></i></a>
                     </div>
             </ul>
     </nav>

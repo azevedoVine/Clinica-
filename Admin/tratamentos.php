@@ -14,7 +14,8 @@
 
 			<div class="tabela">
 			<table id="playlistTable">
-            <caption>Tratamentos</caption>
+            <a data-modal-target="#inserir"><button class="botao-nova">Novo Tratamento</button></a>
+            <caption class="titulo-tabela">Tratamentos</caption>
             <thead>
               <tr>
                 <th>Id</th>
@@ -116,6 +117,24 @@
                                 <button data-close-button class="botao-editar" onclick="confirmaEditar()">Editar</a>
                                 <button data-close-button class="botao-editar">Cancelar</a>
 							</div>
+						</div>
+					</div>
+				</div>
+          <div id="overlay"></div>
+    
+    <div class="modal" id="inserir">
+					<div class="modal-header">
+					  <div class="titulo negrito">Inserir Tratamento</div>
+					  <button data-close-button class="close-button">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div class="inserir-modal">
+						<form>                   
+                            <label>Titulo:</label><input type="text">      
+                            <label>Descrição:</label><textarea type="text" class="textarea-inserir"></textarea>      
+                            <button onclick="confirmaInserir()" class="botao-editar">Inserir</a>
+                            <button data-close-button class="botao-editar-cancelar">Cancelar</a>
+            </form>
 						</div>
 					</div>
 				</div>

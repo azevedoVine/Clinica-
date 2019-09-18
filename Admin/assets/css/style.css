@@ -161,17 +161,6 @@ a{
 	   width: 100%;
 	
   }
-
-  .botao-novo{
-	background-color: yellow;
-	width: 10%;
-	height: 20px;
-	text-align: center;
-	border: solid;
-	border-color: darkgoldenrod;
-	margin-left: 1%;
-  }
-
   .container{
 	  display: flex;
   }
@@ -267,7 +256,6 @@ input{
 }
 
 .editar-modal{
-	margin-left: 30%;
 	margin-top: 1%;
 }
 
@@ -281,4 +269,76 @@ input{
 .botao-editar:hover{
 	background-color: #008FFF;
 	color: white;
+}
+
+.textarea-inserir{
+	display: block;
+	border:solid 2px;
+	border-color: #008FFF;
+	height: 100px;
+	width: 175px;
+}
+
+.botao-editar-cancelar{
+	border-radius: 10px;
+	background-color:#f9f9f9ff;
+	margin-top: 4%;
+}
+
+.botao-editar-cancelar:hover{
+	background-color: red;
+	color: white;
+}
+
+.botao-nova{
+	border-radius: 10px;
+	border-color: #008FFF;
+	background-color:#f9f9f9ff;
+}
+
+.botao-nova:hover{
+	background-color: #008FFF;
+	color: white;
+}
+
+.titulo-tabela{
+	font-weight: bold;
+	color: #04B4AE;
+	font-size: 18px;
+
+}
+
+.grafico-todo{
+	height:300px;
+	margin-left: 10%;
+}
+.container {
+    width: 80%;
+    background-color: #ddd;
+}
+
+.grafico {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.h1-grafico {
+    font-size: 20px;
+    color:#008FFF;
+    text-align: center;
+    margin-right: 20%;
+}
+
+.primeiro {
+    width: 90%; 
+    background-color: #008FFF;
+}
+.segundo {
+    width: 80%; 
+    background-color: #008FFF;
+}
+.terceiro {
+    width: 65%;
+    background-color: #008FFF;
 }
