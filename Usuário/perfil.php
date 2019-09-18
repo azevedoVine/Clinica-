@@ -10,7 +10,7 @@
                         <div class="dados-user">
                             <p><span class="negrito">Nome: </span>Jenovevo Catarrinho</p>
                             <p><span class="negrito">Email: </span>Catarrinho@gmail.com</p>
-                            <a class="negrito mais-info-link" href="#">Mais informações <i class="fas fa-plus icone-mais"></i></a>
+                            <a class="negrito mais-info-link">Mais informações <i class="fas fa-plus icone-mais"></i></a>
                         </div>
 
                         <div id="caleandar">

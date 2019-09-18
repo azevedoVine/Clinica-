@@ -11,7 +11,7 @@
 						<option value="titulo">Titulo</option>                                    
 					</select>		
 			</div>		
-			<!-- <div class="botao-novo">Nova Atualização </div> -->
+
 			<div class="tabela">
 			<table id="playlistTable">
             <caption>Tratamentos</caption>
@@ -32,8 +32,8 @@
                 <td>Hide You</td>
                 <td>Kosheen</td>
                 <td>01/09/1990</td>
-                <td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"></td>
-                <td><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
+                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
 
               <tr>
@@ -41,8 +41,8 @@
                 <td>.38.45</td>
                 <td>Thievery Corporation</td>
                 <td>01/09/1990</td>
-                <td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"></td>
-                <td><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
+                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
 
               <tr>
@@ -50,8 +50,8 @@
                 <td>Fix You</td>
                 <td>Coldplay</td>
                 <td>01/09/1990</td>
-                <td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"></td>
-                <td><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
+                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
 
               <tr>
@@ -59,8 +59,8 @@
                 <td>Maps</td>
                 <td>Yeah Yeah Yeahs</td>
                 <td>01/09/1990</td>
-                <td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"></td>
-                <td><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
+                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
 
               <tr>
@@ -68,8 +68,8 @@
                 <td>Ask me how I am</td>
                 <td>Snow Patrol</td>
                 <td>01/09/1990</td>
-                <td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"></td>
-                <td><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
+                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
 
               <tr>
@@ -77,8 +77,8 @@
                 <td>PMT</td>
                 <td>Deeper Water</td>
                 <td>01/09/1990</td>
-                <td> <i class="fas fa-pen icone-tabela "></i><a data-modal-target="#excluir"></td>
-                <td><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
+                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>  
             </tbody>
           </table>
@@ -95,12 +95,31 @@
                 <div class="modal-body">
                     <article>
 							<p>Tem certeza que deseja excluir "Tratamento Tal"?</p>
-							<button>Excluir</button>
-							<button data-close-button>Cancelar</button>
+							<button data-close-button class="botao-editar" onclick="confirmaExcluir()">Excluir</a>
+              <button data-close-button class="botao-editar">Cancelar</a>
                     </article>
                 </div>
             </div>
               <div id="overlay"></div>
+    
+    <div class="modal" id="editar">
+					<div class="modal-header">
+					  <div class="titulo negrito">Editar informações do Tratamento</div>
+					  <button data-close-button class="close-button">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div>
+							<div class="editar-modal">
+                            <label>Titulo:</label><input type="text" placeholder="Tratamento BHJK">      
+                            <label>Descrição:</label><input type="text" placeholder="É um legal">      
+                            <label>Data:</label><input type="text" placeholder="XX/XX/XXXX">      
+                                <button data-close-button class="botao-editar" onclick="confirmaEditar()">Editar</a>
+                                <button data-close-button class="botao-editar">Cancelar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				  <div id="overlay"></div>
 
 			  <?php include_once "footer.php";
 ?>

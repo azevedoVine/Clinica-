@@ -8,14 +8,15 @@
             <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icone-browser.png">
 
         </head>
-
-    <style>
-        
-    </style>
 <body>
 
-    <div id="logo-login">
-		<img src="assets/img/logo.png" width="80" height="80">         
+    <div class='div-login'>
+		<img src="assets/img/logo.png" class="logo-login">
+    </div>
+    <div class="div-login">
+        <label>E-mail:</label><input type="text">      
+        <label>Senha:</label><input type="password">      
+                            <a href="index.php"><input type="submit" value="Entrar" id="entrar-login" class="botao-form"></a>
 	</div>
 
 </body>

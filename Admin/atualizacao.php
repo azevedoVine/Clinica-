@@ -11,9 +11,11 @@
 						<option value="data">Data</option>
 						<option value="titulo">Titulo</option>                                    
 					</select>		
-			</div>		
+      </div>
+      	
 			<div class="tabela">
           <table id="playlistTable">
+          <a href="novaatualização.php"><button>Nova Atualização</button></a>
             <caption>Atualizações</caption>
             <thead>
               <tr>
@@ -32,7 +34,7 @@
                 <td>Hide You</td>
                 <td>Kosheen</td>
                 <td>01/09/1990</td>
-                <td> <i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
                 <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
 
@@ -41,7 +43,7 @@
                 <td>.38.45</td>
                 <td>Thievery Corporation</td>
                 <td>01/09/1990</td>
-                <td> <i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
                 <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
 
@@ -50,7 +52,7 @@
                 <td>Fix You</td>
                 <td>Coldplay</td>
                 <td>01/09/1990</td>
-                <td> <i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
                 <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
 
@@ -59,7 +61,7 @@
                 <td>Maps</td>
                 <td>Yeah Yeah Yeahs</td>
                 <td>01/09/1990</td>
-                <td><i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
                 <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
 
@@ -68,7 +70,7 @@
                 <td>Ask me how I am</td>
                 <td>Snow Patrol</td>
                 <td>01/09/1990</td>
-                <td> <i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
                 <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
 
@@ -77,7 +79,7 @@
                 <td>PMT</td>
                 <td>Deeper Water</td>
                 <td>01/09/1990</td>
-                <td> <i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
                 <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
 
@@ -86,7 +88,7 @@
                 <td>Four Kicks</td>
                 <td>Kings of Leon</td>
                 <td>01/09/2001</td>
-                <td> <i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
                 <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
 
@@ -95,7 +97,7 @@
                 <td>Gravity</td>
                 <td>Embrace</td>
                 <td>01/09/1998</td>
-                <td> <i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
                 <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
 
@@ -104,7 +106,7 @@
                 <td>Lyla</td>
                 <td>Oasis</td>
                 <td>01/09/1990</td>
-                <td> <i class="fas fa-pen icone-tabela "></i></td>
+                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
                 <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
 
@@ -113,7 +115,7 @@
                 <td>All For You, Sophia</td>
                 <td>Franz Ferdinand</td>
                 <td>01/09/1990</td>
-                <td><i class="fas fa-pen icone-tabela "></i></a></td>
+                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
                 <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
 
@@ -133,12 +135,31 @@
                 <div class="modal-body">
                     <article>
 							<p>Tem certeza que deseja excluir "Noticia Tal"?</p>
-							<button data-close-button onclick="confirmaExclui()">Excluir</button>
-							<button data-close-button>Cancelar</button>
+                    <button data-close-button class="botao-editar" onclick="confirmaExcluir()">Editar</a>
+                    <button data-close-button class="botao-editar">Cancelar</a>
                     </article>
                 </div>
             </div>
               <div id="overlay"></div>
+
+    <div class="modal" id="editar">
+					<div class="modal-header">
+					  <div class="titulo negrito">Editar informações da Atualização</div>
+					  <button data-close-button class="close-button">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div>
+							<div class="editar-modal">
+                            <label>Titulo:</label><input type="text" placeholder="Atualização BHJK">      
+                            <label>Descrição:</label><input type="text" placeholder="É um legal">      
+                            <label>Data:</label><input type="text" placeholder="XX/XX/XXXX">      
+                                <button data-close-button class="botao-editar" onclick="confirmaEditar()">Editar</a>
+                                <button data-close-button class="botao-editar">Cancelar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				  <div id="overlay"></div>
 
 <?php include_once "footer.php"
 

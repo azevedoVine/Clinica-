@@ -36,7 +36,11 @@ const openModalButtons = document.querySelectorAll('[data-modal-target]')
     overlay.classList.remove('active')
   }
 
-  function confirmaExclui(){
+  function confirmaExcluir(){
       alert("Excluído com sucesso!")
   }
  
+  function confirmaEditar(){
+    alert("Editado com sucesso!")
+}
+  

@@ -11,7 +11,7 @@
     <body>
 			<div id="topo">
 				<div id="login">
-					<i class="fas fa-user-shield icone-login"></i>
+					<a href="perfil.php"><i class="fas fa-user-shield icone-login"></i></a>
 				</div>
 			</div>
 		<nav>	

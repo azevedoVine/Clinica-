@@ -218,8 +218,67 @@ a{
 	  margin-top: 2%;
   }
 
-  .logo-login{
-	  width: 30%;
-	  height: 100px;
-	  background-color:#008FFF;
-  }
+.logo-login{
+	width: 150px;
+	height: 150px;
+	background-color:#008FFF;
+}
+
+.div-login{
+	margin-left: 45%;
+	margin-top: 1%;
+}
+
+input{
+	display: block;
+	margin-top: 1%;
+	border-color: #008FFF;
+}
+
+.botao-form{
+	border-radius: 10px;
+	background-color:#f9f9f9ff;
+	margin-left: 9%;
+	margin-top: 1%;
+}
+
+.botao-form:hover{
+	background-color: #008FFF;
+	color: white;
+}
+
+.info-adm{
+	display: flex;
+	width: 50%;
+	margin-left: 35%;
+	margin-top: 3%;
+}
+
+.foto-admin{
+	font-size: 140px;
+}
+
+.dados-adm{
+	margin-left: 3%;
+}
+
+.editar-perfil:hover{
+	color: #008FFF;
+}
+
+.editar-modal{
+	margin-left: 30%;
+	margin-top: 1%;
+}
+
+.botao-editar{
+	border-radius: 10px;
+	background-color:#f9f9f9ff;
+	margin-left: 5%;
+	margin-top: 4%;
+}
+
+.botao-editar:hover{
+	background-color: #008FFF;
+	color: white;
+}
