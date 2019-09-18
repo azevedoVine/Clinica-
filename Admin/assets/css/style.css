@@ -217,3 +217,9 @@ a{
 	  margin-left: 10%;
 	  margin-top: 2%;
   }
+
+  .logo-login{
+	  width: 30%;
+	  height: 100px;
+	  background-color:#008FFF;
+  }
