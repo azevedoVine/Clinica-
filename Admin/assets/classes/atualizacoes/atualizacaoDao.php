@@ -1,4 +1,5 @@
 <?php
+include_once ('BancodeDados.php');
 
 class AtualizacaoDao extends BancodeDados{
 

@@ -1,4 +1,5 @@
 <?php include_once "topo.php";
+
 ?>
 			
 		<section>
@@ -168,9 +169,10 @@
 					</div>
 					<div class="modal-body">
 						<div class="inserir-modal">
-						<form>                   
-                            <label>Titulo:</label><input type="text">      
-                            <label>Descrição:</label><textarea type="text" class="textarea-inserir"></textarea>      
+						<form action="atualizacao-ok.php" method="POST">                   
+                            <label>Titulo:</label><input type="text" name="titulo">      
+                            <label>Texto:</label><textarea type="text" name="texto" class="textarea-inserir"></textarea> 
+                            <label>Descrição:</label><input type="text" name="descricao">      
                             <button onclick="confirmaInserir()" class="botao-editar">Inserir</a>
                             <button data-close-button class="botao-editar-cancelar">Cancelar</a>
             </form>
