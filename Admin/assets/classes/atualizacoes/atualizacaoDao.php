@@ -4,15 +4,18 @@ include_once ('BancodeDados.php');
 class AtualizacaoDao extends BancodeDados{
 
     public function novaAtualizacao($atualizacao) {
-        $sql = $this->conexao->prepare("INSERT INTO atualizacoes (titulo, texto, descricao, administrador_idAdmin) VALUES (:titulo,  :texto, :descricao)");
 
-        $sql->bindValue(':titulo', $atualizacao->getTitulo());
+        $titulo = $atualizacao->getTitulo();
 
-        $sql->bindValue(':texto', $atualizacao->getTexto());
+        $texto = $atualizacao->getTexto();
 
-        $sql->bindValue(':descricao', $atualizacao->getDescricao());
+        $descricao = $atualizacao->getDescricao();
 
+        $sql = $this->conexao->prepare("INSERT INTO atualizacoes (titulo, texto, descricao) VALUES ('$titulo',  '$texto', '$descricao')");
 
+        
+
+        var_dump($sql);
         return $sql->execute();
     }
 }

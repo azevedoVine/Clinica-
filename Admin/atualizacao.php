@@ -169,18 +169,38 @@
 					</div>
 					<div class="modal-body">
 						<div class="inserir-modal">
-						<form action="atualizacao-ok.php" method="POST">                   
-                            <label>Titulo:</label><input type="text" name="titulo">      
-                            <label>Texto:</label><textarea type="text" name="texto" class="textarea-inserir"></textarea> 
-                            <label>Descrição:</label><input type="text" name="descricao">      
-                            <button onclick="confirmaInserir()" class="botao-editar">Inserir</a>
-                            <button data-close-button class="botao-editar-cancelar">Cancelar</a>
+						<form action="" method="POST">                   
+              <label>Titulo:</label><input type="text" name="titulo">      
+              <label>Texto:</label><textarea type="text" name="texto" class="textarea-inserir"></textarea> 
+              <label>Descrição:</label><input type="text" name="descricao">      
+              <button onclick="confirmaInserir()" class="botao-editar">Inserir</a>
+              <button data-close-button class="botao-editar-cancelar">Cancelar</a>
             </form>
 						</div>
 					</div>
 				</div>
 				  <div id="overlay"></div>
 
-<?php include_once "footer.php"
+<?php 
 
+  include_once "footer.php";
+
+  include_once "assets/classes/atualizacoes/atualizacao.php";
+  include_once "assets/classes/atualizacoes/atualizacaoDao.php";
+
+
+  if (isset($_POST['titulo']) && $_POST['texto'] != "" 
+      && isset($_POST['descricao']) != "") {
+
+        echo "deu merda";
+
+      $atualizacao = new Atualizacao();
+      $atualizacao->setTitulo($_POST['titulo']);
+      $atualizacao->setTexto($_POST['texto']);
+      $atualizacao->setDescricao($_POST['descricao']);
+        
+
+      $atualizacaoDao = new AtualizacaoDao();
+      $atualizacaoDao->novaAtualizacao($atualizacao);
+      }
 ?>
