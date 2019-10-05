@@ -202,7 +202,4 @@
 
       $mensagem = "Inserido com sucesso";
       }
-    else{
-      erroInserir()
-    }
 ?>
