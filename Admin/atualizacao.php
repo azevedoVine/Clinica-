@@ -1,4 +1,10 @@
 <?php include_once "topo.php";
+      include_once "assets/classes/atualizacoes/atualizacao.php";
+      include_once "assets/classes/atualizacoes/atualizacaoDao.php";
+
+  $atualizacaoDao = new AtualizacaoDao();
+
+  $dados = $atualizacaoDao->select();
 
 ?>
 			
@@ -30,15 +36,16 @@
             </thead>
 
             <tbody>
+            <?php foreach($dados as $atualizacoes): ?>
               <tr>
-                <td>1</td>
-                <td>Hide You</td>
+                <td><?php echo $atualizacoes->getIdAtualizacao()?></td>
+                <td>lide You</td>
                 <td>Kosheen</td>
                 <td>01/09/1990</td>
                 <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
                 <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
-
+            <?php endforeach;?>
               <tr>
                 <td>2</td>
                 <td>.38.45</td>
@@ -173,7 +180,7 @@
               <label>Titulo:</label><input type="text" name="titulo">      
               <label>Texto:</label><textarea type="text" name="texto" class="textarea-inserir"></textarea> 
               <label>Descrição:</label><input type="text" name="descricao">      
-              <button onclick="confirmaInserir()" class="botao-editar">Inserir</a>
+              <button onclick="" class="botao-editar">Inserir</a>
               <button data-close-button class="botao-editar-cancelar">Cancelar</a>
             </form>
 						</div>
@@ -184,11 +191,6 @@
 <?php 
 
   include_once "footer.php";
-
-  include_once "assets/classes/atualizacoes/atualizacao.php";
-  include_once "assets/classes/atualizacoes/atualizacaoDao.php";
-
-
   if (isset($_POST['titulo']) && $_POST['texto'] != "") {
 
         $atualizacao = new Atualizacao();
