@@ -38,95 +38,14 @@
             <tbody>
             <?php foreach($dados as $atualizacoes): ?>
               <tr>
-                <td><?php echo $atualizacoes->getIdAtualizacao()?></td>
-                <td>lide You</td>
-                <td>Kosheen</td>
-                <td>01/09/1990</td>
+                <td><?php echo $atualizacoes['idAtualizacao']?></td>
+                <td><?php echo $atualizacoes['titulo']?></td>
+                <td><?php echo $atualizacoes['texto']?></td>
+                <td><?php echo $atualizacoes['descricao']?></td>
                 <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
                 <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
             <?php endforeach;?>
-              <tr>
-                <td>2</td>
-                <td>.38.45</td>
-                <td>Thievery Corporation</td>
-                <td>01/09/1990</td>
-                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
-                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-              </tr>
-
-              <tr>
-                <td>3</td>
-                <td>Fix You</td>
-                <td>Coldplay</td>
-                <td>01/09/1990</td>
-                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
-                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-              </tr>
-
-              <tr>
-                <td>4</td>
-                <td>Maps</td>
-                <td>Yeah Yeah Yeahs</td>
-                <td>01/09/1990</td>
-                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
-                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-              </tr>
-
-              <tr>
-                <td>5</td>
-                <td>Ask me how I am</td>
-                <td>Snow Patrol</td>
-                <td>01/09/1990</td>
-                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
-                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-              </tr>
-
-              <tr>
-                <td>6</td>
-                <td>PMT</td>
-                <td>Deeper Water</td>
-                <td>01/09/1990</td>
-                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
-                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-              </tr>
-
-              <tr>
-                <td>7</td>
-                <td>Four Kicks</td>
-                <td>Kings of Leon</td>
-                <td>01/09/2001</td>
-                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
-                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-              </tr>
-
-              <tr>
-                <td>8</td>
-                <td>Gravity</td>
-                <td>Embrace</td>
-                <td>01/09/1998</td>
-                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
-                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-              </tr>
-
-              <tr>
-                <td>9</td>
-                <td>Lyla</td>
-                <td>Oasis</td>
-                <td>01/09/1990</td>
-                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
-                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-              </tr>
-
-              <tr>
-                <td>10</td>
-                <td>All For You, Sophia</td>
-                <td>Franz Ferdinand</td>
-                <td>01/09/1990</td>
-                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
-                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
-              </tr>
-
             </tbody>
           </table>
 			
@@ -180,7 +99,7 @@
               <label>Titulo:</label><input type="text" name="titulo">      
               <label>Texto:</label><textarea type="text" name="texto" class="textarea-inserir"></textarea> 
               <label>Descrição:</label><input type="text" name="descricao">      
-              <button onclick="" class="botao-editar">Inserir</a>
+              <button onclick="checaInserir()" class="botao-editar">Inserir</a>
               <button data-close-button class="botao-editar-cancelar">Cancelar</a>
             </form>
 						</div>
@@ -200,8 +119,9 @@
         
 
       $atualizacaoDao = new AtualizacaoDao();
-      $atualizacaoDao->novaAtualizacao($atualizacao);
-
-      $mensagem = "Inserido com sucesso";
+      $msg = $atualizacaoDao->novaAtualizacao($atualizacao);
       }
-?>
+  else{}
+?> 
+  <script language="javascript"> var mensagem = "<?php print $msg; ?>"; </script>
+    

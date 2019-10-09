@@ -44,10 +44,7 @@ const openModalButtons = document.querySelectorAll('[data-modal-target]')
     alert("Editado com sucesso!")
 }
    
-  function confirmaInserir(){
-    alert("Inserido com sucesso!")
-  }
-
-  function erroInserir(){
-    alert("Preencha todos os campos!")
+  function checaInserir(mensagem){
+    alert(mensagem);
+    console.log(mensagem);
   }
