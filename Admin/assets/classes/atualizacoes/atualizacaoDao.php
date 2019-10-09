@@ -15,9 +15,9 @@ class AtualizacaoDao extends BancodeDados{
 
         if($sql->execute()==true){
 
-            $teste="Inserido com sucesso";}
+            $teste=false;}
         else{
-            $teste="";
+            $teste=false;
         }
 
         return $teste;
@@ -29,5 +29,23 @@ class AtualizacaoDao extends BancodeDados{
         $a = $sql->fetchAll(PDO::FETCH_ASSOC);
 
         return $a;
+    }
+
+    public function selectById($atualizacao) {
+        echo "CARALEO";
+        $sql = $this->conexao->prepare("SELECT * FROM atualizacoes WHERE idAtualizacao = :idAtualizacao");
+        
+        $sql->bindValue(':idAtualizacao', $atualizacao);
+        $sql->execute();
+        
+        $linha = $sql->fetch();
+
+        $atualizacao = new Atualizacao();
+        $atualizacao->setTexto($linha['texto']);
+        $atualizacao->setTitulo($linha['titulo']);
+        $atualizacao->setDescricao($linha['descricao']);
+        $atualizacao->setIdAtualizacao($linha['idAtualizacao']);
+        
+        return $atualizacao;
     }
 }

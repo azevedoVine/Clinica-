@@ -6,7 +6,7 @@
 
   $dados = $atualizacaoDao->select();
 
-?>
+  ?>
 			
 		<section>
 		<div class="container">
@@ -42,7 +42,9 @@
                 <td><?php echo $atualizacoes['titulo']?></td>
                 <td><?php echo $atualizacoes['texto']?></td>
                 <td><?php echo $atualizacoes['descricao']?></td>
-                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
+                <td><a data-modal-target="#editar" <?php $atualizacaoId=$atualizacoes['idAtualizacao'];
+                                                          var_dump($atualizacaoId);
+                                                         $atualizacaoDao->selectById($atualizacaoId); ?>><i class="fas fa-pen icone-tabela "></i></a></td>
                 <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
             <?php endforeach;?>
@@ -77,11 +79,12 @@
 					<div class="modal-body">
 						<div>
 							<div class="editar-modal">
-                            <label>Titulo:</label><input type="text" placeholder="Atualização BHJK">      
-                            <label>Descrição:</label><input type="text" placeholder="É um legal">      
-                            <label>Data:</label><input type="text" placeholder="XX/XX/XXXX">      
-                                <button data-close-button class="botao-editar" onclick="confirmaEditar()">Editar</a>
-                                <button data-close-button class="botao-editar-cancelar">Cancelar</a>
+                <input type="text" type="hidden" name="id" value="" placeholder="Atualização BHJK">
+                <label>Titulo:</label><input type="text" placeholder="Atualização BHJK">      
+                <label>Descrição:</label><input type="text" placeholder="É um legal">      
+                <label>Data:</label><input type="text" placeholder="XX/XX/XXXX">      
+                    <button data-close-button class="botao-editar" onclick="confirmaEditar()">Editar</a>
+                    <button data-close-button class="botao-editar-cancelar">Cancelar</a>
 							</div>
 						</div>
 					</div>
@@ -96,10 +99,10 @@
 					<div class="modal-body">
 						<div class="inserir-modal">
 						<form action="" method="POST">                   
-              <label>Titulo:</label><input type="text" name="titulo">      
+              <label>Titulo:</label><input required="true" type="text"  name="titulo" >      
               <label>Texto:</label><textarea type="text" name="texto" class="textarea-inserir"></textarea> 
               <label>Descrição:</label><input type="text" name="descricao">      
-              <button onclick="checaInserir()" class="botao-editar">Inserir</a>
+              <a href="checaInserir.php"><button class="botao-editar">Inserir</a>
               <button data-close-button class="botao-editar-cancelar">Cancelar</a>
             </form>
 						</div>
@@ -113,15 +116,21 @@
   if (isset($_POST['titulo']) && $_POST['texto'] != "") {
 
         $atualizacao = new Atualizacao();
-      $atualizacao->setTitulo($_POST['titulo']);
-      $atualizacao->setTexto($_POST['texto']);
-      $atualizacao->setDescricao($_POST['descricao']);
-        
+        $atualizacao->setTitulo($_POST['titulo']);
+        $atualizacao->setTexto($_POST['texto']);
+        $atualizacao->setDescricao($_POST['descricao']);
+          
 
-      $atualizacaoDao = new AtualizacaoDao();
-      $msg = $atualizacaoDao->novaAtualizacao($atualizacao);
-      }
-  else{}
+        $atualizacaoDao = new AtualizacaoDao();
+        $msg = $atualizacaoDao->novaAtualizacao($atualizacao);
+
+        if($msg==true){
+          header("Location: checaInserir.php");
+        } else {
+          header("Location: index.php");
+        }}
+        else{
+          header("Location: checaInserir.php");
+        }
 ?> 
-  <script language="javascript"> var mensagem = "<?php print $msg; ?>"; </script>
     

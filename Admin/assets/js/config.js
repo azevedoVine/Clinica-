@@ -44,7 +44,6 @@ const openModalButtons = document.querySelectorAll('[data-modal-target]')
     alert("Editado com sucesso!")
 }
    
-  function checaInserir(mensagem){
-    alert(mensagem);
-    console.log(mensagem);
+  function checaInserir(){
+      window.location.href = "http://www.devmedia.com.br";
   }
