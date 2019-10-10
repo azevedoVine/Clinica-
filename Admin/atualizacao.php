@@ -42,9 +42,7 @@
                 <td><?php echo $atualizacoes['titulo']?></td>
                 <td><?php echo $atualizacoes['texto']?></td>
                 <td><?php echo $atualizacoes['descricao']?></td>
-                <td><a data-modal-target="#editar" <?php $atualizacaoId=$atualizacoes['idAtualizacao'];
-                                                          var_dump($atualizacaoId);
-                                                         $atualizacaoDao->selectById($atualizacaoId); ?>><i class="fas fa-pen icone-tabela "></i></a></td>
+                <td><a data-modal-target="#editar" class="a" name="a" data-titulo="<?php echo $atualizacoes['titulo']?>" data-id="<?php echo $atualizacoes['idAtualizacao']?>" data-descricao="<?php echo $atualizacoes['descricao']?>"><i class="fas fa-pen icone-tabela "></i></a></td>
                 <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
             <?php endforeach;?>
@@ -78,11 +76,12 @@
 					</div>
 					<div class="modal-body">
 						<div>
+
 							<div class="editar-modal">
-                <input type="text" type="hidden" name="id" value="" placeholder="Atualização BHJK">
-                <label>Titulo:</label><input type="text" placeholder="Atualização BHJK">      
-                <label>Descrição:</label><input type="text" placeholder="É um legal">      
-                <label>Data:</label><input type="text" placeholder="XX/XX/XXXX">      
+                <input type="hidden" id="id" name="id" value="" placeholder="Atualização BHJK">
+                <label>Titulo:</label><input type="text"  id="titulo" name ="titulo" value="" placeholder="Atualização BHJK">      
+                <label>Descrição:</label><input type="text" id="descricao" placeholder="É um legal">      
+                <!--label>Data:</label><input type="text" id="data" placeholder="XX/XX/XXXX"-->      
                     <button data-close-button class="botao-editar" onclick="confirmaEditar()">Editar</a>
                     <button data-close-button class="botao-editar-cancelar">Cancelar</a>
 							</div>
@@ -110,6 +109,8 @@
 				</div>
 				  <div id="overlay"></div>
 
+        
+          
 <?php 
 
   include_once "footer.php";
@@ -132,5 +133,27 @@
         else{
           header("Location: checaInserir.php");
         }
-?> 
+?>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script>
+  $('.a').on('click', function(){
+    var id = $(this).data('id');
+    var titulo = $(this).data('titulo');
+    var descricao = $(this).data('descricao');
+    //var data = $(this).data('data');
+
+    document.getElementById('id').value = id;
+    document.getElementById('titulo').value = titulo;
+    document.getElementById('descricao').value = descricao;
+    //document.getElementById('data').value = data;
+    console.log(nome, id);
+    
+  });
+</script>
+
+
+
     
