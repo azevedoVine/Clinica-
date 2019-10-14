@@ -28,6 +28,7 @@
               <tr>
                 <th>Id</th>
                 <th>Titulo</th>
+                <th>Texto</th>
                 <th>Descrição</th>
                 <th>Data</th>
                 <th colspan="2">Ações</th>
@@ -42,8 +43,16 @@
                 <td><?php echo $atualizacoes['titulo']?></td>
                 <td><?php echo $atualizacoes['texto']?></td>
                 <td><?php echo $atualizacoes['descricao']?></td>
-                <td><a data-modal-target="#editar" class="a" name="a" data-titulo="<?php echo $atualizacoes['titulo']?>" data-id="<?php echo $atualizacoes['idAtualizacao']?>" data-descricao="<?php echo $atualizacoes['descricao']?>"><i class="fas fa-pen icone-tabela "></i></a></td>
-                <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+                <td><?php echo $atualizacoes['publicacao']?></td>
+                <td><a data-modal-target="#editar" class="edita-atualizacao" data-id="<?php echo $atualizacoes['idAtualizacao']?>"
+                                                                      data-titulo="<?php echo $atualizacoes['titulo']?>"
+                                                                      data-texto="<?php echo $atualizacoes['texto']?>"
+                                                                      data-descricao="<?php echo $atualizacoes['descricao']?>"
+                                                                      data-publicacao="<?php echo $atualizacoes['publicacao']?>">
+                                                                      <i class="fas fa-pen icone-tabela "></i></a></td>
+                <td><a data-modal-target="#excluir" class="exclui-atualizacao" data-titulo="<?php echo $atualizacoes['titulo']?>"
+                                                                               data-id="<?php echo $atualizacoes['idAtualizacao']?>">
+                                                                              <i class="fas fa-trash-alt icone-tabela "></i></a></td>
               </tr>
             <?php endforeach;?>
             </tbody>
@@ -61,9 +70,13 @@
                 </div>
                 <div class="modal-body">
                     <article>
-							      <p>Tem certeza que deseja excluir "Atualização 1"?</p>
-                    <button data-close-button class="botao-editar" onclick="confirmaExcluir()">Editar</a>
-                    <button data-close-button class="botao-editar-cancelar">Cancelar</a>
+                    <form action="atualizacaoExclui.php" method="POST">
+                      Tem certeza que deseja excluir este elemento:
+                      <input type="hidden" id="id" name ="id" value="">
+                      <input type="text" id="titulo" name ="titulo" value="">
+                      <button data-close-button type="submit" class="botao-editar">Editar</a>
+                      <button data-close-button class="botao-editar-cancelar">Cancelar</a>
+                    </form>
                     </article>
                 </div>
             </div>
@@ -78,12 +91,15 @@
 						<div>
 
 							<div class="editar-modal">
-                <input type="hidden" id="id" name="id" value="" placeholder="Atualização BHJK">
-                <label>Titulo:</label><input type="text"  id="titulo" name ="titulo" value="" placeholder="Atualização BHJK">      
-                <label>Descrição:</label><input type="text" id="descricao" placeholder="É um legal">      
-                <!--label>Data:</label><input type="text" id="data" placeholder="XX/XX/XXXX"-->      
-                    <button data-close-button class="botao-editar" onclick="confirmaEditar()">Editar</a>
-                    <button data-close-button class="botao-editar-cancelar">Cancelar</a>
+              <form action="atualizacaoEdita.php" method="POST">
+                <input type="hidden" id="id" name="id" value="">
+                <label>Titulo:</label><input type="text" id="titulo" name ="titulo" value="">      
+                <label>Texto:</label><input type="text"  id="texto" name ="texto" value="">      
+                <label>Descrição:</label><input type="text" id="descricao" name="descricao" value="">      
+                <label>Data:</label><input type="text" id="publicacao" name="publicacao" value="">      
+                    <button type="submit" data-close-button class="botao-editar">Editar</button>
+                    <button data-close-button class="botao-editar-cancelar">Cancelar</button>
+              </form>
 							</div>
 						</div>
 					</div>
@@ -97,12 +113,13 @@
 					</div>
 					<div class="modal-body">
 						<div class="inserir-modal">
-						<form action="" method="POST">                   
+						<form action="atualizacaoInsere.php" method="POST">                   
               <label>Titulo:</label><input required="true" type="text"  name="titulo" >      
               <label>Texto:</label><textarea type="text" name="texto" class="textarea-inserir"></textarea> 
               <label>Descrição:</label><input type="text" name="descricao">      
-              <a href="checaInserir.php"><button class="botao-editar">Inserir</a>
-              <button data-close-button class="botao-editar-cancelar">Cancelar</a>
+              <label>Data:</label><input type="text" name="publicacao" placeholder="Ex.: dd/mm/aaaa" data-mask="00/00/0000" maxlength="10">   
+              <button type="submit" class="botao-editar">Inserir</button>
+              <button data-close-button class="botao-editar-cancelar">Cancelar</button>
             </form>
 						</div>
 					</div>
@@ -112,44 +129,34 @@
         
           
 <?php 
-
   include_once "footer.php";
-  if (isset($_POST['titulo']) && $_POST['texto'] != "") {
-
-        $atualizacao = new Atualizacao();
-        $atualizacao->setTitulo($_POST['titulo']);
-        $atualizacao->setTexto($_POST['texto']);
-        $atualizacao->setDescricao($_POST['descricao']);
-          
-
-        $atualizacaoDao = new AtualizacaoDao();
-        $msg = $atualizacaoDao->novaAtualizacao($atualizacao);
-
-        if($msg==true){
-          header("Location: checaInserir.php");
-        } else {
-          header("Location: index.php");
-        }}
-        else{
-          header("Location: checaInserir.php");
-        }
 ?>
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+
 <script>
-  $('.a').on('click', function(){
+  $('.edita-atualizacao').on('click', function(){
     var id = $(this).data('id');
     var titulo = $(this).data('titulo');
+    console.log(titulo);
+    var texto = $(this).data('texto');
     var descricao = $(this).data('descricao');
-    //var data = $(this).data('data');
+    var publicacao = $(this).data('publicacao');
 
     document.getElementById('id').value = id;
     document.getElementById('titulo').value = titulo;
+    document.getElementById('texto').value = texto;
     document.getElementById('descricao').value = descricao;
-    //document.getElementById('data').value = data;
-    console.log(nome, id);
+    document.getElementById('publicacao').value = publicacao;
+
+    
+  });
+
+  $('.exclui-atualizacao').on('click', function(){
+    
+    var id = $(this).data('id');
+    var titulo = $(this).data('titulo');
+
+    document.getElementById('id').value = id;
+    document.getElementById('titulo').value = titulo;
     
   });
 </script>

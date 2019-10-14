@@ -11,41 +11,65 @@ class AtualizacaoDao extends BancodeDados{
 
         $descricao = $atualizacao->getDescricao();
 
-        $sql = $this->conexao->prepare("INSERT INTO atualizacoes (titulo, texto, descricao) VALUES ('$titulo',  '$texto', '$descricao')");
+        $publicacao = $atualizacao->getPublicacao();
+
+        $sql = $this->conexao->prepare("INSERT INTO atualizacoes (titulo, texto, descricao, publicacao) VALUES ('$titulo',  '$texto', '$descricao', '$publicacao')");
 
         if($sql->execute()==true){
-
-            $teste=false;}
-        else{
-            $teste=false;
+            $mensagem = "Atualização inserida com sucesso!";
+        }else{
+            $mensagem = "Erro ao inserir a Atualização";
         }
 
-        return $teste;
+        return $mensagem;
     }
 
     public function select() {
         $sql = $this->conexao->prepare("SELECT * FROM atualizacoes");
         $sql->execute();
         $a = $sql->fetchAll(PDO::FETCH_ASSOC);
-
+    
         return $a;
     }
 
-    public function selectById($atualizacao) {
-        echo "CARALEO";
-        $sql = $this->conexao->prepare("SELECT * FROM atualizacoes WHERE idAtualizacao = :idAtualizacao");
-        
-        $sql->bindValue(':idAtualizacao', $atualizacao);
-        $sql->execute();
-        
-        $linha = $sql->fetch();
+    public function editaAtualizacao($atualizacao) {
 
-        $atualizacao = new Atualizacao();
-        $atualizacao->setTexto($linha['texto']);
-        $atualizacao->setTitulo($linha['titulo']);
-        $atualizacao->setDescricao($linha['descricao']);
-        $atualizacao->setIdAtualizacao($linha['idAtualizacao']);
+        $idAtualizacao = $atualizacao->getIdAtualizacao();
+
+        $titulo = $atualizacao->getTitulo();
+
+        $texto = $atualizacao->getTexto();
+
+        $descricao = $atualizacao->getDescricao();
+
+        $publicacao = $atualizacao->getPublicacao();
+
+        $sql = $this->conexao->prepare("UPDATE atualizacoes SET titulo ='$titulo', texto='$texto', descricao='$descricao', publicacao='$publicacao' WHERE idAtualizacao = '$idAtualizacao'");
         
-        return $atualizacao;
+        if($sql->execute()==true){
+            $mensagem = "Atualização editada com sucesso!";
+        }else{
+            $mensagem = "Erro ao editar a Atualização";
+        }
+
+        return $mensagem;
+    }
+    
+    public function excluiAtualizacao($atualizacao) {
+        $idAtualizacao = $atualizacao->getIdAtualizacao();
+
+        var_dump($idAtualizacao);
+
+        $sql = $this->conexao->prepare("DELETE FROM atualizacoes WHERE atualizacoes.idAtualizacao = '$idAtualizacao' ");
+
+        
+
+        if($sql->execute()==true){
+            $mensagem = "Atualização excluida com sucesso!";
+        }else{
+            $mensagem = "Erro ao excluir a Atualização";
+        }
+
+        return $mensagem;
     }
 }

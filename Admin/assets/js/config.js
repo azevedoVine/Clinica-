@@ -36,14 +36,4 @@ const openModalButtons = document.querySelectorAll('[data-modal-target]')
     overlay.classList.remove('active')
   }
 
-  function confirmaExcluir(){
-      alert("Excluído com sucesso!")
-  }
- 
-  function confirmaEditar(){
-    alert("Editado com sucesso!")
-}
-   
-  function checaInserir(){
-      window.location.href = "http://www.devmedia.com.br";
-  }
+  

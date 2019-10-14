@@ -6,6 +6,7 @@ class Atualizacao{
     public $Titulo;
     public $Texto;
     public $Descricao;  
+    public $Publicacao;  
 
 
 
@@ -25,6 +26,10 @@ class Atualizacao{
         return $this->Descricao;
     }
 
+    function getPublicacao() {
+        return $this->Publicacao;
+    }
+
 
     function setIdAtualizacao($IdAtualizacao) {
         $this->IdAtualizacao = $IdAtualizacao;
@@ -40,6 +45,10 @@ class Atualizacao{
 
     function setDescricao($Descricao) {
         $this->Descricao = $Descricao;
+    }
+
+    function setPublicacao($Publicacao) {
+        $this->Publicacao = $Publicacao;
     }
 }
 
