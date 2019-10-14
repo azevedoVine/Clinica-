@@ -58,11 +58,7 @@ class AtualizacaoDao extends BancodeDados{
     public function excluiAtualizacao($atualizacao) {
         $idAtualizacao = $atualizacao->getIdAtualizacao();
 
-        var_dump($idAtualizacao);
-
         $sql = $this->conexao->prepare("DELETE FROM atualizacoes WHERE atualizacoes.idAtualizacao = '$idAtualizacao' ");
-
-        
 
         if($sql->execute()==true){
             $mensagem = "Atualização excluida com sucesso!";

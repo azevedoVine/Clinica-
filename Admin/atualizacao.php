@@ -74,7 +74,7 @@
                       Tem certeza que deseja excluir este elemento:
                       <input type="hidden" id="id" name ="id" value="">
                       <input type="text" id="titulo" name ="titulo" value="">
-                      <button data-close-button type="submit" class="botao-editar">Editar</a>
+                      <button data-close-button type="submit" class="botao-editar">Excluir</a>
                       <button data-close-button class="botao-editar-cancelar">Cancelar</a>
                     </form>
                     </article>
@@ -92,8 +92,8 @@
 
 							<div class="editar-modal">
               <form action="atualizacaoEdita.php" method="POST">
-                <input type="hidden" id="id" name="id" value="">
-                <label>Titulo:</label><input type="text" id="titulo" name ="titulo" value="">      
+                <input type="hidden" id="id-editar" name="id">
+                <label>Titulo:</label><input type="text" id="titulo-editar" name ="titulo" value="">    
                 <label>Texto:</label><input type="text"  id="texto" name ="texto" value="">      
                 <label>Descrição:</label><input type="text" id="descricao" name="descricao" value="">      
                 <label>Data:</label><input type="text" id="publicacao" name="publicacao" value="">      
@@ -136,13 +136,14 @@
   $('.edita-atualizacao').on('click', function(){
     var id = $(this).data('id');
     var titulo = $(this).data('titulo');
-    console.log(titulo);
     var texto = $(this).data('texto');
     var descricao = $(this).data('descricao');
     var publicacao = $(this).data('publicacao');
 
-    document.getElementById('id').value = id;
-    document.getElementById('titulo').value = titulo;
+    console.log(id);
+
+    document.getElementById('id-editar').value = id;
+    document.getElementById('titulo-editar').value = titulo;
     document.getElementById('texto').value = texto;
     document.getElementById('descricao').value = descricao;
     document.getElementById('publicacao').value = publicacao;

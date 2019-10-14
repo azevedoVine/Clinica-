@@ -10,8 +10,7 @@ if (isset($_POST['titulo']) && $_POST['texto'] != "") {
     $atualizacao->setTexto($_POST['texto']);
     $atualizacao->setDescricao($_POST['descricao']);
     $atualizacao->setPublicacao($_POST['publicacao']);
-    
-    
+
 
     $atualizacaoDao = new AtualizacaoDao();
     $mensagem=$atualizacaoDao->editaAtualizacao($atualizacao);

@@ -157,6 +157,7 @@ a{
 	   height: 30px;
 	   margin-top: 5%;
 	   bottom: 0;
+	   position: absolute;
 	   width: 100%;
   }
   op
@@ -311,7 +312,8 @@ input{
 	margin-left: 10%;
 }
 .container {
-    width: 80%;
+	width: 80%;
+	display:flex;
 }
 
 .grafico {
