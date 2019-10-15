@@ -5,6 +5,7 @@ class Dentista{
     public $IdDentista;
     public $CRO;
     public $Nome;
+    public $Perfil;
    
     function getIdDentista() {
         return $this->IdDentista;
@@ -18,6 +19,10 @@ class Dentista{
         return $this->Nome;
     }
 
+    function getPerfil() {
+        return $this->Perfil;
+    }
+
     function setIdDentista($IdDentista) {
         $this->IdDentista = $IdDentista;
     }
@@ -28,6 +33,10 @@ class Dentista{
 
     function setNome($Nome) {
         $this->Nome = $Nome;
+    }
+    
+    function setPerfil($Perfil) {
+        $this->Perfil = $Perfil;
     }
 
 }

@@ -24,12 +24,12 @@ class AtualizacaoDao extends BancodeDados{
         return $mensagem;
     }
 
-    public function select() {
+    public function listaAtualizacoes() {
         $sql = $this->conexao->prepare("SELECT * FROM atualizacoes");
         $sql->execute();
-        $a = $sql->fetchAll(PDO::FETCH_ASSOC);
+        $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
     
-        return $a;
+        return $dados;
     }
 
     public function editaAtualizacao($atualizacao) {

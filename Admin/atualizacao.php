@@ -4,7 +4,7 @@
 
   $atualizacaoDao = new AtualizacaoDao();
 
-  $dados = $atualizacaoDao->select();
+  $dados = $atualizacaoDao->listaAtualizacoes();
 
   ?>
 			

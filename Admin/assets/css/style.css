@@ -15,18 +15,18 @@
 	display: flex;
 	left: 35%;
 	top: 1%;
-	width: 43%;
+	width: 60%;
 	text-align: center;
 	border:solid;
 	border-color: #008FFF;
 	background-color: #CEE3F6;
-	margin-left: 28%;
+	margin-left: 21%;
 }
 
 .ul-a{
 	list-style:none;
 	margin-right: 10%;
-	margin-top: 1%;
+	margin-top: 0%;
 	display: flex;
 }
 
