@@ -9,10 +9,18 @@
         $atualizacao->setTexto($_POST['texto']);
         $atualizacao->setDescricao($_POST['descricao']);
         $atualizacao->setPublicacao($_POST['publicacao']);
-          
 
         $atualizacaoDao = new AtualizacaoDao();
         $msg = $atualizacaoDao->novaAtualizacao($atualizacao);}
+
+      if (isset($_POST['foto']) != "") {
+        
+        $foto=($_POST['foto']);
+          
+        var_dump($foto);
+        die();
+
+        }
 ?>
 
   <div class="tabela">

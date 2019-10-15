@@ -117,6 +117,7 @@
               <label>Titulo:</label><input required="true" type="text"  name="titulo" >      
               <label>Texto:</label><textarea type="text" name="texto" class="textarea-inserir"></textarea> 
               <label>Descrição:</label><input type="text" name="descricao">      
+              <label>Foto:</label><input type="file" name="foto">      
               <label>Data:</label><input type="text" name="publicacao" placeholder="Ex.: dd/mm/aaaa" data-mask="00/00/0000" maxlength="10">   
               <button type="submit" class="botao-editar">Inserir</button>
               <button data-close-button class="botao-editar-cancelar">Cancelar</button>
