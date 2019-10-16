@@ -6,6 +6,7 @@ class Tratamento{
     public $Titulo;
     public $Texto;
     public $Descricao;
+    public $Publicacao;
 
 
     function getIdTratamento() {
@@ -13,7 +14,7 @@ class Tratamento{
     }
 
     function getTitulo() {
-        return $this->idTitulo;
+        return $this->Titulo;
     }
 
     function getTexto() {
@@ -22,6 +23,10 @@ class Tratamento{
 
     function getDescricao() {
         return $this->Descricao;
+    }
+
+    function getPublicacao() {
+        return $this->Publicacao;
     }
 
     function setIdTratamento($IdTratamento) {
@@ -40,6 +45,9 @@ class Tratamento{
         $this->Descricao = $Descricao;
     }
 
+    function setPublicacao($Publicacao) {
+        $this->Publicacao = $Publicacao;
+    }
 }
 
 ?>

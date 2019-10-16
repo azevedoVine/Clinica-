@@ -6,6 +6,11 @@
 
   $dados = $atualizacaoDao->listaAtualizacoes();
 
+  $dados1 = $atualizacaoDao->listaImgAtualizacoes();
+
+    echo '<pre>' , var_dump($dados1) , '</pre>';
+
+
   ?>
 			
 		<section>
@@ -113,12 +118,12 @@
 					</div>
 					<div class="modal-body">
 						<div class="inserir-modal">
-						<form action="atualizacaoInsere.php" method="POST">                   
+						<form action="atualizacaoInsere.php" enctype="multipart/form-data" method="POST">                   
               <label>Titulo:</label><input required="true" type="text"  name="titulo" >      
               <label>Texto:</label><textarea type="text" name="texto" class="textarea-inserir"></textarea> 
               <label>Descrição:</label><input type="text" name="descricao">      
               <label>Foto:</label><input type="file" name="foto">      
-              <label>Data:</label><input type="text" name="publicacao" placeholder="Ex.: dd/mm/aaaa" data-mask="00/00/0000" maxlength="10">   
+              <label>Data:</label><input type="date" name="publicacao" placeholder="Ex.: dd/mm/aaaa" data-mask="00/00/0000" maxlength="10">   
               <button type="submit" class="botao-editar">Inserir</button>
               <button data-close-button class="botao-editar-cancelar">Cancelar</button>
             </form>
@@ -141,7 +146,7 @@
     var descricao = $(this).data('descricao');
     var publicacao = $(this).data('publicacao');
 
-    console.log(id);
+    console.log(texto);
 
     document.getElementById('id-editar').value = id;
     document.getElementById('titulo-editar').value = titulo;

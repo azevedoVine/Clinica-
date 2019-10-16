@@ -15,7 +15,9 @@ class AtualizacaoDao extends BancodeDados{
 
         $imagem = $atualizacao->getImagem();
 
-        $sql = $this->conexao->prepare("INSERT INTO atualizacoes (titulo, texto, descricao, publicacao) VALUES ('$titulo',  '$texto', '$descricao', '$publicacao')");
+        $sql = $this->conexao->prepare("INSERT INTO atualizacoes (titulo, texto, descricao, publicacao,administrador_idAdmin) VALUES ('$titulo',  '$texto', '$descricao', '$publicacao','1')");
+
+        var_dump($sql);
 
         if($sql->execute()==true){
             $mensagem = "Atualização inserida com sucesso!";
@@ -41,6 +43,17 @@ class AtualizacaoDao extends BancodeDados{
 
     public function listaAtualizacoes() {
         $sql = $this->conexao->prepare("SELECT * FROM atualizacoes");
+        $sql->execute();
+        $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
+    
+        return $dados;
+    }
+
+    public function listaImgAtualizacoes() {
+        $sql = $this->conexao->prepare("Select * from imagem_atualizacoes i
+                                            inner join atualizacoes a
+                                            on i.atualizacoes_idAtualizacao = a.idAtualizacao
+                                            ");
         $sql->execute();
         $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
     

@@ -9,7 +9,13 @@
         $atualizacao->setTexto($_POST['texto']);
         $atualizacao->setDescricao($_POST['descricao']);
         $atualizacao->setPublicacao($_POST['publicacao']);
-        $atualizacao->setImagem($_POST['foto']);
+        $atualizacao->setImagem($_FILES['foto']['name']);
+  
+        $destino = 'assets/upload/' . $_FILES['foto']['name'];
+ 
+        $arquivo_tmp = $_FILES['foto']['tmp_name'];
+        
+        move_uploaded_file( $arquivo_tmp, $destino );
 
         $atualizacaoDao = new AtualizacaoDao();
         $msg = $atualizacaoDao->novaAtualizacao($atualizacao);
