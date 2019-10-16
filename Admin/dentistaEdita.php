@@ -6,14 +6,23 @@
 
         $dentista = new Dentista();
         $dentista->setIdDentista($_POST['id']);
-        $dentista->setCRO($_POST['titulo']);
-        $dentista->setNome($_POST['texto']);
-        $dentista->setPerfil($_POST['descricao']);
+        $dentista->setCRO($_POST['cro']);
+        $dentista->setNome($_POST['nome']);
+        $dentista->setPerfil($_POST['foto']);
   
     
         $dentistaDao = new DentistaDao();
         $mensagem=$dentistaDao->editaDentista($dentista);
     
+        }else{
+        $mensagem = "Por favor, preencha os campos obrigatórios";
         }
 
 ?>
+
+<div class="tabela">
+    <h1><?php echo $mensagem ?></h1>
+    <a href="dentistas.php"><button class="botao-nova">Voltar</a>
+  </div>
+
+<?php include_once 'footer.php'; ?>

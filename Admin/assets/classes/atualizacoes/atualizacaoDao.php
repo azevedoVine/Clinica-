@@ -13,12 +13,27 @@ class AtualizacaoDao extends BancodeDados{
 
         $publicacao = $atualizacao->getPublicacao();
 
+        $imagem = $atualizacao->getImagem();
+
         $sql = $this->conexao->prepare("INSERT INTO atualizacoes (titulo, texto, descricao, publicacao) VALUES ('$titulo',  '$texto', '$descricao', '$publicacao')");
 
         if($sql->execute()==true){
             $mensagem = "Atualização inserida com sucesso!";
         }else{
             $mensagem = "Erro ao inserir a Atualização";
+        }
+
+        $last_id = $this->conexao->lastInsertId();
+
+        if($imagem!=""){
+            $sql = $this->conexao->prepare("INSERT INTO imagem_atualizacoes (titulo,src,atualizacoes_idAtualizacao) VALUES ('$titulo','$imagem','$last_id')");
+
+            if($sql->execute()==true){
+                $mensagem = "Atualização inserida com sucesso!";
+            }else{
+                $mensagem = "Erro ao inserir a Atualização";
+            }
+    
         }
 
         return $mensagem;

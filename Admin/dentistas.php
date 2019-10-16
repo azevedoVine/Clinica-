@@ -21,7 +21,7 @@
 
 			<div class="tabela">
 			<table id="playlistTable">
-            <caption class="titulo-tabela">Consultas</caption>
+            <caption class="titulo-tabela">Dentistas</caption>
             <thead>
               <tr>
                 <th>Id</th>
@@ -71,8 +71,8 @@
             <form action="dentistaEdita.php" method="POST">
             <input type="hidden" id="id-editar" name="id">
             <label>CRO:</label><input type="text" id="cro" name ="cro" value="">    
-            <label>Nome:</label><input type="text"  id="nome-editar" name ="texto" value="">      
-            <label>Foto:</label><input type="text" id="foto" name="descricao" value="">     
+            <label>Nome:</label><input type="text"  id="nome-editar" name ="nome" value="">      
+            <label>Foto:</label><input type="text" id="foto" name="foto" value="">     
                 <button type="submit" data-close-button class="botao-editar">Editar</button>
                 <button data-close-button class="botao-editar-cancelar">Cancelar</button>
             </form>
@@ -91,7 +91,7 @@
                     Tem certeza que deseja excluir este elemento:
                     <form action="dentistaExclui.php" method="POST">
                     <input type="hidden" id="id" name="id">  
-                    <label>Nome:</label><input type="text"  id="nome" name ="texto" value="">      
+                    <label>Nome:</label><input type="text"  id="nome" name ="nome" value="">      
                         <button type="submit" data-close-button class="botao-editar">Excluir</button>
                         <button data-close-button class="botao-editar-cancelar">Cancelar</button>
                     </form>

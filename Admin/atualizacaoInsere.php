@@ -9,18 +9,14 @@
         $atualizacao->setTexto($_POST['texto']);
         $atualizacao->setDescricao($_POST['descricao']);
         $atualizacao->setPublicacao($_POST['publicacao']);
+        $atualizacao->setImagem($_POST['foto']);
 
         $atualizacaoDao = new AtualizacaoDao();
-        $msg = $atualizacaoDao->novaAtualizacao($atualizacao);}
-
-      if (isset($_POST['foto']) != "") {
-        
-        $foto=($_POST['foto']);
-          
-        var_dump($foto);
-        die();
-
-        }
+        $msg = $atualizacaoDao->novaAtualizacao($atualizacao);
+      }
+        else{
+          $msg = "Por favor, preencha os campos obrigatórios";
+          }
 ?>
 
   <div class="tabela">

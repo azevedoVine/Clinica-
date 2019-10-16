@@ -15,6 +15,8 @@ if (isset($_POST['titulo']) && $_POST['texto'] != "") {
     $atualizacaoDao = new AtualizacaoDao();
     $mensagem=$atualizacaoDao->editaAtualizacao($atualizacao);
 
+    }else{
+        $mensagem = "Por favor, preencha os campos obrigatórios";
     }
     
 ?>

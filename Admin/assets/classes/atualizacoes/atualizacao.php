@@ -7,6 +7,7 @@ class Atualizacao{
     public $Texto;
     public $Descricao;  
     public $Publicacao;  
+    public $Imagem;  
 
 
 
@@ -30,6 +31,10 @@ class Atualizacao{
         return $this->Publicacao;
     }
 
+    function getImagem() {
+        return $this->Imagem;
+    }
+
 
     function setIdAtualizacao($IdAtualizacao) {
         $this->IdAtualizacao = $IdAtualizacao;
@@ -49,6 +54,10 @@ class Atualizacao{
 
     function setPublicacao($Publicacao) {
         $this->Publicacao = $Publicacao;
+    }
+
+    function setImagem($Imagem) {
+        $this->Imagem = $Imagem;
     }
 }
 

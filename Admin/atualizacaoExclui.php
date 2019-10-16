@@ -10,7 +10,8 @@ if (isset($_POST['id']) != "") {
     $atualizacaoDao = new AtualizacaoDao();
     $mensagem=$atualizacaoDao->excluiAtualizacao($atualizacao);
 
-    }
+    }else{
+        $mensagem = "Por favor, preencha os campos obrigatórios";}
     
 ?>
 
