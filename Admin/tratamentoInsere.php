@@ -9,14 +9,13 @@
         $tratamento->setTexto($_POST['texto']);
         $tratamento->setDescricao($_POST['descricao']);
         $tratamento->setPublicacao($_POST['publicacao']);
-        $tratamento->setImagem($_POST['foto']);
-
+        $tratamento->setImagem($_FILES['foto']['name']);
+  
         $destino = 'assets/upload/' . $_FILES['foto']['name'];
  
         $arquivo_tmp = $_FILES['foto']['tmp_name'];
         
         move_uploaded_file( $arquivo_tmp, $destino );
-
         $tratamentoDao = new tratamentoDao();
         $msg = $tratamentoDao->insereTratamento($tratamento);
       }

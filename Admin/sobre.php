@@ -1,4 +1,10 @@
 <?php include_once "topo.php";
+      include_once "assets/classes/sobre/sobre.php";
+      include_once "assets/classes/sobre/sobreDao.php";
+
+      $sobreDao = new SobreDao; 
+
+      $dados=$sobreDao->listaSobre();
 ?>
 			
 		<section>
@@ -26,40 +32,18 @@
             </thead>
 
             <tbody>
+              <?php foreach($dados as $sobre): ?>
               <tr>
-                <td>Segunda-Feira</td>
-                <td>08:00 - 12:00</td>
-                <td>14:00 - 18:00</td>
-                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
+                <td><?php echo $sobre['dia']; ?></td>
+                <td><?php echo $sobre['manha']; ?></td>
+                <td><?php echo $sobre['tarde']; ?></td>
+                <td><a data-modal-target="#editar" class="edita-sobre" data-id="<?php echo $sobre['idSobre']?>"
+                                                                      data-dia="<?php echo $sobre['dia']?>"
+                                                                      data-manha="<?php echo $sobre['manha']?>"
+                                                                      data-tarde="<?php echo $sobre['tarde']?>">
+                                                                      <i class="fas fa-pen icone-tabela "></i></a></td>
               </tr>
-
-              <tr>
-                <td>Terça-Feira</td>
-                <td>08:00 - 12:00</td>
-                <td>14:00 - 18:00</td>
-                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
-              </tr>
-
-              <tr>
-                <td>Quarta-Feira</td>
-                <td>08:00 - 12:00</td>
-                <td>14:00 - 18:00</td>
-                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
-              </tr>
-
-              <tr>
-                <td>Quinta-Feira</td>
-                <td>08:00 - 12:00</td>
-                <td>14:00 - 18:00</td>
-                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
-              </tr>
-
-              <tr>
-                <td>Sexta-Feira</td>
-                <td>08:00 - 12:00</td>
-                <td>14:00 - 18:00</td>
-                <td><a data-modal-target="#editar"><i class="fas fa-pen icone-tabela "></i></a></td>
-              </tr>
+              <?php endforeach?>
             </tbody>
           </table>
         </section>
@@ -72,11 +56,12 @@
 					<div class="modal-body">
 						<div>
 							<div class="editar-modal">     
-                            <label>Manhã - Abertura:</label><input type="time">
-                            <label>Manhã - Fechamento:</label><input type="time">         
-                            <label>Tarde - Abertura:</label><input type="time">
-                            <label>Tarde - Fechamento:</label><input type="time">        
-                                <button data-close-button class="botao-editar" onclick="confirmaEditar()">Editar</a>
+              <form action="sobreEdita.php" method="POST">                   
+                  <input type="hidden"  id="id" name="id" >      
+                  <label>Dia:</label><input type="text" name="dia" id="dia">
+                  <label>Manha:</label><input type="text" name="manha" id="manha">      
+                  <label>Tarde:</label><input type="text" name="tarde" id="tarde">      
+                                <button data-close-button class="botao-editar">Editar</a>
                                 <button data-close-button class="botao-editar">Cancelar</a>
 							</div>
 						</div>
@@ -87,3 +72,22 @@
 <?php include_once "footer.php"
 
 ?>
+
+<script>
+  $('.edita-sobre').on('click', function(){
+    var id = $(this).data('id');
+    var dia = $(this).data('dia');
+    var manha = $(this).data('manha');
+    var tarde = $(this).data('tarde');
+
+    console.log(id,dia,manha,tarde);
+
+    document.getElementById('id').value = id;
+    document.getElementById('dia').value = dia;
+    document.getElementById('manha').value = manha;
+    document.getElementById('tarde').value = tarde;
+
+    
+  });
+
+</script>

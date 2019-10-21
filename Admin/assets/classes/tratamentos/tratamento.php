@@ -7,6 +7,7 @@ class Tratamento{
     public $Texto;
     public $Descricao;
     public $Publicacao;
+    public $Imagem;
 
 
     function getIdTratamento() {
@@ -29,6 +30,10 @@ class Tratamento{
         return $this->Publicacao;
     }
 
+    function getImagem() {
+        return $this->Imagem;
+    }
+
     function setIdTratamento($IdTratamento) {
         $this->IdTratamento= $IdTratamento;
     }
@@ -47,6 +52,10 @@ class Tratamento{
 
     function setPublicacao($Publicacao) {
         $this->Publicacao = $Publicacao;
+    }
+
+    function setImagem($Imagem) {
+        $this->Imagem = $Imagem;
     }
 }
 

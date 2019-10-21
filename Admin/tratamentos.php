@@ -49,7 +49,9 @@ $dados = $tratamentoDao->listaTratamentos();
                                                                       data-descricao="<?php echo $tratamentos['descricao']?>"
                                                                       data-publicacao="<?php echo $tratamentos['publicacao']?>">
                                                                       <i class="fas fa-pen icone-tabela "></i></a></td>
-                  <td><a data-modal-target="#excluir"><i class="fas fa-trash-alt icone-tabela "></i></a></td>
+                  <td><a data-modal-target="#excluir" class='exclui-tratamento' data-id="<?php echo $tratamentos['idTratamentos']?>"
+                                                                               data-titulo="<?php echo $tratamentos['titulo']?>">
+                                                                               <i class="fas fa-trash-alt icone-tabela "></i></a></td>
                 </tr>
               <?php endforeach; ?>
             </tbody>
@@ -66,9 +68,13 @@ $dados = $tratamentoDao->listaTratamentos();
                 </div>
                 <div class="modal-body">
                     <article>
-							<p>Tem certeza que deseja excluir "Tratamento Tal"?</p>
-							<button data-close-button class="botao-editar" onclick="confirmaExcluir()">Excluir</a>
-              <button data-close-button class="botao-editar">Cancelar</a>
+                    <form action="tratamentoExclui.php" method="POST">
+                      Tem certeza que deseja excluir este elemento:
+                      <input type="hidden" id="id" name ="id" value="">
+                      <input type="text" id="titulo" name ="titulo" value="">
+                      <button data-close-button type="submit" class="botao-editar">Excluir</a>
+                      <button data-close-button class="botao-editar-cancelar">Cancelar</a>
+                    </form>
                     </article>
                 </div>
             </div>
@@ -105,10 +111,11 @@ $dados = $tratamentoDao->listaTratamentos();
 					</div>
 					<div class="modal-body">
 						<div class="inserir-modal">
-						<form action="tratamentoInsere.php" method="POST">                   
+						<form action="tratamentoInsere.php" enctype="multipart/form-data" method="POST">                   
                             <label>Titulo:</label><input type="text" name="titulo">
                             <label>Texto:</label><input type="text" name="texto">       
                             <label>Descrição:</label><textarea type="text" class="textarea-inserir" name="descricao"></textarea>
+                            <label>Foto:</label><input type="file" name="foto">   
                             <label>Data:</label><input type="date" name="publicacao" placeholder="Ex.: dd/mm/aaaa" data-mask="00/00/0000" maxlength="10">        
                             <button class="botao-editar">Inserir</a>
                             <button data-close-button class="botao-editar-cancelar">Cancelar</a>
@@ -135,6 +142,21 @@ $dados = $tratamentoDao->listaTratamentos();
     document.getElementById('texto').value = texto;
     document.getElementById('descricao').value = descricao;
     document.getElementById('publicacao').value = publicacao;
+
+    
+  });
+
+  $('.exclui-tratamento').on('click', function(){
+    var id = $(this).data('id');
+    var titulo = $(this).data('titulo');
+    var texto = $(this).data('texto');
+    var descricao = $(this).data('descricao');
+    var publicacao = $(this).data('publicacao');
+
+    console.log(id);
+
+    document.getElementById('id').value = id;
+    document.getElementById('titulo').value = titulo;
 
     
   });

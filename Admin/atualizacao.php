@@ -6,11 +6,15 @@
 
   $dados = $atualizacaoDao->listaAtualizacoes();
 
-  $dados1 = $atualizacaoDao->listaImgAtualizacoes();
+  // $dados1 = $atualizacaoDao->listaImgAtualizacoes();
 
-    echo '<pre>' , var_dump($dados1) , '</pre>';
+  // foreach($dados1 as $src){
+  //   $dados['src']=$src['src'];
+  // }
 
+  // echo $dados['src'];
 
+  // die();
   ?>
 			
 		<section>
@@ -36,6 +40,7 @@
                 <th>Texto</th>
                 <th>Descrição</th>
                 <th>Data</th>
+                <th>Imagem</th>
                 <th colspan="2">Ações</th>
 
               </tr>
@@ -49,6 +54,7 @@
                 <td><?php echo $atualizacoes['texto']?></td>
                 <td><?php echo $atualizacoes['descricao']?></td>
                 <td><?php echo $atualizacoes['publicacao']?></td>
+                <td><img src="assets/upload/<?php echo $atualizacoes['src']?>"></td>
                 <td><a data-modal-target="#editar" class="edita-atualizacao" data-id="<?php echo $atualizacoes['idAtualizacao']?>"
                                                                       data-titulo="<?php echo $atualizacoes['titulo']?>"
                                                                       data-texto="<?php echo $atualizacoes['texto']?>"
