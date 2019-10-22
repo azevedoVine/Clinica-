@@ -1,11 +1,20 @@
 <?php
-include_once 'C:\xampp\htdocs\Clinica-Odontologica\Admin\assets\classes\atualizacoes\BancodeDados.php';
+include_once 'C:\xampp\htdocs\Clinica-Odontologica\Usuário\assets\classes\atualizacoes\BancodeDados.php';
 
 class DentistaDao extends BancodeDados{
 
     public function listaDentistas(){
 
         $sql = $this->conexao->prepare("Select * from dentista");
+        $sql->execute();
+        $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
+    
+        return $dados;
+    }
+
+    public function lista3Dentistas(){
+
+        $sql = $this->conexao->prepare("SELECT * FROM dentista ORDER BY idDentista desc LIMIT 3");
         $sql->execute();
         $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
     
@@ -22,9 +31,7 @@ class DentistaDao extends BancodeDados{
 
         $foto = $dentista->getPerfil();
 
-        $esp = $dentista->getEspecializacao();
-
-        $sql = $this->conexao->prepare("UPDATE dentista SET cro ='$cro', nomeDentista='$nome', perfilDentista='$foto', especializacao='$esp' WHERE idDentista = '$idDentista'");
+        $sql = $this->conexao->prepare("UPDATE dentista SET cro ='$cro', nomeDentista='$nome', perfilDentista='$foto' WHERE idDentista = '$idDentista'");
 
 
         if($sql->execute()==true){
@@ -46,9 +53,7 @@ class DentistaDao extends BancodeDados{
 
         $foto = $dentista->getPerfil();
 
-        $esp = $dentista->getEspecializacao();
-
-        $sql = $this->conexao->prepare("INSERT INTO dentista (cro, nomeDentista, perfilDentista, especializacao) VALUES ('$cro', '$nome', '$foto', '$esp')");
+        $sql = $this->conexao->prepare("INSERT INTO dentista (cro, nomeDentista, perfilDentista) VALUES ('$cro', '$nome', '$foto')");
 
         
         if($sql->execute()==true){

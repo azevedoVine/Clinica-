@@ -1,3 +1,5 @@
+<html>
+<!DOCTYPE html>
 <head>
         <title>Clínica ABC</title>
         <meta charset="UTF-8">

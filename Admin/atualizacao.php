@@ -6,7 +6,7 @@
 
   $dados = $atualizacaoDao->listaAtualizacoes();
 
-  // $dados1 = $atualizacaoDao->listaImgAtualizacoes();
+  //$dados1 = $atualizacaoDao->listaImgAtualizacoes();
 
   // foreach($dados1 as $src){
   //   $dados['src']=$src['src'];
@@ -51,7 +51,7 @@
               <tr>
                 <td><?php echo $atualizacoes['idAtualizacao']?></td>
                 <td><?php echo $atualizacoes['titulo']?></td>
-                <td><?php echo $atualizacoes['texto']?></td>
+                <td><?php echo substr($atualizacoes['texto'],0,50); echo"..."?></td>
                 <td><?php echo $atualizacoes['descricao']?></td>
                 <td><?php echo $atualizacoes['publicacao']?></td>
                 <td><img src="assets/upload/<?php echo $atualizacoes['src']?>"></td>

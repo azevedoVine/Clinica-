@@ -22,6 +22,7 @@
 
 			<div class="tabela">
 			<table id="playlistTable">
+      <a data-modal-target="#inserir" ><button class="botao-nova">Marcar Consulta</button></a>
             <caption class="titulo-tabela">Consultas</caption>
             <thead>
               <tr>
@@ -40,7 +41,7 @@
               <tr>
                 <td><?php echo $consultas['idConsulta'] ?></td>
                 <td><?php echo $consultas['nome'] ?></td>
-                <td><?php echo $consultas['nomeDentista'] ?></td>
+                <td><a href="dentistas.php":><?php echo $consultas['nomeDentista'] ?></a></td>
                 <td><?php echo $consultas['data'] ?></td>
                 <td><?php echo $consultas['horario'] ?></td>
                  <td><!--<a data-modal-target="#detalhe" class="detalhe-consulta" data-id="<?php echo $consultas['idConsulta']?>"
@@ -59,22 +60,22 @@
 		</div>
 		</section>
 
-		<!-- <div class="modal" id="detalhe">
+    <!-- <div class="modal" id="detalhe">
                 <div class="modal-header">
                   <div class="titulo negrito">Consulta</div>
                   <button data-close-button class="close-button">&times;</button>
                 </div>
                 <div class="modal-body">
                     <article>
-							<p><span class="negrito">Paciete: </span><input type="text" id="id" name="id"></p>
-							<p><span class="negrito">Horário: </span><input type="text" id="nome" name="nome"></p>
-							<p><span class="negrito">Dia: </span>01/12/1123</p>
-							<p><span class="negrito">Dentista: </span>Jalma</p>
-							
+              <p><span class="negrito">Paciete: </span><input type="text" id="id" name="id"></p>
+              <p><span class="negrito">Horário: </span><input type="text" id="nome" name="nome"></p>
+              <p><span class="negrito">Dia: </span>01/12/1123</p>
+              <p><span class="negrito">Dentista: </span>Jalma</p>
+              
                     </article>
                 </div>
             </div>
-              <div id="overlay"></div> -->
+    <div id="overlay"></div> -->
 
 <?php include_once "footer.php"; ?>
 <!-- <script>

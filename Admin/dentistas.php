@@ -21,12 +21,14 @@
 
 			<div class="tabela">
 			<table id="playlistTable">
+        <a data-modal-target="#inserir" ><button class="botao-nova">Cadastrar Dentista</button></a>
             <caption class="titulo-tabela">Dentistas</caption>
             <thead>
               <tr>
                 <th>Id</th>
                 <th>CRO</th>
                 <th>Nome</th>
+                <th>Especializacao</th>
                 <th>Foto de Perfil</th>
                 <th colspan="2">Ações</th>
 
@@ -39,10 +41,12 @@
                 <td><?php echo $dentistas['idDentista'] ?></td>
                 <td><?php echo $dentistas['CRO'] ?></td>
                 <td><?php echo $dentistas['nomeDentista'] ?></td>
-                <td><?php echo $dentistas['perfilDentista'] ?></td>
+                <td><?php echo $dentistas['especializacao'] ?></td>
+                <td><img src="assets/upload/<?php echo $dentistas['perfilDentista'] ?>" width="70"></td>
                  <td><a data-modal-target="#editar" class="edita-dentista" data-id="<?php echo $dentistas['idDentista']?>"
                                                                              data-cro="<?php echo $dentistas['CRO']?>"
                                                                              data-nome="<?php echo $dentistas['nomeDentista']?>"
+                                                                             data-esp="<?php echo $dentistas['especializacao'] ?>"
                                                                              data-foto="<?php echo $dentistas['perfilDentista']?>">                                                                             
                                                                              <i class="fas fa-pen icone-tabela "></i></a></td>
                 <td><a data-modal-target="#excluir" class="exclui-dentista" class="edita-dentista" data-id="<?php echo $dentistas['idDentista']?>"
@@ -58,6 +62,25 @@
 		</div>
 		</section>
 
+    <div class="modal" id="inserir">
+					<div class="modal-header">
+					  <div class="titulo negrito">Inserir Dentista</div>
+					  <button data-close-button class="close-button">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div class="inserir-modal">
+						<form action="dentistaInsere.php" enctype="multipart/form-data" method="POST">                   
+              <label>Nome:</label><input required="true" type="text"  name="nome" >      
+              <label>CRO:</label><input type="text" name="cro" >
+              <label>Especializacao:</label><input type="text" name="esp" >
+              <label>Foto:</label><input type="file" name="foto">      
+              <button type="submit" class="botao-editar">Inserir</button>
+              <button data-close-button class="botao-editar-cancelar">Cancelar</button>
+            </form>
+						</div>
+					</div>
+				</div>
+				  <div id="overlay"></div>
 
     <div class="modal" id="editar">
                 <div class="modal-header">
@@ -72,6 +95,7 @@
             <input type="hidden" id="id-editar" name="id">
             <label>CRO:</label><input type="text" id="cro" name ="cro" value="">    
             <label>Nome:</label><input type="text"  id="nome-editar" name ="nome" value="">      
+            <label>Especializacao:</label><input type="text"  id="esp" name ="esp" value="">      
             <label>Foto:</label><input type="text" id="foto" name="foto" value="">     
                 <button type="submit" data-close-button class="botao-editar">Editar</button>
                 <button data-close-button class="botao-editar-cancelar">Cancelar</button>
@@ -108,12 +132,14 @@
     var id = $(this).data('id');
     var cro = $(this).data('cro');
     var nome = $(this).data('nome');
+    var esp = $(this).data('esp');
     var foto = $(this).data('foto');
 
     console.log(cro)
 
     document.getElementById('id-editar').value = id;
     document.getElementById('cro').value = cro;
+    document.getElementById('esp').value = esp;
     document.getElementById('nome-editar').value = nome;
     document.getElementById('foto').value = foto;
 

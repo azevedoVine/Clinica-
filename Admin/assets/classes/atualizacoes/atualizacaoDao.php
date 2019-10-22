@@ -17,8 +17,6 @@ class AtualizacaoDao extends BancodeDados{
 
         $sql = $this->conexao->prepare("INSERT INTO atualizacoes (titulo, texto, descricao, publicacao,administrador_idAdmin) VALUES ('$titulo',  '$texto', '$descricao', '$publicacao','1')");
 
-        var_dump($sql);
-
         if($sql->execute()==true){
             $mensagem = "Atualização inserida com sucesso!";
         }else{
@@ -49,16 +47,16 @@ class AtualizacaoDao extends BancodeDados{
         return $dados;
     }
 
-    // public function listaImgAtualizacoes() {
-    //     $sql = $this->conexao->prepare("Select * from imagem_atualizacoes i
-    // inner join atualizacoes a
-    // on i.atualizacoes_idAtualizacao = a.idAtualizacao
-    //                                         ");
-    //     $sql->execute();
-    //     $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
+    //  public function listaImgAtualizacoes() {
+    //      $sql = $this->conexao->prepare("Select * from imagem_atualizacoes i
+    //                                     inner join atualizacoes a
+    //                                     on i.atualizacoes_idAtualizacao = a.idAtualizacao
+    //                                          ");
+    //      $sql->execute();
+    //      $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
     
-    //     return $dados;
-    // }
+    //      return $dados;
+    //  }
 
     public function editaAtualizacao($atualizacao) {
 
@@ -86,9 +84,16 @@ class AtualizacaoDao extends BancodeDados{
     public function excluiAtualizacao($atualizacao) {
         $idAtualizacao = $atualizacao->getIdAtualizacao();
 
-        $sql = $this->conexao->prepare("DELETE FROM atualizacoes WHERE atualizacoes.idAtualizacao = '$idAtualizacao' ");
-
+        $sql = $this->conexao->prepare("SELECT * FROM imagem_atualizacoes WHERE atualizacoes_idAtualizacao='$idAtualizacao'");
+        
         if($sql->execute()==true){
+            $sql = $this->conexao->prepare("DELETE FROM imagem_atualizacoes WHERE imagem_atualizacoes.atualizacoes_idAtualizacao = '$idAtualizacao' ");
+            $sql->execute();
+        }        
+
+        $sql1 = $this->conexao->prepare("DELETE FROM atualizacoes WHERE atualizacoes.idAtualizacao = '$idAtualizacao' ");
+
+        if($sql1->execute()==true){
             $mensagem = "Atualização excluida com sucesso!";
         }else{
             $mensagem = "Erro ao excluir a Atualização";

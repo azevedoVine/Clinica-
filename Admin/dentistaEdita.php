@@ -8,6 +8,7 @@
         $dentista->setIdDentista($_POST['id']);
         $dentista->setCRO($_POST['cro']);
         $dentista->setNome($_POST['nome']);
+        $dentista->setEspecializacao($_POST['esp']);
         $dentista->setPerfil($_POST['foto']);
   
     
