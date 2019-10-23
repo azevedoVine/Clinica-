@@ -80,7 +80,7 @@
 						</div>
 					</div>
 				</div>
-				  <div id="overlay"></div>
+		<div id="overlay"></div>
 
     <div class="modal" id="editar">
                 <div class="modal-header">

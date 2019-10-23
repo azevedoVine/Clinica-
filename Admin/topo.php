@@ -25,6 +25,7 @@
 						<div class="atalho"><li><a href="index.php">Inicio</a></li></div>
 						<div class="atalho atalho-left"><li><a href="atualizacao.php">Atualizações</a></li></div>
 						<div class="atalho atalho-left"><li><a href="consultas.php">Consultas</a></li></div>
+						<div class="atalho atalho-left"><li><a href="pacientes.php">Pacientes</a></li></div>
 						<div class="atalho atalho-left"><li><a href="dentistas.php">Dentistas</a></li></div>
 						<div class="atalho atalho-left"><li><a href="tratamentos.php">Tratamentos</a></li></div>
 						<div class="atalho atalho-left"><li><a href="sobre.php">Sobre nós</a></li></div>
