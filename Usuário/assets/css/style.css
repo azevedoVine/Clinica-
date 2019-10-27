@@ -601,3 +601,12 @@ footer{
 .form-edita-perfil{
 	display: flex;
 }
+
+.perfil-destaque{
+
+	border:solid;
+	border-color:#008FFF;
+	margin-top: 2px;
+	height: 77%;
+	width: 80%;
+}

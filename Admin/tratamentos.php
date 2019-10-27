@@ -29,6 +29,7 @@ $dados = $tratamentoDao->listaTratamentos();
                 <th>Titulo</th>
                 <th>Texto</th>
                 <th>Descrição</th>
+                <th>Foto</th>
                 <th>Data</th>
                 <th colspan="2">Ações</th>
 
@@ -42,12 +43,14 @@ $dados = $tratamentoDao->listaTratamentos();
                   <td><?php echo $tratamentos['titulo'] ?></td>
                   <td><?php echo $tratamentos['texto'] ?></td>
                   <td><?php echo $tratamentos['descricao'] ?></td>
+                  <td><img src="assets/upload/<?php echo $tratamentos['src'] ?>" width="50px"></td>
                   <td><?php echo $tratamentos['publicacao'] ?></td>
                   <td><a data-modal-target="#editar" class='edita-tratamento' data-id="<?php echo $tratamentos['idTratamentos']?>"
                                                                       data-titulo="<?php echo $tratamentos['titulo']?>"
                                                                       data-texto="<?php echo $tratamentos['texto']?>"
                                                                       data-descricao="<?php echo $tratamentos['descricao']?>"
-                                                                      data-publicacao="<?php echo $tratamentos['publicacao']?>">
+                                                                      data-publicacao="<?php echo $tratamentos['publicacao']?>"
+                                                                      data-foto="<?php echo $tratamentos['src']?>">
                                                                       <i class="fas fa-pen icone-tabela "></i></a></td>
                   <td><a data-modal-target="#excluir" class='exclui-tratamento' data-id="<?php echo $tratamentos['idTratamentos']?>"
                                                                                data-titulo="<?php echo $tratamentos['titulo']?>">
@@ -91,6 +94,7 @@ $dados = $tratamentoDao->listaTratamentos();
             <div class="editar-modal">
             <form action="tratamentoEdita.php" method="POST">
               <input type="hidden" id="id-editar" name="id">
+              <img id="foto-edita" width="100px">
               <label>Titulo:</label><input type="text" id="titulo-editar" name ="titulo" value="">    
               <label>Texto:</label><input type="text"  id="texto" name ="texto" value="">      
               <label>Descrição:</label><input type="text" id="descricao" name="descricao" value="">      
@@ -134,6 +138,7 @@ $dados = $tratamentoDao->listaTratamentos();
     var texto = $(this).data('texto');
     var descricao = $(this).data('descricao');
     var publicacao = $(this).data('publicacao');
+    var foto = $(this).data('foto');
 
     console.log(id);
 
@@ -142,6 +147,7 @@ $dados = $tratamentoDao->listaTratamentos();
     document.getElementById('texto').value = texto;
     document.getElementById('descricao').value = descricao;
     document.getElementById('publicacao').value = publicacao;
+    document.getElementById('foto-edita').src = "assets/upload/"+foto;
 
     
   });

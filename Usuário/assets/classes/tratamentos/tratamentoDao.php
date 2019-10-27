@@ -41,13 +41,15 @@ class TratamentoDao extends BancodeDados{
 
     public function listaTratamentos(){
     
-        $sql = $this->conexao->prepare("SELECT * FROM tratamentos");
+        $sql = $this->conexao->prepare("SELECT tratamentos.titulo, tratamentos.texto, tratamentos.idTratamentos, tratamentos.descricao, tratamentos.publicacao, imagem_tratamentos.src
+                                        FROM tratamentos, imagem_tratamentos
+                                        WHERE imagem_tratamentos.tratamentos_idTratamentos = tratamentos.idTratamentos");
         $sql->execute();
         $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
     
         return $dados;
     }
-
+    
     public function editaTratamento($tratamento) {
 
         $idTratamento = $tratamento->getIdtratamento();

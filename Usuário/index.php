@@ -32,7 +32,7 @@
                                                                              data-nome="<?php echo $dentista['nomeDentista']?>"
                                                                              data-esp="<?php echo $dentista['especializacao'] ?>"
                                                                              data-foto="<?php echo $dentista['perfilDentista']?>">
-							<img src="../Admin/assets/upload/<?php echo $dentista["perfilDentista"]?>" class="foto-perfil">
+							<img src="../Admin/assets/upload/<?php echo $dentista["perfilDentista"]?>" class="perfil-destaque">
 							<p class="nome-dentista"><?php echo $dentista["nomeDentista"]?> <i class="fas fa-info-circle detalhe"></i> </a></p>
 						</div>
 					<?php endforeach?>
@@ -59,17 +59,19 @@
                 <div class="modal-header">
                     <div class="titulo negrito">Profissional em destaque</div>
                     <button data-close-button class="close-button">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div>
-                        <div class="editar-modal">
-							<label>CRO:</label><input type="text" id="cro" name ="cro" value="">    
-							<label>Nome:</label><input type="text"  id="nome-editar" name ="nome" value="">      
-							<label>Especializacao:</label><input type="text"  id="esp" name ="esp" value="">      
-							<label>Foto:</label><input type="text" id="foto" name="foto" value="">     
-                        </div>
-                    </div>
-                </div>
+				</div>
+				<div class="modal-body">
+					<div class="dentistas">
+						<div class="dentista">
+							<img id="foto" name="foto" height="200" class="foto-dentista">
+						</div>
+						<div class="informacao-dentista">
+							<p><span class="negrito">Nome: </span><span id="nome-dentista"></span></p>   
+							<p><span class="negrito">CRO: </span><span id="cro-dentista"></span></p>       
+							<p><span class="negrito">Especialização: </span><span id="esp-dentista"></span></p>   
+						</div>
+					</div>
+				</div>
             </div>
         <div id="overlay"></div>
 
@@ -123,10 +125,10 @@
     var esp = $(this).data('esp');
 	var foto = $(this).data('foto');
 	
-    document.getElementById('cro').value = cro;
-    document.getElementById('esp').value = esp;
-    document.getElementById('nome-editar').value = nome;
-    document.getElementById('foto').value = foto;
+     document.getElementById('nome-dentista').innerHTML = nome;
+    document.getElementById('cro-dentista').innerHTML = cro;
+    document.getElementById('esp-dentista').innerHTML = esp;
+    document.getElementById('foto').src = "../Admin/assets/upload/"+foto;
 
     
   });

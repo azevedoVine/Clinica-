@@ -54,12 +54,13 @@
                 <td><?php echo substr($atualizacoes['texto'],0,50); echo"..."?></td>
                 <td><?php echo $atualizacoes['descricao']?></td>
                 <td><?php echo $atualizacoes['publicacao']?></td>
-                <td><img src="assets/upload/<?php echo $atualizacoes['src']?>"></td>
+                <td><img src="assets/upload/<?php echo $atualizacoes['src']?>" width='50'></td>
                 <td><a data-modal-target="#editar" class="edita-atualizacao" data-id="<?php echo $atualizacoes['idAtualizacao']?>"
                                                                       data-titulo="<?php echo $atualizacoes['titulo']?>"
                                                                       data-texto="<?php echo $atualizacoes['texto']?>"
                                                                       data-descricao="<?php echo $atualizacoes['descricao']?>"
-                                                                      data-publicacao="<?php echo $atualizacoes['publicacao']?>">
+                                                                      data-publicacao="<?php echo $atualizacoes['publicacao']?>"
+                                                                      data-foto="<?php echo $atualizacoes['src']?>">
                                                                       <i class="fas fa-pen icone-tabela "></i></a></td>
                 <td><a data-modal-target="#excluir" class="exclui-atualizacao" data-titulo="<?php echo $atualizacoes['titulo']?>"
                                                                                data-id="<?php echo $atualizacoes['idAtualizacao']?>">
@@ -104,6 +105,7 @@
 							<div class="editar-modal">
               <form action="atualizacaoEdita.php" method="POST">
                 <input type="hidden" id="id-editar" name="id">
+                <img id="foto-edita" width="100px">
                 <label>Titulo:</label><input type="text" id="titulo-editar" name ="titulo" value="">    
                 <label>Texto:</label><input type="text"  id="texto" name ="texto" value="">      
                 <label>Descrição:</label><input type="text" id="descricao" name="descricao" value="">      
@@ -151,6 +153,7 @@
     var texto = $(this).data('texto');
     var descricao = $(this).data('descricao');
     var publicacao = $(this).data('publicacao');
+    var foto = $(this).data('foto');
 
     console.log(texto);
 
@@ -159,6 +162,7 @@
     document.getElementById('texto').value = texto;
     document.getElementById('descricao').value = descricao;
     document.getElementById('publicacao').value = publicacao;
+    document.getElementById('foto-edita').src = "assets/upload/"+foto;
 
     
   });

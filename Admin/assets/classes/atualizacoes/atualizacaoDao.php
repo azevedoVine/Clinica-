@@ -25,22 +25,22 @@ class AtualizacaoDao extends BancodeDados{
 
         $last_id = $this->conexao->lastInsertId();
 
-        if($imagem!=""){
-            $sql = $this->conexao->prepare("INSERT INTO imagem_atualizacoes (titulo,src,atualizacoes_idAtualizacao) VALUES ('$titulo','$imagem','$last_id')");
+     
+        $sql = $this->conexao->prepare("INSERT INTO imagem_atualizacoes (titulo,src,atualizacoes_idAtualizacao) VALUES ('$titulo','$imagem','$last_id')");
 
-            if($sql->execute()==true){
-                $mensagem = "Atualização inserida com sucesso!";
-            }else{
-                $mensagem = "Erro ao inserir a Atualização";
-            }
-    
+        if($sql->execute()==true){
+            $mensagem = "Atualização inserida com sucesso!";
+        }else{
+            $mensagem = "Erro ao inserir a Atualização";
         }
 
         return $mensagem;
     }
 
     public function listaAtualizacoes() {
-        $sql = $this->conexao->prepare("SELECT * FROM atualizacoes");
+        $sql = $this->conexao->prepare("SELECT atualizacoes.titulo, atualizacoes.texto, atualizacoes.idAtualizacao, atualizacoes.descricao, atualizacoes.publicacao, imagem_atualizacoes.src
+                                        FROM atualizacoes, imagem_atualizacoes
+                                        WHERE imagem_atualizacoes.atualizacoes_idAtualizacao = atualizacoes.idAtualizacao");
         $sql->execute();
         $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
     
