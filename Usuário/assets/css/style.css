@@ -92,8 +92,7 @@ a:active{
 	border:solid;
 	border-color:#008FFF;
 	margin-top: 2px;
-	height: 77%;
-    width: 81%;
+	height: 200px;
 	
 }
 
@@ -597,4 +596,8 @@ footer{
 	width: 150px;
 	height: 150px;
 	background-color:#008FFF;
+}
+
+.form-edita-perfil{
+	display: flex;
 }

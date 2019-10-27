@@ -101,13 +101,13 @@
 					<div class="modal-body">
 						<div class="inserir-modal">
 						<form action="pacienteEdita.php" enctype="multipart/form-data" method="POST">                   
-              <input type="hidden" name="id" id="id-edita" >      
+              <input type="hidden" name="id" id="id-edita" >
+              <img id="foto-edita" width="100px">      
               <label>Nome:</label><input required="true" type="text" name="nome" id="nome-edita" >      
               <label>Telefone:</label><input type="text" name="tel" id="tel" >
               <label>Email:</label><input type="text" name="email" id="email" >
               <label>Endereço:</label><input type="text" name="end" id="end" >
               <label>Data de Nascimento:</label><input type="text" name="nasc" id="nasc" >
-              <label>Foto de Perfil:</label><input type="text" name="foto" id="foto">
               <button type="submit" class="botao-editar">Editar</button>
               <button data-close-button class="botao-editar-cancelar">Cancelar</button>
             </form>
@@ -122,14 +122,14 @@
 					  <button data-close-button class="close-button">&times;</button>
 					</div>
 					<div class="modal-body">
-						<div class="inserir-modal">                  
+						<div class="inserir-modal">       
+              <img id="foto-detalhe" width="100px">           
               <input type="hidden" name="id" id="id-detalhe" >      
               <label>Nome:</label><input required="true" type="text" name="nome" id="nome-detalhe" >      
               <label>Telefone:</label><input type="text" name="tel" id="tel-detalhe" >
               <label>Email:</label><input type="text" name="email" id="email-detalhe" >
               <label>Endereço:</label><input type="text" name="end" id="end-detalhe" >
-              <label>Data de Nascimento:</label><input type="text" name="nasc" id="nasc-detalhe" >
-              <label>Foto de Perfil:</label><input type="text" name="foto" id="foto-detalhe">
+              <label>Data de Nascimento:</label><input type="text" name="nasc" id="nasc-detalhe">
             </form>
 						</div>
 					</div>
@@ -176,7 +176,7 @@
     document.getElementById('end').value = end;
     document.getElementById('nasc').value = nasc;
     document.getElementById('nome-edita').value = nome;
-    document.getElementById('foto').value = foto;
+    document.getElementById('foto-edita').src = "assets/upload/"+foto;
 
     
   });
@@ -198,14 +198,12 @@
     var nasc = $(this).data('nasc');
     var foto = $(this).data('foto');
 
-    console.log(email)
-
     document.getElementById('tel-detalhe').value = tel;
     document.getElementById('email-detalhe').value = email;
     document.getElementById('end-detalhe').value = end;
     document.getElementById('nasc-detalhe').value = nasc;
     document.getElementById('nome-detalhe').value = nome;
-    document.getElementById('foto-detalhe').value = foto;
+    document.getElementById('foto-detalhe').src = "assets/upload/"+foto;
 
     
   });

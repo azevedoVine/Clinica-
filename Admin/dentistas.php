@@ -92,11 +92,11 @@
 
                         <div class="editar-modal">
             <form action="dentistaEdita.php" method="POST">
+            <img id="foto-edita" name="foto" width="100px"> 
             <input type="hidden" id="id-editar" name="id">
             <label>CRO:</label><input type="text" id="cro" name ="cro" value="">    
             <label>Nome:</label><input type="text"  id="nome-editar" name ="nome" value="">      
-            <label>Especializacao:</label><input type="text"  id="esp" name ="esp" value="">      
-            <label>Foto:</label><input type="text" id="foto" name="foto" value="">     
+            <label>Especializacao:</label><input type="text"  id="esp" name ="esp" value=""> 
                 <button type="submit" data-close-button class="botao-editar">Editar</button>
                 <button data-close-button class="botao-editar-cancelar">Cancelar</button>
             </form>
@@ -141,7 +141,7 @@
     document.getElementById('cro').value = cro;
     document.getElementById('esp').value = esp;
     document.getElementById('nome-editar').value = nome;
-    document.getElementById('foto').value = foto;
+    document.getElementById('foto-edita').src = "assets/upload/"+foto;
 
     
   });

@@ -4,10 +4,13 @@ class Paciente{
 
     public $IdPaciente;
     public $Nome;
-    public $Idade;
+    public $Nascimento;
     public $Telefone;
     public $Email;
     public $Endereco;
+    public $Perfil;
+    public $Login;
+    public $Senha;
     
 
 
@@ -20,8 +23,8 @@ class Paciente{
         return $this->Nome;
     }
 
-    function getIdade() {
-        return $this->Idade;
+    function getNascimento() {
+        return $this->Nascimento;
     }
 
     function getTelefone() {
@@ -36,20 +39,52 @@ class Paciente{
         return $this->Endereco;
     }
 
+    function getPerfil() {
+        return $this->Perfil;
+    }
+
+    function getLogin() {
+        return $this->Login;
+    }
+
+    function getSenha() {
+        return $this->Senha;
+    }
+
     function setIdPaciente($idPaciente) {
         $this->IdPaciente = $idPaciente;
     }
 
-    function setNome($Titulo) {
-        $this->Titulo = $Titulo;
+    function setNome($Nome) {
+        $this->Nome = $Nome;
     }
 
-    function setIdade($Idade) {
-        $this->Idade = $Idade;
+    function setNascimento($Nascimento) {
+        $this->Nascimento = $Nascimento;
     }
 
     function setTelefone($Telefone) {
         $this->Telefone = $Telefone;
+    }
+
+    function setEmail($Email) {
+        $this->Email = $Email;
+    }
+    
+    function setEndereco($Endereco) {
+        $this->Endereco = $Endereco;
+    }
+
+    function setPerfil($Perfil) {
+        $this->Perfil = $Perfil;
+    }
+
+    function setLogin($Login) {
+        $this->Login = $Login;
+    }
+
+    function setSenha($Senha) {
+        $this->Senha = $Senha;
     }
 }
 
