@@ -17,6 +17,14 @@ class ConsultaDao extends BancodeDados{
         return $dados;
     } 
 
+    public function novaConsultaLista(){
+
+        $sql = $this->conexao->prepare("Select * from dentista ORDER BY nomeDentista");
+        $sql->execute();
+        $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
+    
+        return $dados;
+    }
 
 
 }

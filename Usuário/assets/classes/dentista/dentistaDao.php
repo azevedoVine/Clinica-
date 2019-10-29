@@ -5,7 +5,7 @@ class DentistaDao extends BancodeDados{
 
     public function listaDentistas(){
 
-        $sql = $this->conexao->prepare("Select * from dentista");
+        $sql = $this->conexao->prepare("Select * from dentista ORDER BY nomeDentista");
         $sql->execute();
         $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
     
