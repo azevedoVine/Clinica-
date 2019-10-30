@@ -17,7 +17,7 @@ class ConsultaDao extends BancodeDados{
         return $dados;
     } 
 
-    public function novaConsultaLista(){
+    public function listaDentistas(){
 
         $sql = $this->conexao->prepare("Select * from dentista ORDER BY nomeDentista");
         $sql->execute();
@@ -26,5 +26,51 @@ class ConsultaDao extends BancodeDados{
         return $dados;
     }
 
+    public function listaPacientesID($idPaciente){
+
+        $sql = $this->conexao->prepare("Select * from paciente WHERE idPaciente =$idPaciente");
+        $sql->execute();
+        $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
+    
+        return $dados;
+    }
+
+    public function novaConsulta($consulta){
+
+        $horario = $consulta->getHorario();
+
+        $data = $consulta->getData();
+
+        $paciente = $consulta->getPaciente();
+
+        $dentista = $consulta->getDentista();
+
+
+        $sql = $this->conexao->prepare("Select * from consulta WHERE Dentista_idDentista =$dentista");
+        $sql->execute();
+        $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($dados as $disponivel){
+
+            if($disponivel['data']==$data) || ($disponivel[horario]){
+
+            }
+        }
+        
+
+        var_dump($dados);
+        die();
+
+        
+        $sql = $this->conexao->prepare("INSERT INTO consulta (data, horario, paciente_idPaciente, Dentista_idDentista) VALUES ( '$data', '$horario', '$paciente', '$dentista')");
+    
+        if($sql->execute()==true){
+            $mensagem = "Consulta marcada com sucesso";
+        }else{
+            $mensagem = "Erro ao marcar a consulta";
+        }
+
+        return $mensagem;
+    }
 
 }

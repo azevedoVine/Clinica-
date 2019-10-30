@@ -5,10 +5,8 @@ class Consulta{
     public $IdConsulta;
     public $Data;
     public $Horario;
-    public $Descricao;
-    public $Email;
-    public $Endereco;
-    
+    public $Paciente;
+    public $Dentista;
 
 
 
@@ -24,6 +22,13 @@ class Consulta{
         return $this->Horario;
     }
 
+    function getPaciente() {
+        return $this->Paciente;
+    }
+    function getDentista() {
+        return $this->Dentista;
+    }
+
     function setIdConsulta($IdConsulta) {
         $this->IdConsulta = $IdConsulta;
     }
@@ -34,6 +39,14 @@ class Consulta{
 
     function setHorario($Horario) {
         $this->Horario = $Horario;
+    }
+
+    function setPaciente($Paciente) {
+        $this->Paciente = $Paciente;
+    }
+
+    function setDentista($Dentista) {
+        $this->Dentista = $Dentista;
     }
 
 }

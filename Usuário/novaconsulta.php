@@ -2,14 +2,15 @@
         include_once 'topo.php';
         include_once 'assets\classes\consulta\consultaDao.php';
 
-    $idPaciente = 1;
-    
+    $idPaciente = 4;
+  
     $consultaDao = new ConsultaDao();
 
-    $dados=$consultaDao->novaConsultaLista();
+    $dados=$consultaDao->listaDentistas();
 
-    var_dump($dados);
+    $dados1=$consultaDao->listaPacientesID($idPaciente);
 
+    //var_dump($dados1);
     ?>
 <html>
 
@@ -19,28 +20,25 @@
                     <div class="formulario-consulta">
                         <p class="titulo-pagina negrito consulta-titulo">Nova Consulta</p>  
                     <div class="formulario">
-                        <form action="consulta-confirma.php" method="POST">
-
-                            <label>Nome: </label><input type="text" name="name" placeholder="Jenovevo User">
-
+                        <form action="consultaConfirma.php" method="POST">
+                            <?php foreach($dados1 as $paciente):?>
+                                <label>Nome: </label><input type="text" value="<?php echo $paciente['nome']?>">
+                                <input type="hidden" name="paciente" value="<?php echo $paciente['idPaciente']?>">
+                            <?php endforeach;?>
                             <label> Dentistas: </label>
                             <select name="dentistas" >
                                 <?php foreach($dados as $dentista):?>
                                         <option value="<?php echo $dentista['nomeDentista']?>" id="<?php echo $dentista['idDentista']?>"><?php echo $dentista['nomeDentista']?></option>
+                                        <input type="hidden" value="<?php echo $dentista['idDentista']?>" name='dentista'>
                                 <?php endforeach;?>
                             </select>
                 
-                        <label>Horário: </label><input type="time" id="hora" name="horario" min="09:00" max="18:00">
+                        <label>Horário: </label><input type="time" id="hora" name="horario" min="09:00" max="18:00" step="1800">
+
+                        <label>Data: </label><input type="date" id="data" name="data" >
         
-                        <label> Especialidades: </label>
-                            <select name="especialidades">
-                                <?php foreach($dados as $dentista):?>
-                                        <option value="<?php echo $dentista['especializacao']?>" id="<?php echo $dentista['idDentista']?>"><?php echo $dentista['especializacao']?></option>
-                                <?php endforeach;?>
-                            </select>
-                        
                         <label>Mensagem (opcional):</label> <textarea id="mensagem-consulta"></textarea>
-                        <input type="submit" value="Verificar Disponibilidade" class="botao-disponibilidade">
+                        <input type="submit" value="Marcar Consulta" class="botao-disponibilidade">
                         </form>
                     </div>
                 </div>
