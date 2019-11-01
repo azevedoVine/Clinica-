@@ -27,7 +27,6 @@ $dados = $tratamentoDao->listaTratamentos();
               <tr>
                 <th>Id</th>
                 <th>Titulo</th>
-                <th>Texto</th>
                 <th>Descrição</th>
                 <th>Foto</th>
                 <th>Data</th>
@@ -41,13 +40,11 @@ $dados = $tratamentoDao->listaTratamentos();
                 <tr>
                   <td><?php echo $tratamentos['idTratamentos'] ?></td>
                   <td><?php echo $tratamentos['titulo'] ?></td>
-                  <td><?php echo $tratamentos['texto'] ?></td>
-                  <td><?php echo $tratamentos['descricao'] ?></td>
+                  <td><?php echo substr($tratamentos['descricao'],0,50); echo"..."?></td>
                   <td><img src="assets/upload/<?php echo $tratamentos['src'] ?>" width="50px"></td>
                   <td><?php echo $tratamentos['publicacao'] ?></td>
                   <td><a data-modal-target="#editar" class='edita-tratamento' data-id="<?php echo $tratamentos['idTratamentos']?>"
                                                                       data-titulo="<?php echo $tratamentos['titulo']?>"
-                                                                      data-texto="<?php echo $tratamentos['texto']?>"
                                                                       data-descricao="<?php echo $tratamentos['descricao']?>"
                                                                       data-publicacao="<?php echo $tratamentos['publicacao']?>"
                                                                       data-foto="<?php echo $tratamentos['src']?>">
@@ -95,8 +92,7 @@ $dados = $tratamentoDao->listaTratamentos();
             <form action="tratamentoEdita.php" method="POST">
               <input type="hidden" id="id-editar" name="id">
               <img id="foto-edita" width="100px">
-              <label>Titulo:</label><input type="text" id="titulo-editar" name ="titulo" value="">    
-              <label>Texto:</label><input type="text"  id="texto" name ="texto" value="">      
+              <label>Titulo:</label><input type="text" id="titulo-editar" name ="titulo" value="">
               <label>Descrição:</label><input type="text" id="descricao" name="descricao" value="">      
               <label>Data:</label><input type="text" id="publicacao" name="publicacao" value="">      
                   <button type="submit" data-close-button class="botao-editar">Editar</button>
@@ -117,7 +113,6 @@ $dados = $tratamentoDao->listaTratamentos();
 						<div class="inserir-modal">
 						<form action="tratamentoInsere.php" enctype="multipart/form-data" method="POST">                   
                             <label>Titulo:</label><input type="text" name="titulo">
-                            <label>Texto:</label><input type="text" name="texto">       
                             <label>Descrição:</label><textarea type="text" class="textarea-inserir" name="descricao"></textarea>
                             <label>Foto:</label><input type="file" name="foto">   
                             <label>Data:</label><input type="date" name="publicacao" placeholder="Ex.: dd/mm/aaaa" data-mask="00/00/0000" maxlength="10">        
@@ -135,7 +130,6 @@ $dados = $tratamentoDao->listaTratamentos();
   $('.edita-tratamento').on('click', function(){
     var id = $(this).data('id');
     var titulo = $(this).data('titulo');
-    var texto = $(this).data('texto');
     var descricao = $(this).data('descricao');
     var publicacao = $(this).data('publicacao');
     var foto = $(this).data('foto');
@@ -144,7 +138,6 @@ $dados = $tratamentoDao->listaTratamentos();
 
     document.getElementById('id-editar').value = id;
     document.getElementById('titulo-editar').value = titulo;
-    document.getElementById('texto').value = texto;
     document.getElementById('descricao').value = descricao;
     document.getElementById('publicacao').value = publicacao;
     document.getElementById('foto-edita').src = "assets/upload/"+foto;

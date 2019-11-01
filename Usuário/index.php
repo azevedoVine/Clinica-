@@ -28,7 +28,7 @@
 				<div class="dentistas">
 					<?php foreach ($dados as $dentista ): ?>	
 						<div class="dentista">
-						<a data-modal-target="#dentista" class="detalhe-dentista"data-cro="<?php echo $dentista['CRO']?>"
+						<a data-modal-target="#dentista" class="detalhe-dentista" data-cro="<?php echo $dentista['CRO']?>"
                                                                              data-nome="<?php echo $dentista['nomeDentista']?>"
                                                                              data-esp="<?php echo $dentista['especializacao'] ?>"
                                                                              data-foto="<?php echo $dentista['perfilDentista']?>">

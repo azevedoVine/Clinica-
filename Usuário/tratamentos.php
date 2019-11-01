@@ -1,5 +1,11 @@
 <?php
-			include_once 'topo.php';
+            include_once 'topo.php';
+            include_once 'assets/classes/tratamentos/tratamentoDao.php';
+
+        $tratamentoDao= new TratamentoDao;
+
+        $dados = $tratamentoDao->listaTratamentos();
+
 		?>
 <html>
 
@@ -9,12 +15,17 @@
             <p class="titulo-tratamento"> Tratamentos </p>
         <div id="conteudo-tratamentos">
            <div id="tratamentos"> 
-            <div class="tratamento">
-            <a data-modal-target="#tratamento-individual" class="saiba-botao">
-                <img src="assets/img/clareamento.jpg" class="foto-propaganda">
-                <p class="nome-tratamento">Clareamento</p>
-                <div class="saiba-mais"><p class="botao-saiba">SAIBA MAIS</p><i id="icone-saiba-mais" class="fas fa-plus icone-mais"></i></div></a>
-            </div>
+            <?php foreach($dados as $tratamento):?>
+                <div class="tratamento">
+                <a data-modal-target="#tratamento-individual" class="saiba-botao saiba-tratamento" data-src="<?php echo $tratamento['src']?>"
+                                                                                  data-descricao="<?php echo $tratamento['descricao']?>"
+                                                                                  data-titulo="<?php echo $tratamento['titulo']?>">
+                    <img src="../Admin/assets/upload/<?php echo $tratamento['src'] ?>" class="foto-propaganda">
+                    <p class="nome-tratamento"><?php echo $tratamento['titulo'] ?></p>
+                    <div class="saiba-mais"><p class="botao-saiba">SAIBA MAIS</p><i id="icone-saiba-mais" class="fas fa-plus icone-mais"></i></div></a>
+                </div>
+            <?php endforeach;?>
+            <!--
             <div class="tratamento">
             <a data-modal-target="#tratamento-individual" class="saiba-botao">
                 <img src="assets/img/aparelho-ortodontico.jpg" class="foto-propaganda">
@@ -46,7 +57,7 @@
                     <img src="assets/img/clinica-geral.jpg" class="foto-propaganda">
                     <p class="nome-tratamento">Clinica Geral</p>
                     <div class="saiba-mais"><p class="botao-saiba">SAIBA MAIS</p><i id="icone-saiba-mais" class="fas fa-plus icone-mais"></i></div></a>
-                </div>
+                </div> -->
                 </div>
         </div>
 
@@ -97,3 +108,20 @@
 <?php
 	include_once 'footer.php';
 	?> 
+
+<script>
+  $('.saiba-tratamento').on('click', function(){
+    var src = $(this).data('src');
+    var titulo = $(this).data('titulo');
+    var descricao = $(this).data('descricao');
+
+    console.log(descricao)
+	
+    document.getElementById('nome-dentista').innerHTML = nome;
+    document.getElementById('cro-dentista').innerHTML = cro;
+    document.getElementById('foto').src = "../Admin/assets/upload/"+foto;
+
+    
+  });
+
+</script>

@@ -7,8 +7,6 @@ class TratamentoDao extends BancodeDados{
 
         $titulo = $tratamento->getTitulo();
 
-        $texto = $tratamento->getTexto();
-
         $descricao = $tratamento->getDescricao();
 
         $publicacao = $tratamento->getPublicacao();
@@ -16,9 +14,7 @@ class TratamentoDao extends BancodeDados{
         $imagem = $tratamento->getImagem();
 
 
-        $sql = $this->conexao->prepare("INSERT INTO tratamentos (titulo, texto, descricao, publicacao) VALUES ('$titulo',  '$texto', '$descricao', '$publicacao')");
-
-        var_dump($sql);
+        $sql = $this->conexao->prepare("INSERT INTO tratamentos (titulo, descricao, publicacao) VALUES ('$titulo', '$descricao', '$publicacao')");
 
         if($sql->execute()==true){
             $mensagem = "Tratamento inserido com sucesso!";
@@ -41,7 +37,7 @@ class TratamentoDao extends BancodeDados{
 
     public function listaTratamentos(){
     
-        $sql = $this->conexao->prepare("SELECT tratamentos.titulo, tratamentos.texto, tratamentos.idTratamentos, tratamentos.descricao, tratamentos.publicacao, imagem_tratamentos.src
+        $sql = $this->conexao->prepare("SELECT tratamentos.titulo, tratamentos.idTratamentos, tratamentos.descricao, tratamentos.publicacao, imagem_tratamentos.src
                                         FROM tratamentos, imagem_tratamentos
                                         WHERE imagem_tratamentos.tratamentos_idTratamentos = tratamentos.idTratamentos");
         $sql->execute();
@@ -49,20 +45,18 @@ class TratamentoDao extends BancodeDados{
     
         return $dados;
     }
-    
+
     public function editaTratamento($tratamento) {
 
         $idTratamento = $tratamento->getIdtratamento();
 
         $titulo = $tratamento->getTitulo();
 
-        $texto = $tratamento->getTexto();
-
         $descricao = $tratamento->getDescricao();
 
         $publicacao = $tratamento->getPublicacao();
 
-        $sql = $this->conexao->prepare("UPDATE tratamentos SET titulo ='$titulo', texto='$texto', descricao='$descricao', publicacao='$publicacao' WHERE idTratamentos = '$idTratamento'");
+        $sql = $this->conexao->prepare("UPDATE tratamentos SET titulo ='$titulo', descricao='$descricao', publicacao='$publicacao' WHERE idTratamentos = '$idTratamento'");
         
         if($sql->execute()==true){
             $mensagem = "Tratamento '$titulo' editado com sucesso!";

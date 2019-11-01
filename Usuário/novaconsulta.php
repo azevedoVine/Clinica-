@@ -2,7 +2,7 @@
         include_once 'topo.php';
         include_once 'assets\classes\consulta\consultaDao.php';
 
-    $idPaciente = 4;
+    $idPaciente = 1;
   
     $consultaDao = new ConsultaDao();
 
@@ -10,7 +10,6 @@
 
     $dados1=$consultaDao->listaPacientesID($idPaciente);
 
-    //var_dump($dados1);
     ?>
 <html>
 
@@ -26,10 +25,9 @@
                                 <input type="hidden" name="paciente" value="<?php echo $paciente['idPaciente']?>">
                             <?php endforeach;?>
                             <label> Dentistas: </label>
-                            <select name="dentistas" >
+                            <select name="dentista" >
                                 <?php foreach($dados as $dentista):?>
-                                        <option value="<?php echo $dentista['nomeDentista']?>" id="<?php echo $dentista['idDentista']?>"><?php echo $dentista['nomeDentista']?></option>
-                                        <input type="hidden" value="<?php echo $dentista['idDentista']?>" name='dentista'>
+                                        <option value="<?php echo $dentista['idDentista']?>" id="<?php echo $dentista['idDentista']?>"><?php echo $dentista['nomeDentista']?></option>
                                 <?php endforeach;?>
                             </select>
                 

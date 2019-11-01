@@ -50,26 +50,37 @@ class ConsultaDao extends BancodeDados{
         $sql->execute();
         $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-        foreach($dados as $disponivel){
-
-            if($disponivel['data']==$data) || ($disponivel[horario]){
-
-            }
-        }
-        
-
         var_dump($dados);
-        die();
 
-        
-        $sql = $this->conexao->prepare("INSERT INTO consulta (data, horario, paciente_idPaciente, Dentista_idDentista) VALUES ( '$data', '$horario', '$paciente', '$dentista')");
-    
-        if($sql->execute()==true){
-            $mensagem = "Consulta marcada com sucesso";
+        if($dados != null){
+            foreach($dados as $disponivel){
+
+                if($disponivel['data']==$data && $disponivel['horario']){
+                    $mensagem = "Este horário não está disponível, tente marcar sua consulta em outro horário";
+                }
+                else{
+                    echo "o erro ta aqui";
+                    $sql = $this->conexao->prepare("INSERT INTO consulta (data, horario, paciente_idPaciente, Dentista_idDentista) VALUES ( '$data', '$horario', '$paciente', '$dentista')");
+            
+                    if($sql->execute()==true){
+                        $mensagem = "Consulta marcada com sucesso";
+                    }else{
+                        $mensagem = "Erro ao marcar a consulta";
+                    }
+                }
+            }
         }else{
-            $mensagem = "Erro ao marcar a consulta";
-        }
-
+            
+            $sql = $this->conexao->prepare("INSERT INTO consulta (data, horario, paciente_idPaciente, Dentista_idDentista) VALUES ( '$data', '$horario', '$paciente', '$dentista')");
+            echo 'Entrou no IF do NULL';
+            if($sql->execute()==true){
+                $mensagem = "Consulta marcada com sucesso";
+                echo 'entrou no ultimo IF';
+            }else{
+                $mensagem = "Erro ao marcar a consulta";
+            }
+        }        
+        
         return $mensagem;
     }
 

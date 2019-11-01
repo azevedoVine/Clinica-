@@ -2,12 +2,11 @@
     include_once "assets/classes/tratamentos/tratamento.php";
     include_once "assets/classes/tratamentos/tratamentoDao.php";
 
-if (isset($_POST['titulo']) && $_POST['texto'] != "") {    
+if (isset($_POST['titulo']) && $_POST['descricao'] != "") {    
 
     $tratamento = new Tratamento();
     $tratamento->setIdTratamento($_POST['id']);
     $tratamento->setTitulo($_POST['titulo']);
-    $tratamento->setTexto($_POST['texto']);
     $tratamento->setDescricao($_POST['descricao']);
     $tratamento->setPublicacao($_POST['publicacao']);
 
