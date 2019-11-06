@@ -16,13 +16,13 @@
 			</div>
 		<nav>	
 			<div class="acesso-rapido">
-				<a href="index.php">
+				<a href="painelControle.php">
 					<div id="logo">
 						<img src="assets/img/logo.png" width="80" height="80">         
 					</div>
 				</a>
 				<ul class="ul-a">
-						<div class="atalho"><li><a href="index.php">Inicio</a></li></div>
+						<div class="atalho"><li><a href="painelControle.php">Inicio</a></li></div>
 						<div class="atalho atalho-left"><li><a href="atualizacao.php">Atualizações</a></li></div>
 						<div class="atalho atalho-left"><li><a href="consultas.php">Consultas</a></li></div>
 						<div class="atalho atalho-left"><li><a href="pacientes.php">Pacientes</a></li></div>

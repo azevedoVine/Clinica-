@@ -1,20 +1,13 @@
-<?php include_once "topo.php";
-      include_once "assets/classes/atualizacoes/atualizacao.php";
-      include_once "assets/classes/atualizacoes/atualizacaoDao.php";
+<?php
+  include_once "entrar.php";
+  include_once "topo.php";
+  include_once "assets/classes/atualizacoes/atualizacao.php";
+  include_once "assets/classes/atualizacoes/atualizacaoDao.php";
 
   $atualizacaoDao = new AtualizacaoDao();
 
   $dados = $atualizacaoDao->listaAtualizacoes();
 
-  //$dados1 = $atualizacaoDao->listaImgAtualizacoes();
-
-  // foreach($dados1 as $src){
-  //   $dados['src']=$src['src'];
-  // }
-
-  // echo $dados['src'];
-
-  // die();
   ?>
 			
 		<section>

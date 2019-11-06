@@ -13,7 +13,7 @@
         $paciente->setNascimento($_POST['nasc']);
         $paciente->setLogin($_POST['login']);
         $paciente->setSenha(md5($_POST['senha']));
-        $paciente->setPerfil($_POST['foto']);
+        //$paciente->setPerfil($_POST['foto']);
   
     
         $pacienteDao = new PacienteDao();

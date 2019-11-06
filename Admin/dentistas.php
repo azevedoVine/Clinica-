@@ -1,4 +1,6 @@
-<?php include_once 'topo.php';
+<?php 
+      include_once "entrar.php";
+      include_once 'topo.php';
       include_once 'assets/classes/dentista/dentista.php';
       include_once 'assets/classes/dentista/dentistaDao.php';
 

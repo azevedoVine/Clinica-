@@ -1,27 +1,25 @@
-<?php include_once "topo.php";
-?>
-			
-		<section>			
-		<div class="grafico-todo">
-            <h1 class="h1-grafico">Consultas marcadas nos últimos 3 meses</h1>
+<html>
+    <head>
+            <title>Clínica ABC - Login</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+            <link rel="stylesheet" type="text/css" href="assets/css/all.css">
+            <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icone-browser.png">
 
-            <p class="p-grafico">Janeiro</p>
-            <div class="container">
-                <div class="grafico primeiro">412 Acessos</div>
-            </div>
+        </head>
+<body>
 
-            <p  class="p-grafico">Fevereiro</p>
-            <div class="container">
-                <div class="grafico segundo">300 Acessos</div>
-            </div>
+    <div class='div-login'>
+		<img src="assets/img/logo.png" class="logo-login">
+    </div>
+    <div class="div-login">
+      <form action="verificaLogin.php" method="POST">
+        <label>E-mail:</label><input type="email" name="login">      
+        <label>Senha:</label><input type="password" name="senha">      
+                             <input type="submit" value="Entrar" id="entrar-login" class="botao-form">
+      </form>
+	</div>
 
-            <p class="p-grafico">Março</p>
-            <div class="container">
-                <div class="grafico terceiro">215 Acessos</div>
-            </div>
-        </div>
-		</section>
-
-<?php include_once "footer.php"
-
-?>
+</body>
+</html>

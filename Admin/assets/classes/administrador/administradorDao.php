@@ -12,6 +12,19 @@ class AdminDao extends BancodeDados{
         return $dados;
     }
 
+    public function verificaLogin($administrador){
+
+        $login = $administrador->getLogin();
+
+        $senha = $administrador->getSenha();
+
+        $sql = $this->conexao->prepare("Select * from administrador WHERE login='$login' AND senha='$senha'");
+        $sql->execute();
+        $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
+    
+        return $dados;
+    }
+
     public function editaAdmin($administrador) {
 
         $idAdministrador = $administrador->getIdAdmin();

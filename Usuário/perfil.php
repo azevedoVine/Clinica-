@@ -3,7 +3,7 @@
 			include_once 'assets\classes\paciente\paciente.php';
 			include_once 'assets\classes\paciente\pacienteDao.php';
 
-        $idPaciente = 1;
+        $idPaciente = 4;
 
         $paciente = new Paciente();
 
