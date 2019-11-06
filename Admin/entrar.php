@@ -1,8 +1,8 @@
 <?php
     session_start();
-    echo $_SESSION['login'];
+    var_dump($_SESSION['login']);
 
-    if($_SESSION['login']= ""){
+    if($_SESSION['login'] == NULL){
         header("Location:erro.php");
     }
 

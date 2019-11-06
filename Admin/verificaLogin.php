@@ -16,7 +16,7 @@
     $dados=$adminDao->verificaLogin($administrador);
 
    if($dados != ""){        
-        $_SESSION['login'] = $login;
+        $_SESSION['login'] = $_POST['login'];
         header("Location:painelControle.php");
     }else{
         unset($_SESSION['login']);

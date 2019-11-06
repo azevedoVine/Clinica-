@@ -2,7 +2,7 @@
         include_once 'topo.php';
         include_once 'assets\classes\consulta\consultaDao.php';
 
-    $idPaciente = 1;
+    $idPaciente = 4;
   
     $consultaDao = new ConsultaDao();
 

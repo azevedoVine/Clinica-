@@ -46,7 +46,7 @@ class ConsultaDao extends BancodeDados{
         $dentista = $consulta->getDentista();
 
 
-        $sql = $this->conexao->prepare("Select * from consulta WHERE Dentista_idDentista =$dentista");
+        $sql = $this->conexao->prepare("Select * from consulta WHERE Dentista_idDentista = '$dentista' AND ");
         $sql->execute();
         $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -56,7 +56,9 @@ class ConsultaDao extends BancodeDados{
             foreach($dados as $disponivel){
 
                 if($disponivel['data']==$data && $disponivel['horario']){
-                    $mensagem = "Este horário não está disponível, tente marcar sua consulta em outro horário";
+
+                    echo "marcou não";
+                    //$mensagem = "Este horário não está disponível, tente marcar sua consulta em outro horário";
                 }
                 else{
                     echo "o erro ta aqui";
