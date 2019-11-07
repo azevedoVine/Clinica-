@@ -15,10 +15,17 @@
     </div>
     <div class="div-login">
       <form action="verificaLogin.php" method="POST">
-        <label>E-mail:</label><input type="email" name="login">      
+        <label>E-mail:</label><input type="text" name="login">      
         <label>Senha:</label><input type="password" name="senha">      
                              <input type="submit" value="Entrar" id="entrar-login" class="botao-form">
       </form>
+      <p>
+      <?php session_start();
+       if(empty($_SESSION['erro'])){
+
+       }else{
+         echo $_SESSION['erro'];
+       }?></p>
 	</div>
 
 </body>

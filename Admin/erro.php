@@ -1,4 +1,4 @@
 <?php
-    echo "DEU MERDA";
+    echo "Você não tem permissão para acessar esta página";
 
 ?>

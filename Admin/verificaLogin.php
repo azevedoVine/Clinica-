@@ -9,24 +9,26 @@
     $administrador = new Administrador();
 
     $administrador->setLogin($_POST['login']);
-    $administrador->setSenha($_POST['senha']);
+    $administrador->setSenha(md5($_POST['senha']));
    
     $adminDao = new AdminDao();
 
     $dados=$adminDao->verificaLogin($administrador);
 
-   if($dados != ""){        
-        $_SESSION['login'] = $_POST['login'];
-        header("Location:painelControle.php");
-    }else{
+    var_dump($dados);
+
+   if($dados == NULL){
+        $_SESSION['erro'] = "Insira credenciais de login validas";
         unset($_SESSION['login']);
         header("Location:index.php");
-    }
-    
+    }else{        
+        $_SESSION['login'] = $_POST['login'];
+        header("Location:painelControle.php");
+    }    
 }else{
+    $_SESSION['erro'] = "Preencha todos os campos!";
     unset($_SESSION['login']);
     unset($_SESSION['senha']);
-    $msg = "Insira credenciais de login válidas!";
     header("Location:index.php");
 }
 
