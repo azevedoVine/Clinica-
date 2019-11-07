@@ -12,6 +12,7 @@
 			<div id="topo">
 				<div id="login">
 					<a href="perfil.php"><i class="fas fa-user-shield icone-login"></i></a>
+					<a href="sair.php"><i class="fas fa-sign-out-alt icone-login"></i></a>
 				</div>
 			</div>
 		<nav>	

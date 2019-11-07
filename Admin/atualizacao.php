@@ -75,7 +75,7 @@
                 </div>
                 <div class="modal-body">
                     <article>
-                    <form action="atualizacaoExclui.php" method="POST">
+                    <form action="atualizacaoExclui.php" method="POST" accept-charset="UTF-8">
                       Tem certeza que deseja excluir este elemento:
                       <input type="hidden" id="id" name ="id" value="">
                       <input type="text" id="titulo" name ="titulo" value="">
@@ -96,7 +96,7 @@
 						<div>
 
 							<div class="editar-modal">
-              <form action="atualizacaoEdita.php" method="POST">
+              <form action="atualizacaoEdita.php" method="POST" accept-charset="UTF-8">
                 <input type="hidden" id="id-editar" name="id">
                 <img id="foto-edita" width="100px">
                 <label>Titulo:</label><input type="text" id="titulo-editar" name ="titulo" value="">    
@@ -119,7 +119,7 @@
 					</div>
 					<div class="modal-body">
 						<div class="inserir-modal">
-						<form action="atualizacaoInsere.php" enctype="multipart/form-data" method="POST">                   
+						<form action="atualizacaoInsere.php" enctype="multipart/form-data" method="POST" accept-charset="UTF-8">                   
               <label>Titulo:</label><input required="true" type="text"  name="titulo" >      
               <label>Texto:</label><textarea type="text" name="texto" class="textarea-inserir"></textarea> 
               <label>Descrição:</label><input type="text" name="descricao">      

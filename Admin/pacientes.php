@@ -78,7 +78,7 @@
 					</div>
 					<div class="modal-body">
 						<div class="inserir-modal">
-						<form action="pacienteInsere.php" enctype="multipart/form-data" method="POST">                   
+						<form action="pacienteInsere.php" enctype="multipart/form-data" method="POST" accept-charset="UTF-8">                   
               <label>Nome:</label><input required="true" type="text" name="nome" >      
               <label>Telefone:</label><input type="text" name="tel" >
               <label>Email:</label><input type="text" name="email" >
@@ -102,7 +102,7 @@
 					</div>
 					<div class="modal-body">
 						<div class="inserir-modal">
-						<form action="pacienteEdita.php" enctype="multipart/form-data" method="POST">                   
+						<form action="pacienteEdita.php" enctype="multipart/form-data" method="POST" accept-charset="UTF-8">                   
               <input type="hidden" name="id" id="id-edita" >
               <img id="foto-edita" width="100px">      
               <label>Nome:</label><input required="true" type="text" name="nome" id="nome-edita" >      
@@ -145,7 +145,7 @@
                 </div>
                 <div class="modal-body">
                     Tem certeza que deseja excluir este elemento:
-                    <form action="pacienteExclui.php" method="POST">
+                    <form action="pacienteExclui.php" method="POST" accept-charset="UTF-8">
                     <input type="hidden" id="id-exclui" name="id">  
                     <label>Nome:</label><input type="text"  id="nome-exclui" name ="nome" value="">      
                         <button type="submit" data-close-button class="botao-editar">Excluir</button>

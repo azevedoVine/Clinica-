@@ -1,11 +1,16 @@
 <?php
             include_once 'topo.php';
-            include_once 'assets/classes/tratamentos/tratamentoDao.php';
+            include_once 'assets\classes\tratamentos\tratamentoDao.php';
+            include_once 'assets\classes\dentista\dentistaDao.php';
+			include_once 'assets\classes\atualizacoes\atualizacaoDao.php';
 
-        $tratamentoDao= new TratamentoDao;
+        $tratamentoDao= new TratamentoDao();
 
         $dados = $tratamentoDao->listaTratamentos();
 
+        $atualizacaoDao = new AtualizacaoDao();
+
+        $dados1=$atualizacaoDao->lista3Atualizacoes();
 		?>
 <html>
 
@@ -63,22 +68,13 @@
 
         <div class="propaganda-tratamento">
             <p class="titulo negrito">Atualizações</p>
-
+            <?php foreach($dados1 as $atualizacoes):?>
             <div>
-                <p class="sub-titulo negrito">Noticia tal</p>
-                <p>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam.</p>            
+                <p class="sub-titulo negrito"><?php echo $atualizacoes['titulo']; ?></p>
+                <p><?php echo $atualizacoes['texto'];?></p>            
             </div>
-
-            <div>
-                <p class="sub-titulo negrito">Noticia tal</p>
-                <p>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam.</p>            
-            </div>
-
-            <div>
-                <p class="sub-titulo negrito">Noticia tal</p>
-                <p>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam.</p>
-                <a href="atualizacoes.php"><button class='vejamais tratamento-botao'>Veja mais</button></a>
-            </div>
+            <?php endforeach;?>
+            <a href="atualizacoes.php"><button class='vejamais tratamento-botao'>Veja mais</button></a>
         </div>
         </div>
     </section>

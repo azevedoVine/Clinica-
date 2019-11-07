@@ -1,39 +1,7 @@
 <?php
-    include_once 'C:\xampp\htdocs\Clinica-Odontologica\Admin\assets\classes\atualizacoes\BancodeDados.php';
+    include_once 'C:\xampp\htdocs\Clinica-Odontologica\Usuário\assets\classes\atualizacoes\BancodeDados.php';
 
 class TratamentoDao extends BancodeDados{
-
-    public function insereTratamento($tratamento){
-
-        $titulo = $tratamento->getTitulo();
-
-        $descricao = $tratamento->getDescricao();
-
-        $publicacao = $tratamento->getPublicacao();
-
-        $imagem = $tratamento->getImagem();
-
-
-        $sql = $this->conexao->prepare("INSERT INTO tratamentos (titulo, descricao, publicacao) VALUES ('$titulo', '$descricao', '$publicacao')");
-
-        if($sql->execute()==true){
-            $mensagem = "Tratamento inserido com sucesso!";
-        }else{
-            $mensagem = "Erro ao inserir o tratamento";
-        }
-
-        $last_id = $this->conexao->lastInsertId();
-
-        $sql = $this->conexao->prepare("INSERT INTO imagem_tratamentos (titulo, src, tratamentos_idTratamentos) VALUES ('$titulo',  '$imagem', '$last_id')");
-
-        if($sql->execute()==true){
-            $mensagem = "Tratamento inserido com sucesso!";
-        }else{
-            $mensagem = "Erro ao inserir o tratamento";
-        }
-
-        return $mensagem;
-    }
 
     public function listaTratamentos(){
     

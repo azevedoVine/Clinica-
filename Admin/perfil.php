@@ -38,7 +38,7 @@
 					<div class="modal-body">
 						<div>
 							<div class="editar-modal">
-                  <form action="perfilEdita.php" method="POST">
+                  <form action="perfilEdita.php" method="POST" accept-charset="UTF-8">
                       <input type="hidden" id="id" name="id">      
                       <label>Nome:</label><input type="text" id="nome" name="nome">      
                       <label>Email:</label><input type="email" id="email" name="email">      

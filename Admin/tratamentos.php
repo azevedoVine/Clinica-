@@ -70,7 +70,7 @@ $dados = $tratamentoDao->listaTratamentos();
                 </div>
                 <div class="modal-body">
                     <article>
-                    <form action="tratamentoExclui.php" method="POST">
+                    <form action="tratamentoExclui.php" method="POST" accept-charset="UTF-8">
                       Tem certeza que deseja excluir este elemento:
                       <input type="hidden" id="id" name ="id" value="">
                       <input type="text" id="titulo" name ="titulo" value="">
@@ -91,7 +91,7 @@ $dados = $tratamentoDao->listaTratamentos();
           <div>
 
             <div class="editar-modal">
-            <form action="tratamentoEdita.php" method="POST">
+            <form action="tratamentoEdita.php" method="POST" accept-charset="UTF-8">
               <input type="hidden" id="id-editar" name="id">
               <img id="foto-edita" width="100px">
               <label>Titulo:</label><input type="text" id="titulo-editar" name ="titulo" value="">
@@ -113,7 +113,7 @@ $dados = $tratamentoDao->listaTratamentos();
 					</div>
 					<div class="modal-body">
 						<div class="inserir-modal">
-						<form action="tratamentoInsere.php" enctype="multipart/form-data" method="POST">                   
+						<form action="tratamentoInsere.php" enctype="multipart/form-data" method="POST" accept-charset="UTF-8">                   
                             <label>Titulo:</label><input type="text" name="titulo">
                             <label>Descrição:</label><textarea type="text" class="textarea-inserir" name="descricao"></textarea>
                             <label>Foto:</label><input type="file" name="foto">   
