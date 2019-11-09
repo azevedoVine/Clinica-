@@ -6,7 +6,7 @@ class AtualizacaoDao extends BancodeDados{
         public function listaAtualizacoes() {
             $sql = $this->conexao->prepare("SELECT atualizacoes.titulo, atualizacoes.texto, atualizacoes.idAtualizacao, atualizacoes.descricao, atualizacoes.publicacao, imagem_atualizacoes.src
                                             FROM atualizacoes, imagem_atualizacoes
-                                            WHERE imagem_atualizacoes.atualizacoes_idAtualizacao = atualizacoes.idAtualizacao");
+                                            WHERE imagem_atualizacoes.atualizacoes_idAtualizacao = atualizacoes.idAtualizacao ORDER BY idAtualizacao desc");
             $sql->execute();
             $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
         

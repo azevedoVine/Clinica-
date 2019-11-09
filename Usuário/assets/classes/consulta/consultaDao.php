@@ -17,6 +17,15 @@ class ConsultaDao extends BancodeDados{
         return $dados;
     } 
 
+    public function listaConsultasID($idPaciente){
+
+        $sql = $this->conexao->prepare("Select * from consulta WHERE paciente_idPaciente='$idPaciente'");
+        $sql->execute();
+        $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
+    
+        return $dados;
+    } 
+
     public function listaDentistas(){
 
         $sql = $this->conexao->prepare("Select * from dentista ORDER BY nomeDentista");

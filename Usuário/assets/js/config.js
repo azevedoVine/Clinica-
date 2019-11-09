@@ -39,8 +39,5 @@
     overlay.classList.remove('active')
   }
 
-  function confirmaEditar(){
-    // console.log("pq.?");
-    alert("Editado com sucesso!")
-}
+
   

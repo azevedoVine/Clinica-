@@ -1,8 +1,9 @@
 <?php
         include_once 'topo.php';
         include_once 'assets\classes\consulta\consultaDao.php';
+        include_once 'entrar.php';
 
-    $idPaciente = 1;
+    $idPaciente = $_SESSION['id'];
   
     $consultaDao = new ConsultaDao();
 

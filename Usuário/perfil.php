@@ -1,9 +1,11 @@
 <?php
 			include_once 'topo.php';
 			include_once 'assets\classes\paciente\paciente.php';
-			include_once 'assets\classes\paciente\pacienteDao.php';
+            include_once 'assets\classes\paciente\pacienteDao.php';
+            include_once 'assets\classes\consulta\consultaDao.php';
+            include_once 'entrar.php';
 
-        $idPaciente = 4;
+        $idPaciente = $_SESSION['id'];
 
         $paciente = new Paciente();
 
@@ -11,11 +13,13 @@
 
         $pacienteDao = new PacienteDao();        
 
-		$dados=$pacienteDao->listaPacientesID($paciente);
+        $dados=$pacienteDao->listaPacientesID($paciente);
+        
+        $consultaDao = new consultaDao();        
+
+        $dados1=$consultaDao->listaConsultasID($idPaciente);
 
 		?>
-<html>
-
             <section>
                 <div class="container">
                 <?php foreach ($dados as $perfilPaciente):?>
@@ -30,13 +34,13 @@
                                                                              data-email="<?php echo $perfilPaciente['email'] ?>"
                                                                              data-end="<?php echo $perfilPaciente['endereco'] ?>"
                                                                              data-login="<?php echo $perfilPaciente['login'] ?>"
-                                                                             data-senha="<?php echo $perfilPaciente['senha'] ?>"
                                                                              data-nasc="<?php echo $perfilPaciente['nascimento'] ?>"
                                                                              data-foto="<?php echo $perfilPaciente['fotoPerfil']?>">Editar informações <i class="fas fa-edit"></i></a>
                         </div>
                 <?php endforeach;?>
                         <div id="caleandar">
-
+                            <button class="text" data-teo="<?php print_r($dados1)?>">Ver Consultas</button>
+                            <div id="container-calendario"></div>
                         </div>
                         
                     </div>
@@ -82,7 +86,7 @@
                                     <div>
                                         <label>Email:</label><input type="text" id="email" name="email"> 
                                         <label>Login:</label><input type="text" id="login-edita" name="login">      
-                                        <label>Senha:</label><input type="password" id="senha" name="senha">            
+                                        <label>Senha:</label><input type="password" name="senha">            
                                     </div>
                                 </div>
                                 <div class="botoes-editar">
@@ -101,6 +105,8 @@
 
 <script>
   $('.edita-paciente').on('click', function(){
+
+    //var texte = $(this).data('texte');
     var nome = $(this).data('nome');
     var id = $(this).data('id');
     var tel = $(this).data('tel');
@@ -109,7 +115,8 @@
     var nasc = $(this).data('nasc');
     var foto = $(this).data('foto');
     var login = $(this).data('login');
-    var senha = $(this).data('senha');
+
+    //console.log(texte);
 
     document.getElementById('tel').value = tel;
     document.getElementById('id-edita').value = id;
@@ -118,10 +125,85 @@
     document.getElementById('nasc').value = nasc;
     document.getElementById('nome').value = nome;
     document.getElementById('login-edita').value = login;
-    document.getElementById('senha').value = senha;
     document.getElementById('foto').src = "../Admin/assets/upload/"+foto;
 
     
   });
 
+  $('.text').on('click', function(){
+    var teo = $(this).data('teo');
+
+    return teo;
+  });
+
+  var ter = "hh";
+
+  $('#container-calendario').fullCalendar({
+  header: {
+    left: 'prev,next today',
+    center: 'title',
+    right: 'month,agendaWeek,agendaDay,listWeek'
+  },
+  defaultDate: '2019-01-12',
+  navLinks: true, // can click day/week names to navigate views
+  editable: true,
+  eventLimit: true, // allow "more" link when too many events
+  events: [
+    {
+      title: ter,
+      start: '2019-01-01',
+    },
+    {
+      title: 'Long Event',
+      start: '2019-01-07',
+      end: '2019-01-10'
+    },
+    {
+      id: 999,
+      title: 'Repeating Event',
+      start: '2019-01-09T16:00:00'
+    },
+    {
+      id: 999,
+      title: 'Repeating Event',
+      start: '2019-01-16T16:00:00'
+    },
+    {
+      title: 'Mutei',
+      start: '2019-11-11',
+      end: '2019-11-13'
+    },
+    {
+      title: 'Meeting',
+      start: '2019-01-12T10:30:00',
+      end: '2019-01-12T12:30:00'
+    },
+    {
+      title: 'Lunch',
+      start: '2019-01-12T12:00:00'
+    },
+    {
+      title: 'Meeting',
+      start: '2019-01-12T14:30:00'
+    },
+    {
+      title: 'Happy Hour',
+      start: '2019-01-12T17:30:00'
+    },
+    {
+      title: 'Dinner',
+      start: '2019-01-12T20:00:00'
+    },
+    {
+      title: 'Birthday Party',
+      start: '2019-01-13T07:00:00'
+    },
+    {
+      title: 'Click for Google',
+      url: 'http://google.com/',
+      start: '2019-01-28'
+    }
+  ]
+});    
+    
 </script>

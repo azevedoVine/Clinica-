@@ -13,7 +13,7 @@
         $paciente->setEndereco($_POST['end']);
         $paciente->setNascimento($_POST['nasc']);
         $paciente->setLogin($_POST['login']);
-        $paciente->setSenha($_POST['senha']);
+        $paciente->setSenha(md5($_POST['senha']));
         $paciente->setPerfil($_FILES['foto']['name']);
   
         $destino = 'assets/upload/' . $_FILES['foto']['name'];

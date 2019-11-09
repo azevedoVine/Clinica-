@@ -14,9 +14,18 @@
 		<img src="assets/img/logo-inteiro.png" class="logo-login">
     </div>
     <div class="div-login">
-        <label>E-mail:</label><input type="text" class="input-login">      
-        <label>Senha:</label><input type="password" class="input-login">      
-                            <a href="perfil.php"><input type="submit" value="Entrar" id="entrar-login" class="botao-form"></a>
+      <form action="verificaLogin.php" method="POST"> 
+          <label>E-mail:</label><input type="text" class="input-login" name="login">      
+          <label>Senha:</label><input type="password" class="input-login" name="senha">      
+                              <input type="submit" value="Entrar" id="entrar-login" class="botao-form">
+      </form>
+      <p>
+      <?php session_start();
+       if(empty($_SESSION['erro'])){
+
+       }else{
+         echo $_SESSION['erro'];
+       }?></p>
 	</div>
 
 </body>
