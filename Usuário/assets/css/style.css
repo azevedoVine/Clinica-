@@ -625,5 +625,16 @@ footer{
 	position: absolute;
     margin-top: 20%;
     width: 30%;
-    height: 500px;
+	height: 500px;
+}
+
+.cadastra-left{
+	display: flex;
+	margin-top: 5%;
+}
+
+.login-right{
+	float: right;
+	margin-left: 15%;
+	margin-top: 2%;
 }

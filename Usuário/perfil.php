@@ -1,9 +1,9 @@
 <?php
 			include_once 'topo.php';
 			include_once 'assets\classes\paciente\paciente.php';
-            include_once 'assets\classes\paciente\pacienteDao.php';
-            include_once 'assets\classes\consulta\consultaDao.php';
-            include_once 'entrar.php';
+      include_once 'assets\classes\paciente\pacienteDao.php';
+      include_once 'assets\classes\consulta\consultaDao.php';
+      include_once 'entrar.php';
 
         $idPaciente = $_SESSION['id'];
 
@@ -18,6 +18,12 @@
         $consultaDao = new consultaDao();        
 
         $dados1=$consultaDao->listaConsultasID($idPaciente);
+
+        foreach($dados1 as $dataConsulta){
+
+            $Consultadata['title'] = $dataConsulta['idConsulta'];
+            $Consultadata['start'] = $dataConsulta['data'];
+        }
 
 		?>
             <section>
@@ -39,8 +45,7 @@
                         </div>
                 <?php endforeach;?>
                         <div id="caleandar">
-                            <button class="text" data-teo="<?php print_r($dados1)?>">Ver Consultas</button>
-                            <div id="container-calendario"></div>
+                            <div id="container-calendario" ></div>
                         </div>
                         
                     </div>
@@ -106,7 +111,6 @@
 <script>
   $('.edita-paciente').on('click', function(){
 
-    //var texte = $(this).data('texte');
     var nome = $(this).data('nome');
     var id = $(this).data('id');
     var tel = $(this).data('tel');
@@ -115,8 +119,6 @@
     var nasc = $(this).data('nasc');
     var foto = $(this).data('foto');
     var login = $(this).data('login');
-
-    //console.log(texte);
 
     document.getElementById('tel').value = tel;
     document.getElementById('id-edita').value = id;
@@ -130,80 +132,20 @@
     
   });
 
-  $('.text').on('click', function(){
-    var teo = $(this).data('teo');
-
-    return teo;
-  });
-
-  var ter = "hh";
+  var tempArray = <?php echo json_encode($Consultadata); ?>;
 
   $('#container-calendario').fullCalendar({
+
   header: {
     left: 'prev,next today',
     center: 'title',
     right: 'month,agendaWeek,agendaDay,listWeek'
   },
-  defaultDate: '2019-01-12',
+  defaultDate: tempArray[0],
   navLinks: true, // can click day/week names to navigate views
   editable: true,
   eventLimit: true, // allow "more" link when too many events
-  events: [
-    {
-      title: ter,
-      start: '2019-01-01',
-    },
-    {
-      title: 'Long Event',
-      start: '2019-01-07',
-      end: '2019-01-10'
-    },
-    {
-      id: 999,
-      title: 'Repeating Event',
-      start: '2019-01-09T16:00:00'
-    },
-    {
-      id: 999,
-      title: 'Repeating Event',
-      start: '2019-01-16T16:00:00'
-    },
-    {
-      title: 'Mutei',
-      start: '2019-11-11',
-      end: '2019-11-13'
-    },
-    {
-      title: 'Meeting',
-      start: '2019-01-12T10:30:00',
-      end: '2019-01-12T12:30:00'
-    },
-    {
-      title: 'Lunch',
-      start: '2019-01-12T12:00:00'
-    },
-    {
-      title: 'Meeting',
-      start: '2019-01-12T14:30:00'
-    },
-    {
-      title: 'Happy Hour',
-      start: '2019-01-12T17:30:00'
-    },
-    {
-      title: 'Dinner',
-      start: '2019-01-12T20:00:00'
-    },
-    {
-      title: 'Birthday Party',
-      start: '2019-01-13T07:00:00'
-    },
-    {
-      title: 'Click for Google',
-      url: 'http://google.com/',
-      start: '2019-01-28'
-    }
-  ]
-});    
+  events: [tempArray]
+  });    
     
 </script>
