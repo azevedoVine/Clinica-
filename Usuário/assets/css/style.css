@@ -488,6 +488,7 @@ footer{
   .info-user{
 	  display: flex;
 	  width: 50%;
+	  margin-left: 10%;
   }
 
   .dados-user{

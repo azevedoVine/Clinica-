@@ -44,7 +44,7 @@
                 <td><?php echo $dentistas['CRO'] ?></td>
                 <td><?php echo $dentistas['nomeDentista'] ?></td>
                 <td><?php echo $dentistas['especializacao'] ?></td>
-                <td><img src="assets/upload/<?php echo $dentistas['perfilDentista'] ?>" width="70"></td>
+                <td><img src="assets/upload/<?php echo $dentistas['perfilDentista'] ?>" width="50"></td>
                  <td><a data-modal-target="#editar" class="edita-dentista" data-id="<?php echo $dentistas['idDentista']?>"
                                                                              data-cro="<?php echo $dentistas['CRO']?>"
                                                                              data-nome="<?php echo $dentistas['nomeDentista']?>"

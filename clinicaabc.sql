@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 12-Nov-2019 às 16:21
+-- Generation Time: 13-Nov-2019 às 07:04
 -- Versão do servidor: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -78,6 +78,7 @@ CREATE TABLE `consulta` (
   `idConsulta` bigint(20) UNSIGNED NOT NULL,
   `data` date NOT NULL,
   `horario` varchar(45) NOT NULL,
+  `mensagem` varchar(500) DEFAULT NULL,
   `paciente_idPaciente` bigint(20) UNSIGNED DEFAULT NULL,
   `Dentista_idDentista` bigint(20) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -86,20 +87,21 @@ CREATE TABLE `consulta` (
 -- Extraindo dados da tabela `consulta`
 --
 
-INSERT INTO `consulta` (`idConsulta`, `data`, `horario`, `paciente_idPaciente`, `Dentista_idDentista`) VALUES
-(1, '2019-08-07', '15:00', 1, 1),
-(2, '2019-10-09', '18:00', 1, 4),
-(3, '2019-10-03', '10:30', 1, 6),
-(4, '2019-11-07', '18:00', 1, 6),
-(5, '2019-11-07', '18:00', 1, 6),
-(14, '2019-10-10', '10:30', 1, 6),
-(15, '2019-10-10', '10:00', 1, 6),
-(16, '2019-10-10', '10:00', 1, 6),
-(17, '2019-10-10', '10:00', 1, 6),
-(18, '2019-10-10', '10:00', 1, 4),
-(22, '2019-10-10', '10:00', 1, 4),
-(23, '2019-11-07', '09:00', 1, 6),
-(24, '2019-11-05', '09:30', 4, 6);
+INSERT INTO `consulta` (`idConsulta`, `data`, `horario`, `mensagem`, `paciente_idPaciente`, `Dentista_idDentista`) VALUES
+(1, '2019-08-07', '15:00', NULL, 1, 1),
+(2, '2019-10-09', '18:00', NULL, 1, 4),
+(3, '2019-10-03', '10:30', NULL, 1, 6),
+(4, '2019-11-07', '18:00', NULL, 1, 6),
+(5, '2019-11-07', '18:00', NULL, 1, 6),
+(14, '2019-10-10', '10:30', NULL, 1, 6),
+(15, '2019-10-10', '10:00', NULL, 1, 6),
+(16, '2019-10-10', '10:00', NULL, 1, 6),
+(17, '2019-10-10', '10:00', NULL, 1, 6),
+(18, '2019-10-10', '10:00', NULL, 1, 4),
+(22, '2019-10-10', '10:00', NULL, 1, 4),
+(23, '2019-11-07', '09:00', NULL, 1, 6),
+(27, '2019-11-13', '09:00', '', 4, 6),
+(28, '2019-11-14', '09:00', 'giuguig', 4, 6);
 
 -- --------------------------------------------------------
 
@@ -339,7 +341,7 @@ ALTER TABLE `atualizacoes`
 -- AUTO_INCREMENT for table `consulta`
 --
 ALTER TABLE `consulta`
-  MODIFY `idConsulta` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `idConsulta` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `dentista`

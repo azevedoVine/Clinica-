@@ -17,6 +17,19 @@ class ConsultaDao extends BancodeDados{
         return $dados;
     } 
 
+    public function cancelaConsulta($consulta) {
+        $idConsulta = $consulta->getIdConsulta();
+
+        $sql = $this->conexao->prepare("DELETE FROM consulta WHERE consulta.idConsulta = '$idConsulta' ");
+
+        if($sql->execute()==true){
+            $mensagem = "Consulta cancelada com sucesso!";
+        }else{
+            $mensagem = "Erro ao cancelar a consulta";
+        }
+
+        return $mensagem;
+    }
 
 
 }

@@ -7,6 +7,7 @@ class Consulta{
     public $Horario;
     public $Paciente;
     public $Dentista;
+    public $Mensagem;
 
 
 
@@ -29,6 +30,10 @@ class Consulta{
         return $this->Dentista;
     }
 
+    function getMensagem() {
+        return $this->Mensagem;
+    }
+
     function setIdConsulta($IdConsulta) {
         $this->IdConsulta = $IdConsulta;
     }
@@ -49,6 +54,9 @@ class Consulta{
         $this->Dentista = $Dentista;
     }
 
-}
+    function setMensagem($Mensagem) {
+        $this->Mensagem = $Mensagem;
+    }
 
+}
 ?>

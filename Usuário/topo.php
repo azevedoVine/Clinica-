@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/all.css">
 		    <link rel="stylesheet" href="assets/css/bxslider.css">        
         <link rel="stylesheet" href="assets/css/theme1.css"/>
-        <link rel="stylesheet" href="assets/css/fullcalendar.min.css">
+        <link rel="stylesheet" href="assets/css/fullcalendar.css">
         
 		<link rel="icon" type="image/png" sizes="32x32" href="assets/img/Logo.png">
 

@@ -36,7 +36,7 @@
 
                         <label>Data: </label><input type="date" id="data" name="data" >
         
-                        <label>Mensagem (opcional):</label> <textarea id="mensagem-consulta"></textarea>
+                        <label>Mensagem (opcional):</label> <textarea id="mensagem-consulta" name="mensagem"></textarea>
                         <input type="submit" value="Marcar Consulta" class="botao-disponibilidade">
                         </form>
                     </div>

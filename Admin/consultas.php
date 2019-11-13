@@ -24,7 +24,6 @@
 
 			<div class="tabela">
 			<table id="playlistTable">
-      <a data-modal-target="#inserir" ><button class="botao-nova">Marcar Consulta</button></a>
             <caption class="titulo-tabela">Consultas</caption>
             <thead>
               <tr>
@@ -33,7 +32,7 @@
                 <th>Dentista</th>
                 <th>Data</th>
                 <th>Horário</th>
-                <th>Ações</th>
+                <th colspan="2">Ações</th>
 
               </tr>
             </thead>
@@ -46,13 +45,21 @@
                 <td><a href="dentistas.php":><?php echo $consultas['nomeDentista'] ?></a></td>
                 <td><?php echo $consultas['data'] ?></td>
                 <td><?php echo $consultas['horario'] ?></td>
-                 <td><!--<a data-modal-target="#detalhe" class="detalhe-consulta" data-id="<?php echo $consultas['idConsulta']?>"
+                 <td><a data-modal-target="#detalhe" class="detalhe-consulta" data-id="<?php echo $consultas['idConsulta']?>"
                                                                              data-nome="<?php echo $consultas['nome']?>"
                                                                              data-dentista="<?php echo $consultas['nomeDentista']?>"
                                                                              data-dia="<?php echo $consultas['data']?>"
-                                                                             data-hora="<?php echo $consultas['horario']?>"> -->
-                                                                             
-                                                                             <i class="fas fa-eye icone-tabela "></i></a></td>
+                                                                             data-hora="<?php echo $consultas['horario']?>"
+                                                                             data-mensagem="<?php echo $consultas['mensagem']?>">                                                                          
+                                                                             <i class="fas fa-eye icone-tabela "></i></a>
+                 </td>
+                 <td><a data-modal-target="#cancelar" class="cancelar-consulta" data-id="<?php echo $consultas['idConsulta']?>"
+                                                                            data-dia="<?php echo $consultas['data']?>"
+                                                                            data-hora="<?php echo $consultas['horario']?>">
+                                                                            
+                                                                            <i class="fas fa-times"></i></a>
+                </td>                                                             
+                  
               </tr>
               <?php endforeach;?>
             </tbody>
@@ -62,40 +69,80 @@
 		</div>
 		</section>
 
-    <!-- <div class="modal" id="detalhe">
+   <div class="modal" id="detalhe">
                 <div class="modal-header">
                   <div class="titulo negrito">Consulta</div>
                   <button data-close-button class="close-button">&times;</button>
                 </div>
                 <div class="modal-body">
                     <article>
-              <p><span class="negrito">Paciete: </span><input type="text" id="id" name="id"></p>
-              <p><span class="negrito">Horário: </span><input type="text" id="nome" name="nome"></p>
-              <p><span class="negrito">Dia: </span>01/12/1123</p>
-              <p><span class="negrito">Dentista: </span>Jalma</p>
+              <p><span class="negrito">Paciente: </span><span id="nome-modal"></span></p>
+              <p><span class="negrito">Horário: </span><span id="hora-modal"></span></p>
+              <p><span class="negrito">Dia: </span><span id="dia-modal"></span></p>
+              <p><span class="negrito">Dentista: </span><span id="dentista-modal"></span></p>
+              <p><span class="negrito">Mensagem: </span><span id="mensagem-modal"></span></p>
               
                     </article>
                 </div>
             </div>
-    <div id="overlay"></div> -->
+    <div id="overlay"></div>
+
+    <div class="modal" id="cancelar">
+                <div class="modal-header">
+                  <div class="titulo negrito">Consulta</div>
+                  <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <article>
+                    <p>Tem certeza que deseja excluir este elemento?</p>
+                    <p><span class="negrito">Dia: </span><span id="dia"></span></p>  
+                    <p><span class="negrito">Horário: </span><span id="hora"></span></p>         
+                    </article>
+                    <form action="cancelaConsulta.php" method="POST">
+                      <input type="hidden" id="id" name="id"/>
+                      <input type="submit" value="Excluir"/>
+                    </form>
+                </div>
+            </div>
+    <div id="overlay"></div>
 
 <?php include_once "footer.php"; ?>
-<!-- <script>
-  $('.edita-atualizacao').on('click', function(){
-    var id = $(this).data('id');
+<script>
+  $('.detalhe-consulta').on('click', function(){
     var nome = $(this).data('nome');
     var dentista = $(this).data('dentista');
     var dia = $(this).data('dia');
     var hora = $(this).data('hora');
+    var mensagem = $(this).data('mensagem');
 
+    if(mensagem == "" ){
+      mensagem = "Nenhuma mensagem a ser mostrada";
+    }
+
+    console.log(dia);
   
+    document.getElementById('nome-modal').innerHTML = nome;
+    document.getElementById('dentista-modal').innerHTML = dentista;
+    document.getElementById('dia-modal').innerHTML = dia;
+    document.getElementById('hora-modal').innerHTML = hora;
+    document.getElementById('mensagem-modal').innerHTML = mensagem;
 
-    document.getElementById('id').value = id;
-    document.getElementById('nome').value = nome;
-    document.getElementById('dentista').value = dentista;
-    document.getElementById('descricao').value = dia;
-    document.getElementById('publicacao').value = horario;
 
     
   });
-</script> -->
+
+  $('.cancelar-consulta').on('click', function(){
+    var id = $(this).data('id');
+    var dia = $(this).data('dia');
+    var hora = $(this).data('hora');
+
+    console.log(dia);
+  
+
+    document.getElementById('id').value = id;
+    document.getElementById('dia').innerHTML = dia;
+    document.getElementById('hora').innerHTML = hora;
+
+    
+  });
+</script>

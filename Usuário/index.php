@@ -125,7 +125,7 @@
     var esp = $(this).data('esp');
 	var foto = $(this).data('foto');
 	
-     document.getElementById('nome-dentista').innerHTML = nome;
+    document.getElementById('nome-dentista').innerHTML = nome;
     document.getElementById('cro-dentista').innerHTML = cro;
     document.getElementById('esp-dentista').innerHTML = esp;
     document.getElementById('foto').src = "../Admin/assets/upload/"+foto;

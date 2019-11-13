@@ -19,12 +19,16 @@
 
         $dados1=$consultaDao->listaConsultasID($idPaciente);
 
+        $n = 0;
+
         foreach($dados1 as $dataConsulta){
 
-            $Consultadata['title'] = $dataConsulta['idConsulta'];
-            $Consultadata['start'] = $dataConsulta['data'];
-        }
+            $Consultadata[$n]['title'] = $dataConsulta['idConsulta'];
+            $Consultadata[$n]['start'] = $dataConsulta['data'];
 
+            $n = $n+1;
+        }
+    
 		?>
             <section>
                 <div class="container">
@@ -145,7 +149,7 @@
   navLinks: true, // can click day/week names to navigate views
   editable: true,
   eventLimit: true, // allow "more" link when too many events
-  events: [tempArray]
+  events: tempArray
   });    
     
 </script>

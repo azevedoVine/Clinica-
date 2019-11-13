@@ -9,6 +9,7 @@
         $consulta->setData($_POST['data']);
         $consulta->setPaciente($_POST['paciente']);
         $consulta->setDentista($_POST['dentista']);
+        $consulta->setMensagem($_POST['mensagem']);
         
         $consultaDao = new ConsultaDao();
         $msg = $consultaDao->novaConsulta($consulta);
