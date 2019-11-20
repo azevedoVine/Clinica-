@@ -68,7 +68,6 @@ class ConsultaDao extends BancodeDados{
             $sql = $this->conexao->prepare("INSERT INTO consulta (data, horario, mensagem, paciente_idPaciente, Dentista_idDentista) VALUES ( '$data', '$horario', '$mensagem', '$paciente', '$dentista')");
             if($sql->execute()==true){
                 $mensagem = "Consulta marcada com sucesso";
-                echo 'entrou no ultimo IF';
             }else{
                 $mensagem = "Erro ao marcar a consulta";
             }

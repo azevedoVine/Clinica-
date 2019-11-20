@@ -47,17 +47,6 @@ class AtualizacaoDao extends BancodeDados{
         return $dados;
     }
 
-    //  public function listaImgAtualizacoes() {
-    //      $sql = $this->conexao->prepare("Select * from imagem_atualizacoes i
-    //                                     inner join atualizacoes a
-    //                                     on i.atualizacoes_idAtualizacao = a.idAtualizacao
-    //                                          ");
-    //      $sql->execute();
-    //      $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
-    
-    //      return $dados;
-    //  }
-
     public function editaAtualizacao($atualizacao) {
 
         $idAtualizacao = $atualizacao->getIdAtualizacao();

@@ -15,7 +15,7 @@
         $paciente->setSenha(md5($_POST['senha']));
         $paciente->setPerfil($_FILES['foto']['name']);
   
-        $destino = 'assets/upload/' . $_FILES['foto']['name'];
+        $destino = '../Admin/assets/upload/' . $_FILES['foto']['name'];
  
         $arquivo_tmp = $_FILES['foto']['tmp_name'];
         
@@ -42,5 +42,3 @@
 
   include_once "footer.php";
   ?>
-    
-?>

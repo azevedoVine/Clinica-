@@ -30,6 +30,7 @@
 						<div class="atalho atalho-left"><li><a href="dentistas.php">Dentistas</a></li></div>
 						<div class="atalho atalho-left"><li><a href="tratamentos.php">Tratamentos</a></li></div>
 						<div class="atalho atalho-left"><li><a href="sobre.php">Sobre nós</a></li></div>
+						<div class="atalho atalho-left"><li><a href="anuncios.php">Anúncios</a></li></div>
 				</ul>
 			</div>
 		</nav>

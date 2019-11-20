@@ -1,0 +1,5 @@
+Admin:
+
+Login: Deus
+
+Senha: 12345 ou 123456 (não lembro qual é ;) )

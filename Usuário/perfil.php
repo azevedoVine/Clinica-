@@ -1,6 +1,6 @@
 <?php
-			include_once 'topo.php';
-			include_once 'assets\classes\paciente\paciente.php';
+      include_once 'topo.php';
+      include_once 'assets\classes\paciente\paciente.php';
       include_once 'assets\classes\paciente\pacienteDao.php';
       include_once 'assets\classes\consulta\consultaDao.php';
       include_once 'entrar.php';
@@ -14,25 +14,31 @@
         $pacienteDao = new PacienteDao();        
 
         $dados=$pacienteDao->listaPacientesID($paciente);
+
+       
         
         $consultaDao = new consultaDao();        
 
         $dados1=$consultaDao->listaConsultasID($idPaciente);
 
         $n = 0;
+        if($dados1 != null){
+            foreach($dados1 as $dataConsulta){
 
-        foreach($dados1 as $dataConsulta){
+                $Consultadata[$n]['title'] = $dataConsulta['idConsulta'];
+                $Consultadata[$n]['start'] = $dataConsulta['data'];
 
-            $Consultadata[$n]['title'] = $dataConsulta['idConsulta'];
-            $Consultadata[$n]['start'] = $dataConsulta['data'];
-
-            $n = $n+1;
+                $n = $n+1;
+            }
+        }else{
+            $Consultadata = 0;
         }
-    
+        
 		?>
             <section>
                 <div class="container">
                 <?php foreach ($dados as $perfilPaciente):?>
+
                     <div class="info-user">
                     <img src="../Admin/assets/upload/<?php echo $perfilPaciente['fotoPerfil']; ?>" class="foto-perfil">
                         <div class="dados-user">
@@ -99,10 +105,10 @@
                                     </div>
                                 </div>
                                 <div class="botoes-editar">
-                                    <button type="submit" data-close-button class="botao-editar">Editar</a>
-                                    <button data-close-button class="botao-editar-cancelar">Cancelar</a>
+                                    <input type="submit" data-close-button class="botao-editar" value="Editar"/>
+                                    </form>
                                 </div>
-                            </form>
+                                <button data-close-button class="botao-editar-cancelar close-button">Cancelar</button>
 							</div>
 						</div>
 					</div>
@@ -115,6 +121,8 @@
 <script>
   $('.edita-paciente').on('click', function(){
 
+    console.log("entrou nessa caceta");
+
     var nome = $(this).data('nome');
     var id = $(this).data('id');
     var tel = $(this).data('tel');
@@ -123,6 +131,8 @@
     var nasc = $(this).data('nasc');
     var foto = $(this).data('foto');
     var login = $(this).data('login');
+
+    console.log(login);
 
     document.getElementById('tel').value = tel;
     document.getElementById('id-edita').value = id;
