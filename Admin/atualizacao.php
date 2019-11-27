@@ -98,7 +98,7 @@
 							<div class="editar-modal">
               <form action="atualizacaoEdita.php" method="POST" accept-charset="UTF-8">
                 <input type="hidden" id="id-editar" name="id">
-                <img id="foto-edita" width="100px">
+                <img id="foto-edita" width="100px" class="foto-modal"/>
                 <label>Titulo:</label><input type="text" id="titulo-editar" name ="titulo" value="">    
                 <label>Texto:</label><input type="text"  id="texto" name ="texto" value="">      
                 <label>Descrição:</label><input type="text" id="descricao" name="descricao" value="">      
@@ -120,13 +120,21 @@
 					<div class="modal-body">
 						<div class="inserir-modal">
 						<form action="atualizacaoInsere.php" enctype="multipart/form-data" method="POST" accept-charset="UTF-8">                   
+            <div class="div-form-modal"> 
+              <div> 
               <label>Titulo:</label><input required="true" type="text"  name="titulo" >      
               <label>Texto:</label><textarea type="text" name="texto" class="textarea-inserir"></textarea> 
+              </div>
+              <div class="div-2-modal">
               <label>Descrição:</label><input type="text" name="descricao">      
               <label>Foto:</label><input type="file" name="foto">      
               <label>Data:</label><input type="date" name="publicacao" placeholder="Ex.: dd/mm/aaaa" data-mask="00/00/0000" maxlength="10">   
+            </div>
+            </div>
+            <div class="botoes-modal-inserir">  
               <button type="submit" class="botao-editar">Inserir</button>
               <button data-close-button class="botao-editar-cancelar">Cancelar</button>
+            </div>
             </form>
 						</div>
 					</div>

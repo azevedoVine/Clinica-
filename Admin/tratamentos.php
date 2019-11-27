@@ -93,7 +93,7 @@ $dados = $tratamentoDao->listaTratamentos();
             <div class="editar-modal">
             <form action="tratamentoEdita.php" method="POST" accept-charset="UTF-8">
               <input type="hidden" id="id-editar" name="id">
-              <img id="foto-edita" width="100px">
+              <img id="foto-edita" width="100px"  class="foto-modal">
               <label>Titulo:</label><input type="text" id="titulo-editar" name ="titulo" value="">
               <label>Descrição:</label><input type="text" id="descricao" name="descricao" value="">      
               <label>Data:</label><input type="text" id="publicacao" name="publicacao" value="">      
@@ -114,12 +114,21 @@ $dados = $tratamentoDao->listaTratamentos();
 					<div class="modal-body">
 						<div class="inserir-modal">
 						<form action="tratamentoInsere.php" enctype="multipart/form-data" method="POST" accept-charset="UTF-8">                   
+            <div class="div-form-modal">
+              <div>
                             <label>Titulo:</label><input type="text" name="titulo">
                             <label>Descrição:</label><textarea type="text" class="textarea-inserir" name="descricao"></textarea>
+              </div>
+              <div class="div-2-modal">
                             <label>Foto:</label><input type="file" name="foto">   
                             <label>Data:</label><input type="date" name="publicacao" placeholder="Ex.: dd/mm/aaaa" data-mask="00/00/0000" maxlength="10">        
+              </div>
+              </div>
+              <div class="botoes-modal-inserir">
                             <button class="botao-editar">Inserir</a>
                             <button data-close-button class="botao-editar-cancelar">Cancelar</a>
+              
+              </div>
             </form>
 						</div>
 					</div>

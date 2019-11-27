@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 13-Nov-2019 às 07:04
+-- Generation Time: 27-Nov-2019 às 10:32
 -- Versão do servidor: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -43,6 +43,27 @@ CREATE TABLE `administrador` (
 
 INSERT INTO `administrador` (`idAdmin`, `nome`, `categoria`, `email`, `login`, `senha`) VALUES
 (1, 'God', 'Super User', 'dios@live.com', 'Deus', '827ccb0eea8a706c4c34a16891f84e7b');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `anuncios`
+--
+
+CREATE TABLE `anuncios` (
+  `idAnuncio` bigint(11) NOT NULL,
+  `nome` varchar(1000) NOT NULL,
+  `src` varchar(1000) NOT NULL,
+  `administrador_idAdmin` bigint(11) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `anuncios`
+--
+
+INSERT INTO `anuncios` (`idAnuncio`, `nome`, `src`, `administrador_idAdmin`) VALUES
+(2, 'inicio', 'anuncio-home.png', 1),
+(3, 'inicio2', 'anuncio-home.png', 1);
 
 -- --------------------------------------------------------
 
@@ -88,7 +109,6 @@ CREATE TABLE `consulta` (
 --
 
 INSERT INTO `consulta` (`idConsulta`, `data`, `horario`, `mensagem`, `paciente_idPaciente`, `Dentista_idDentista`) VALUES
-(1, '2019-08-07', '15:00', NULL, 1, 1),
 (2, '2019-10-09', '18:00', NULL, 1, 4),
 (3, '2019-10-03', '10:30', NULL, 1, 6),
 (4, '2019-11-07', '18:00', NULL, 1, 6),
@@ -260,6 +280,13 @@ ALTER TABLE `administrador`
   ADD UNIQUE KEY `idAdmin` (`idAdmin`);
 
 --
+-- Indexes for table `anuncios`
+--
+ALTER TABLE `anuncios`
+  ADD PRIMARY KEY (`idAnuncio`),
+  ADD KEY `administrador_idAdmin` (`administrador_idAdmin`);
+
+--
 -- Indexes for table `atualizacoes`
 --
 ALTER TABLE `atualizacoes`
@@ -332,6 +359,12 @@ ALTER TABLE `administrador`
   MODIFY `idAdmin` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `anuncios`
+--
+ALTER TABLE `anuncios`
+  MODIFY `idAnuncio` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `atualizacoes`
 --
 ALTER TABLE `atualizacoes`
@@ -382,6 +415,12 @@ ALTER TABLE `tratamentos`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Limitadores para a tabela `anuncios`
+--
+ALTER TABLE `anuncios`
+  ADD CONSTRAINT `anuncios_ibfk_1` FOREIGN KEY (`administrador_idAdmin`) REFERENCES `administrador` (`idAdmin`);
 
 --
 -- Limitadores para a tabela `atualizacoes`

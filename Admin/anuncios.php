@@ -91,7 +91,7 @@
               <form action="anuncioEdita.php" method="POST" accept-charset="UTF-8">
                 <input type="hidden" id="id-editar" name="id">
                 <img id="foto-edita" width="100px">
-                <label>Titulo:</label><input type="text" id="nome-editar" name ="nome" value="">
+                <p><label>Titulo:</label></p><input type="text" id="nome-editar" name ="nome" value="">
                     <button type="submit" data-close-button class="botao-editar">Editar</button>
                     <button data-close-button class="botao-editar-cancelar">Cancelar</button>
               </form>

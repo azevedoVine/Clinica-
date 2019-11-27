@@ -2,24 +2,16 @@
       include_once "topo.php";
 ?>
 			
-		<section>			
-		<div class="grafico-todo">
-            <h1 class="h1-grafico">Consultas marcadas nos últimos 3 meses</h1>
+		<section>
+        <h2 class="titulo-painel">Acesso Rápido</h2>
+        <div class="icones-painel">			
+        <div class="icone-singular"><p><a href="atualizacao.php"><h2>Atualizações</h2><i class="far fa-newspaper icone-painel"></i></a></p></div>
+        <div class="icone-singular"><p><a href="consultas.php"><h2>Consultas</h2><i class="far fa-calendar-alt icone-painel"></i></a></p></div>
+        <div class="icone-singular"><p><a href="pacientes.php"><h2>Pacientes</h2><i class="fas fa-user  icone-painel"></i></a></p></div>
+        <div class="icone-singular"><p><a href="dentistas.php"><h2>Dentistas</h2><i class="fas fa-user-md icone-painel"></i></a></p></div>
+        <div class="icone-singular"><p><a href="tratamentos.php"><h2>Tratamentos</h2><i class="fas fa-book-medical icone-painel"></i></a></p></div>
 
-            <p class="p-grafico">Janeiro</p>
-            <div class="container">
-                <div class="grafico primeiro">412 Acessos</div>
-            </div>
-
-            <p  class="p-grafico">Fevereiro</p>
-            <div class="container">
-                <div class="grafico segundo">300 Acessos</div>
-            </div>
-
-            <p class="p-grafico">Março</p>
-            <div class="container">
-                <div class="grafico terceiro">215 Acessos</div>
-            </div>
+        
         </div>
 		</section>
 

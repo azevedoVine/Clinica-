@@ -100,7 +100,7 @@
                     </article>
                     <form action="cancelaConsulta.php" method="POST">
                       <input type="hidden" id="id" name="id"/>
-                      <input type="submit" value="Excluir"/>
+                      <input type="submit" value="Cancelar"/>
                     </form>
                 </div>
             </div>

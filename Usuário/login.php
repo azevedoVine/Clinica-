@@ -15,8 +15,8 @@
     </div>
     <div class="div-login">
       <form action="verificaLogin.php" method="POST"> 
-          <label>E-mail:</label><input type="text" class="input-login" name="login">      
-          <label>Senha:</label><input type="password" class="input-login" name="senha">      
+          <label>E-mail:</label><input type="text" class="input-escolha" name="login">      
+          <label>Senha:</label><input type="password" class="input-escolha" name="senha">      
                               <input type="submit" value="Entrar" id="entrar-login" class="botao-form">
       </form>
       <p>

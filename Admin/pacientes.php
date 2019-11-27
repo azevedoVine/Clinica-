@@ -79,16 +79,24 @@
 					<div class="modal-body">
 						<div class="inserir-modal">
 						<form action="pacienteInsere.php" enctype="multipart/form-data" method="POST" accept-charset="UTF-8">                   
+            <div class="div-form-modal">  
+              <div>
               <label>Nome:</label><input required="true" type="text" name="nome" >      
               <label>Telefone:</label><input type="text" name="tel" >
               <label>Email:</label><input type="text" name="email" >
               <label>Endereço:</label><input type="text" name="end" >
+              </div>
+              <div class="div-2-modal">
               <label>Data de Nascimento:</label><input type="date" name="nasc" >
               <label>Foto de Perfil:</label><input type="file" name="foto">
               <label>Login:</label><input type="text" name="login">
               <label>Senha:</label><input type="password" name="senha">
-              <button type="submit" class="botao-editar">Inserir</button>
-              <button data-close-button class="botao-editar-cancelar">Cancelar</button>
+              </div>
+              </div>
+              <div class="botoes-modal-inserir">
+                <button type="submit" class="botao-editar">Inserir</button>
+                <button data-close-button class="botao-editar-cancelar">Cancelar</button>
+              </div>
             </form>
 						</div>
 					</div>
@@ -104,14 +112,22 @@
 						<div class="inserir-modal">
 						<form action="pacienteEdita.php" enctype="multipart/form-data" method="POST" accept-charset="UTF-8">                   
               <input type="hidden" name="id" id="id-edita" >
-              <img id="foto-edita" width="100px">      
-              <label>Nome:</label><input required="true" type="text" name="nome" id="nome-edita" >      
-              <label>Telefone:</label><input type="text" name="tel" id="tel" >
-              <label>Email:</label><input type="text" name="email" id="email" >
-              <label>Endereço:</label><input type="text" name="end" id="end" >
-              <label>Data de Nascimento:</label><input type="text" name="nasc" id="nasc" >
+              <img id="foto-edita" width="100px" class="foto-modal">      
+              <div class="div-form-modal">
+                <div>
+                <label>Nome:</label><input required="true" type="text" name="nome" id="nome-edita" >      
+                <label>Telefone:</label><input type="text" name="tel" id="tel" >
+                <label>Email:</label><input type="text" name="email" id="email" >
+                </div>
+                <div class="div-2-modal">
+                <label>Endereço:</label><input type="text" name="end" id="end" >
+                <label>Data de Nascimento:</label><input type="text" name="nasc" id="nasc" >
+                </div>
+              </div>
+              <div class="botoes-modal">
               <button type="submit" class="botao-editar">Editar</button>
               <button data-close-button class="botao-editar-cancelar">Cancelar</button>
+              </div>
             </form>
 						</div>
 					</div>
@@ -125,7 +141,7 @@
 					</div>
 					<div class="modal-body">
 						<div class="inserir-modal">       
-              <img id="foto-detalhe" width="100px">           
+              <img id="foto-detalhe" width="100px"  class="foto-modal">           
               <input type="hidden" name="id" id="id-detalhe" >      
               <label>Nome:</label><input required="true" type="text" name="nome" id="nome-detalhe" >      
               <label>Telefone:</label><input type="text" name="tel" id="tel-detalhe" >

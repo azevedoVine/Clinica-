@@ -15,18 +15,18 @@
 	display: flex;
 	left: 35%;
 	top: 1%;
-	width: 69%;
+	width: 80%;
 	text-align: center;
 	border:solid;
 	border-color: #008FFF;
 	background-color: #CEE3F6;
-	margin-left: 15%;
+	margin-left: 10%;
 }
 
 .ul-a{
 	list-style:none;
 	margin-right: 10%;
-	margin-top: 0%;
+	margin-top: -1%;
 	display: flex;
 }
 
@@ -34,7 +34,7 @@
 	float: left;
 	background-color: #CEE3F6;
 	height: 30%;
-	width: 100px;
+	width: 106px;
 	margin-top: 5%;
 }
 
@@ -340,4 +340,55 @@ input{
 .terceiro {
     width: 65%;
     background-color: #008FFF;
+}
+
+.foto-modal{
+	position: absolute;
+	margin-left: 68%;
+	border-color: #008FFF;
+}
+
+.div-form-modal{
+	display: flex;
+}
+
+.div-2-modal{
+	margin-left: 1%;
+}
+
+.botoes-modal{
+	width: auto;
+    margin-left: 60%;
+    margin-top: 10%;
+}
+
+.botoes-modal-inserir{
+	width: auto;
+    margin-left: 60%;
+    margin-top: 5%;
+}
+
+.icones-painel{
+	margin-left: 17%;
+	margin-top: 5%;
+	display: flex;
+}
+
+.icone-painel{
+	font-size: 88px;
+	color: #008FFF;
+	margin-left: 1%;
+
+}
+
+.icone-singular{
+	margin-left: 5%;
+}
+
+.titulo-painel{
+	font-weight: bold;
+	color: #008FFF;
+	text-align: center;
+	font-size: 35px;
+
 }

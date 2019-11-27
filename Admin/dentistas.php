@@ -94,7 +94,7 @@
 
                         <div class="editar-modal">
             <form action="dentistaEdita.php" method="POST" accept-charset="UTF-8">
-            <img id="foto-edita" name="foto" width="100px"> 
+            <img id="foto-edita" name="foto" width="100px"  class="foto-modal"> 
             <input type="hidden" id="id-editar" name="id">
             <label>CRO:</label><input type="text" id="cro" name ="cro" value="">    
             <label>Nome:</label><input type="text"  id="nome-editar" name ="nome" value="">      

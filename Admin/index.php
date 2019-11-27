@@ -17,7 +17,7 @@
       <form action="verificaLogin.php" method="POST" id="cu">
         <label>E-mail:</label><input type="text" name="login">      
         <label>Senha:</label><input type="password" name="senha">      
-        <div class="g-recaptcha" data-sitekey="6Lc-xMIUAAAAAPwl9qISDZLoKLAEaEZcitF8gozp" id="g-recaptcha-response"></div>
+        <!--<div class="g-recaptcha" data-sitekey="6Lc-xMIUAAAAAPwl9qISDZLoKLAEaEZcitF8gozp" id="g-recaptcha-response"></div>-->
                              <input type="submit" value="Entrar" id="entrar-login" class="botao-form">
       </form>
       <p>
@@ -31,7 +31,7 @@
 
 </body>
 </html>
-
+<!--
 <script>
     window.onload = function() {
     var recaptcha = document.forms["cu"]["g-recaptcha-response"];
@@ -45,4 +45,4 @@
 
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
     async defer>
-</script>
+</script>-->

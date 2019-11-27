@@ -4,28 +4,31 @@
 
 <div class="container">
         <form action="cadastrar.php" enctype="multipart/form-data" method="POST" accept-charset="UTF-8">
-    <div class="cadastra-left">                   
+        <h2>Não possui cadastro ainda? Cadastre-se agora!</h2> 
+        <div class="cadastra-left">                  
            <div>
-            <label>Nome:</label><input required="true" type="text" name="nome" >      
-            <label>Telefone:</label><input type="text" name="tel" >
-            <label>Email:</label><input required="true" type="text" name="email" >
-            <label>Endereço:</label><input type="text" name="end" >
-            <label>Data de Nascimento:</label><input type="date" name="nasc" >
+            <label>Nome:</label><input required="true" type="text" name="nome" class="input-escolha">      
+            <label>Telefone:</label><input type="text" name="tel" class="input-escolha">
+            <label>Email:</label><input required="true" type="text" name="email" class="input-escolha">
+            <label>Endereço:</label><input type="text" name="end" class="input-escolha">
+            <label>Data de Nascimento:</label><input type="date" name="nasc" class="input-escolha">
            </div>
-           <div>
-            <label>Foto de Perfil:</label><input type="file" name="foto">
-            <label>Login:</label><input required="true" type="text" name="login">
-            <label>Senha: </label> <input type="password" name="senha" id="inputSenha" minlength="6" required='true'/>
-            <label>Confirmar senha: </label> <input type="password" name="senha2" id="inputSenha2"minlength="6" required='true'/> 
+           <div class="cadastrar-2">
+            <label>Foto de Perfil:</label><input type="file" name="foto" class="input-escolha">
+            <label>Login:</label><input required="true" type="text" name="login" class="input-escolha">
+            <label>Senha: </label> <input type="password" name="senha" id="inputSenha" minlength="6" required='true' class="input-escolha"/>
+            <label>Confirmar senha: </label> <input type="password" name="senha2" id="inputSenha2"minlength="6" required='true' class="input-escolha"/>
+            <button type="submit" class="botao-editar" id="inputSubmit">Cadastrar-se</button>
             </div>
-            <button type="submit" class="botao-editar" id="inputSubmit">Cadastrar</button>
+            
         </form>
     </div>
 
     <div class="login-right">
+    <h2>Faça login</h2> 
     <form action="verificaLogin.php" method="POST"> 
-          <label>Login:</label><input type="text" class="input-login" name="login">      
-          <label>Senha:</label><input type="password" class="input-login" name="senha">      
+          <label>Login:</label><input type="text" class="input-escolha" name="login">      
+          <label>Senha:</label><input type="password" class="input-escolha" name="senha">      
                               <input type="submit" value="Logar" id="entrar-login" class="botao-form">
       </form>
       <p>
