@@ -11,17 +11,7 @@
 ?>
 			
 		<section>
-		<div class="container">
-    <div class="menu-lateral">
-				<p>Ordenar por:</p>
-					<select name="filtros">
-						<option value="padrao">Padrão</option>
-						<option value="descricao">Descrição</option>
-						<option value="data">Data</option>
-						<option value="titulo">Titulo</option>                                    
-					</select>		
-      </div>		
-
+		<div class="container">	
 			<div class="tabela">
 			<table id="playlistTable">
             <caption class="titulo-tabela">Consultas</caption>

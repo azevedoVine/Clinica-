@@ -11,16 +11,6 @@ $dados = $tratamentoDao->listaTratamentos();
 ?>
 		<section>
 		<div class="container">
-			<div class="menu-lateral">
-				<p>Ordenar por:</p>
-					<select name="filtros">
-						<option value="padrao">Padrão</option>
-						<option value="data-publi">Data de Publicação</option>
-						<option value="descricao">Descrição</option>
-						<option value="titulo">Titulo</option>                                    
-					</select>		
-			</div>		
-
 			<div class="tabela">
 			<table id="playlistTable">
             <a data-modal-target="#inserir"><button class="botao-nova">Novo Tratamento</button></a>

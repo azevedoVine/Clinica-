@@ -10,16 +10,8 @@
 ?>
 			
 		<section>
-        <div class="container">
-			<div class="menu-lateral">
-				<p>Ordenar por:</p>
-					<select name="filtros">
-						<option value="padrao">Padrão</option>
-						<option value="manha">Manhã</option>
-						<option value="tarde">Tarde</option>                                  
-					</select>		
-            </div>		
-            			
+    <div class="container">  
+             			
 		<div class="tabela">
 			<table id="playlistTable">
             <caption class="titulo-tabela">Horários de Funcionamento</caption>

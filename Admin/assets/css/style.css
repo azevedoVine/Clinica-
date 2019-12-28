@@ -307,39 +307,10 @@ input{
 	font-size: 18px;
 }
 
-.grafico-todo{
-	height:300px;
-	margin-left: 10%;
-}
 .container {
 	width: 80%;
 	display:flex;
-}
-
-.grafico {
-    text-align: right;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.h1-grafico {
-    font-size: 20px;
-    color:#008FFF;
-    text-align: center;
-    margin-right: 20%;
-}
-
-.primeiro {
-    width: 90%; 
-    background-color: #008FFF;
-}
-.segundo {
-    width: 80%; 
-    background-color: #008FFF;
-}
-.terceiro {
-    width: 65%;
-    background-color: #008FFF;
+	margin-left: 10%;
 }
 
 .foto-modal{

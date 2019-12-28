@@ -1,7 +1,7 @@
 <?php
     session_start();
     session_destroy();
-
-    echo "Volte logo!";
-    include_once "footer.php";
 ?>
+<strong><p>Volte Logo!</p></strong>
+
+<a href="index.php">Logar Novamente</a>

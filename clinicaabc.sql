@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 27-Nov-2019 às 10:32
+-- Generation Time: 28-Dez-2019 às 02:47
 -- Versão do servidor: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -143,7 +143,7 @@ CREATE TABLE `dentista` (
 
 INSERT INTO `dentista` (`idDentista`, `CRO`, `nomeDentista`, `especializacao`, `perfilDentista`) VALUES
 (1, '654789/RS', 'Jalma da Boa Morte', 'Ortodontia', 'dentista-2.jpg'),
-(4, '54673/RS', 'Gumercinda da Cu da Luz', 'Periodontista', 'dentista-1.jpg'),
+(4, '54673/RS', 'Gumercinda da Luz', 'Periodontista', 'dentista-1.jpg'),
 (5, '98765/RS', 'Joeferson Catarrinho', 'Implantodontia', 'dentista-3.jpg'),
 (6, '654352/RJ', 'Dentista Feliz ', 'Ortodontia', 'dentista.jpg');
 
@@ -215,10 +215,10 @@ CREATE TABLE `paciente` (
 --
 
 INSERT INTO `paciente` (`idPaciente`, `nome`, `telefone`, `email`, `endereco`, `nascimento`, `login`, `senha`, `administrador_idAdmin`, `fotoPerfil`) VALUES
-(1, 'Jurandir', '6666-6666', 'jurandir100porcento@live.com', 'casa do caralho', '19/09/2019', 'juju', '02e51eb6cff1fd9914f84b1d03c352d9', 1, 'porco.png'),
+(1, 'Jurandir', '6666-6666', 'jurandir100porcento@live.com', 'indefinido', '19/09/2019', 'juju', '02e51eb6cff1fd9914f84b1d03c352d9', 1, 'porco.png'),
 (3, 'Orlindio', '89095869', 'orlindinho@yahoo.com', 'Onde o vento fez a curva', '2000-10-17', 'orlindinho', '12345', 1, 'cerp-logo.png'),
 (4, 'Jurandio', '123456', 'marcinhasurfista@gmail.com', 'Onde o vento fez a curva', '19/09/2019', 'jur', '827ccb0eea8a706c4c34a16891f84e7b', 1, 'porco.png'),
-(5, 'bb', '234567890-976', 'nhhghgh@gm.vom', 'casa do caralho', '2019-11-07', 'cghhbv', 'e10adc3949ba59abbe56e057f20f883e', 1, '');
+(5, 'bb', '234567890-976', 'nhhghgh@gm.vom', 'indefinido', '2019-11-07', 'cghhbv', 'e10adc3949ba59abbe56e057f20f883e', 1, '');
 
 -- --------------------------------------------------------
 

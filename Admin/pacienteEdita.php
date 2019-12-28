@@ -13,7 +13,7 @@
         $paciente->setEndereco($_POST['end']);
         $paciente->setTelefone($_POST['tel']);
         $paciente->setNascimento($_POST['nasc']);
-        $paciente->setPerfil($_POST['foto']);
+        //$paciente->setPerfil($_POST['foto']);
   
     
         $pacienteDao = new PacienteDao();
